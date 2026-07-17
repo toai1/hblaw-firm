@@ -7,7 +7,7 @@
     "dev:server": "tsx server.ts",
     "dev:client": "vite --host",
     "dev": "npx concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "build": "vite build",
+    "build": "vite build && tsc -p tsconfig.server.json",
     "start": "node --import tsx server.ts"
   },
   "dependencies": {
