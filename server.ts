@@ -53,7 +53,7 @@ app.post("/api/send-email", async (req, res) => {
   }
 });
 
-const distPath = path.join(__dirname, "dist");
+const distPath = path.join(__dirname, "..", "dist");
 app.use(express.static(distPath));
 app.get("/{*path}", (_req, res) => {
   res.sendFile(path.join(distPath, "index.html"));
