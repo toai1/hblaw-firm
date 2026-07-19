@@ -1352,9 +1352,6 @@ export default function App() {
               <Badge className="mb-3 bg-slate-100 text-slate-800 hover:bg-slate-100">
                 {t("pres.badge")}
               </Badge>
-              <h2 className="font-serif text-2xl text-slate-900 sm:text-3xl">
-                {t("pres.title")}
-              </h2>
               <div className="mt-4 space-y-3 text-sm leading-relaxed text-stone-600">
                 <p>{t("pres.p1")}</p>
                 <p>{t("pres.p2")}</p>
