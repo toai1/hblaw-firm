@@ -1,4 +1,5 @@
 import { useState, useEffect, useSyncExternalStore } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import {
   Scale,
@@ -846,13 +847,12 @@ function BookingForm() {
     });
 
     try {
-      const res = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, phone, email, service: svcTitle, date, slot, notes }),
-      });
-
-      if (!res.ok) throw new Error("Failed");
+      await emailjs.send(
+        "service_m1sz2lv",
+        "template_t3a96hj",
+        { name, phone, email, service: svcTitle, date, slot, notes },
+        { publicKey: "r9QEFpwAe98oTMnmt" },
+      );
 
       setSuccess(true);
       setName("");
