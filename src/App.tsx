@@ -1351,8 +1351,8 @@ export default function App() {
           >
             <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-yellow-200/20 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80"
-                alt="Law library"
+                src="/hero.jpg"
+                alt="H&B Law Firm"
                 className="h-full w-full object-cover"
               />
             </div>
