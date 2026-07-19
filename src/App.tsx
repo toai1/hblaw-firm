@@ -1216,17 +1216,17 @@ export default function App() {
   }, [lang]);
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-800 antialiased">
+    <div className="min-h-screen bg-slate-50 text-slate-800 antialiased">
       {/* Top contact bar */}
-      <div className="bg-slate-900 text-yellow-50/90">
+      <div className="bg-gradient-to-r from-[#0c1929] via-[#132743] to-[#0c1929] text-yellow-50/90">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-2 text-xs sm:text-sm">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             <span className="inline-flex items-center gap-1.5">
-              <Phone className="h-3.5 w-3.5 text-yellow-300" />
+              <Phone className="h-3.5 w-3.5 text-yellow-400" />
               {t("topbar.phone")}
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <Mail className="h-3.5 w-3.5 text-yellow-300" />
+              <Mail className="h-3.5 w-3.5 text-yellow-400" />
               {t("topbar.email")}
             </span>
           </div>
@@ -1235,39 +1235,39 @@ export default function App() {
       </div>
 
       {/* Header */}
-      <header className="sticky top-0 z-20 border-b border-stone-200 bg-stone-50/85 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <header className="sticky top-0 z-20 border-b border-slate-200/60 bg-white/80 backdrop-blur-md shadow-sm shadow-slate-200/20">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="H&B Law Firm" className="h-11 w-auto" />
+            <img src="/logo.png" alt="H&B Law Firm" className="h-10 w-auto" />
             <div className="leading-tight">
               <p className="font-serif text-xl text-slate-900">
                 H&amp;B Law Firm
               </p>
-              <p className="text-xs uppercase tracking-[0.18em] text-stone-500">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">
                 Attorneys at Law · Algeria
               </p>
             </div>
           </div>
-          <nav className="hidden items-center gap-6 text-sm font-medium text-stone-600 md:flex">
-            <a href="#services" className="transition hover:text-slate-800">
+          <nav className="hidden items-center gap-6 text-sm font-medium text-slate-500 md:flex">
+            <a href="#services" className="transition hover:text-blue-800">
               {t("nav.practice")}
             </a>
-            <a href="#team" className="transition hover:text-slate-800">
+            <a href="#team" className="transition hover:text-blue-800">
               {t("nav.team")}
             </a>
-            <a href="#references" className="transition hover:text-slate-800">
+            <a href="#references" className="transition hover:text-blue-800">
               {t("nav.references")}
             </a>
-            <a href="#book" className="transition hover:text-slate-800">
+            <a href="#book" className="transition hover:text-blue-800">
               {t("nav.consult")}
             </a>
-            <a href="#location" className="transition hover:text-slate-800">
+            <a href="#location" className="transition hover:text-blue-800">
               {t("nav.location")}
             </a>
           </nav>
           <Button
             asChild
-            className="bg-yellow-500 text-slate-900 shadow-sm hover:bg-yellow-400"
+            className="bg-gradient-to-r from-yellow-500 to-amber-500 text-slate-900 shadow-sm shadow-yellow-500/20 hover:from-yellow-400 hover:to-amber-400 hover:shadow-md hover:shadow-yellow-500/25"
           >
             <a href="#book">{t("cta.book")}</a>
           </Button>
@@ -1275,42 +1275,48 @@ export default function App() {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-yellow-50">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1929] via-[#132743] to-[#0f1f3a] text-yellow-50">
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.07]"
+          className="pointer-events-none absolute inset-0"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 20% 20%, #fbbf24 0, transparent 40%), radial-gradient(circle at 80% 60%, #34d399 0, transparent 45%)",
+              "radial-gradient(ellipse 60% 50% at 15% 15%, rgba(251,191,36,0.12) 0%, transparent 70%), radial-gradient(ellipse 50% 60% at 85% 70%, rgba(59,130,246,0.08) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(251,191,36,0.03) 0%, transparent 50%)",
           }}
         />
-        <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 py-16 text-center md:py-24">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fbbf24' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 py-20 text-center md:py-28">
           <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="mb-8"
           >
             <div className="mb-6 flex items-center justify-center">
               <img
                 src="/logo.png"
                 alt="H&B Law Firm"
-                className="h-44 w-auto drop-shadow-[0_2px_12px_rgba(251,191,36,0.2)] md:h-60"
+                className="h-44 w-auto md:h-60"
               />
             </div>
           </motion.div>
           <motion.p
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="max-w-2xl text-lg text-yellow-100/80 md:text-xl"
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            className="max-w-2xl text-lg text-blue-100/70 md:text-xl"
           >
             {t("hero.tagline")}
           </motion.p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
+            className="mt-10 flex flex-wrap items-center justify-center gap-4"
+          >
             <Button
               asChild
               size="lg"
-              className="bg-yellow-500 text-slate-900 shadow hover:bg-yellow-400"
+              className="bg-gradient-to-r from-yellow-500 to-amber-500 text-slate-900 shadow-lg shadow-yellow-500/20 transition-all hover:shadow-xl hover:shadow-yellow-500/30 hover:from-yellow-400 hover:to-amber-400"
             >
               <a href="#book">{t("hero.cta.book")}</a>
             </Button>
@@ -1318,40 +1324,44 @@ export default function App() {
               asChild
               size="lg"
               variant="outline"
-              className="border-yellow-200/40 bg-transparent text-yellow-50 hover:bg-yellow-50/10 hover:text-yellow-50"
+              className="border-yellow-200/30 bg-white/5 text-yellow-50 backdrop-blur-sm transition-all hover:bg-white/10 hover:border-yellow-200/50 hover:text-yellow-50"
             >
               <a href="#team">{t("hero.cta.team")}</a>
             </Button>
-          </div>
+          </motion.div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-yellow-500/30 to-transparent" />
       </section>
 
       {/* Presentation */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
+      <section className="bg-gradient-to-b from-white to-slate-50/80">
+        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
           <div className="grid items-center gap-8 md:grid-cols-[1fr_1.2fr]">
             <motion.div
-              initial={{ opacity: 0, x: -16 }}
+              initial={{ opacity: 0, x: -24 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.45 }}
-              className="overflow-hidden rounded-2xl shadow-lg"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="overflow-hidden rounded-2xl shadow-xl shadow-slate-200/50 ring-1 ring-slate-100"
             >
               <img
                 src="/presentation.jpg"
                 alt="H&B Law Firm"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 16 }}
+              initial={{ opacity: 0, x: 24 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.45, delay: 0.1 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Badge className="mb-3 bg-slate-100 text-slate-800 hover:bg-slate-100">
+              <Badge className="mb-3 bg-blue-50 text-blue-800 ring-1 ring-blue-100 hover:bg-blue-50">
                 {t("pres.badge")}
               </Badge>
+              <h2 className="font-serif text-2xl text-slate-900 sm:text-3xl">
+                {t("pres.title")}
+              </h2>
               <div className="mt-4 space-y-3 text-sm leading-relaxed text-stone-600">
                 <p>{t("pres.p1")}</p>
                 <p>{t("pres.p2")}</p>
@@ -1363,38 +1373,51 @@ export default function App() {
       </section>
 
       {/* References / Track Record */}
-      <section id="references" className="relative overflow-hidden bg-slate-900 text-yellow-50">
+      <section id="references" className="relative overflow-hidden bg-gradient-to-br from-[#0c1929] via-[#132743] to-[#0f1f3a] text-yellow-50">
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.05]"
+          className="pointer-events-none absolute inset-0"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 10% 10%, #fbbf24 0, transparent 30%), radial-gradient(circle at 90% 80%, #34d399 0, transparent 35%)",
+              "radial-gradient(ellipse 50% 50% at 10% 10%, rgba(251,191,36,0.1) 0%, transparent 60%), radial-gradient(ellipse 40% 50% at 90% 80%, rgba(59,130,246,0.06) 0%, transparent 50%)",
           }}
         />
+        <div className="pointer-events-none absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fbbf24' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
-          <div className="mb-12 max-w-2xl">
-            <Badge className="mb-3 border-yellow-300/40 bg-yellow-300/10 text-yellow-200 hover:bg-yellow-300/10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="mb-12 max-w-2xl"
+          >
+            <Badge className="mb-3 border-yellow-300/30 bg-yellow-300/10 text-yellow-200 hover:bg-yellow-300/10">
               {t("refs.badge")}
             </Badge>
             <h2 className="font-serif text-3xl text-yellow-50 sm:text-4xl">
               {t("refs.title")}
             </h2>
-            <p className="mt-3 text-yellow-100/80">
+            <p className="mt-3 text-blue-100/60">
               {t("refs.desc")}
             </p>
-          </div>
+          </motion.div>
 
           {/* Stats Bar */}
-          <div className="mb-14 grid grid-cols-1 gap-6 rounded-2xl border border-yellow-200/20 bg-slate-800/40 p-6 backdrop-blur sm:grid-cols-1 max-w-sm mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mb-14 rounded-2xl border border-yellow-200/15 bg-gradient-to-r from-yellow-500/10 via-slate-800/40 to-blue-500/10 p-8 backdrop-blur max-w-sm mx-auto"
+          >
             <div className="text-center">
-              <p className="font-serif text-4xl text-yellow-300">
+              <p className="font-serif text-5xl bg-gradient-to-r from-yellow-300 to-amber-400 bg-clip-text text-transparent">
                 {t("refs.stat1.value")}
               </p>
-              <p className="mt-1 text-xs uppercase tracking-[0.18em] text-yellow-100/70">
+              <p className="mt-2 text-xs uppercase tracking-[0.18em] text-yellow-100/60">
                 {t("refs.stat1.label")}
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Expertise List */}
           <div className="mx-auto max-w-3xl">
@@ -1407,11 +1430,11 @@ export default function App() {
                 return (
                   <motion.li
                     key={n}
-                    initial={{ opacity: 0, x: -10 }}
+                    initial={{ opacity: 0, x: -16 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.3, delay: n * 0.1 }}
-                    className="flex items-start gap-4 rounded-xl border border-yellow-200/10 bg-slate-800/30 p-4"
+                    transition={{ duration: 0.4, delay: n * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                    className="flex items-start gap-4 rounded-xl border border-yellow-200/10 bg-gradient-to-r from-yellow-500/5 to-blue-500/5 p-4 transition-colors hover:border-yellow-200/20 hover:from-yellow-500/10 hover:to-blue-500/10"
                   >
                     <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-yellow-500/20 text-yellow-300">
                       <Icon className="h-5 w-5" />
@@ -1428,19 +1451,25 @@ export default function App() {
       </section>
 
       {/* Booking + Reservations */}
-      <section id="book" className="bg-gradient-to-b from-stone-100 to-stone-50">
+      <section id="book" className="bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-          <div className="mb-10 max-w-2xl">
-            <Badge className="mb-3 bg-yellow-100 text-yellow-900 hover:bg-yellow-100">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="mb-10 max-w-2xl"
+          >
+            <Badge className="mb-3 bg-gradient-to-r from-yellow-100 to-amber-50 text-yellow-800 ring-1 ring-yellow-200/50 hover:bg-yellow-100">
               {t("book.badge")}
             </Badge>
             <h2 className="font-serif text-3xl text-slate-900 sm:text-4xl">
               {t("book.title")}
             </h2>
-            <p className="mt-3 text-stone-600">
+            <p className="mt-3 text-stone-500">
               {t("book.desc")}
             </p>
-          </div>
+          </motion.div>
           <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr]">
             <BookingForm />
             <Reservations />
@@ -1449,38 +1478,63 @@ export default function App() {
       </section>
 
       {/* Practice Areas + Our Team (compact) */}
-      <section id="services" className="bg-stone-50">
-        <div className="mx-auto max-w-6xl px-4 py-8 md:py-10">
+      <section id="services" className="bg-gradient-to-b from-white to-slate-50/80">
+        <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
           <div className="grid gap-6 lg:grid-cols-2">
-            <div>
-              <Badge className="mb-2 bg-slate-100 text-slate-800 hover:bg-slate-100">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <Badge className="mb-2 bg-blue-50 text-blue-800 ring-1 ring-blue-100 hover:bg-blue-50">
                 {t("services.badge")}
               </Badge>
               <ul className="mt-3 space-y-2">
-                {SERVICES.map((s) => {
+                {SERVICES.map((s, i) => {
                   const Icon = ICONS[s.icon] ?? ScrollText;
                   return (
-                    <li key={s.id} className="flex items-start gap-3 rounded-lg border border-stone-200 bg-white p-3 shadow-sm">
-                      <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-slate-100 text-slate-600">
+                    <motion.li
+                      key={s.id}
+                      initial={{ opacity: 0, y: 8 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.35, delay: i * 0.05 }}
+                      className="flex items-start gap-3 rounded-xl border border-slate-100 bg-white p-3 shadow-sm ring-1 ring-slate-50 transition-all hover:shadow-md hover:border-blue-100 hover:ring-blue-50"
+                    >
+                      <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-slate-700 to-slate-800 text-yellow-300 shadow-sm">
                         <Icon className="h-4 w-4" />
                       </div>
                       <div>
                         <p className="text-sm font-medium text-slate-900">{s.title[lang]}</p>
                         <p className="text-xs text-stone-500">{s.blurb[lang]}</p>
                       </div>
-                    </li>
+                    </motion.li>
                   );
                 })}
               </ul>
-            </div>
-            <div id="team">
-              <Badge className="mb-2 bg-yellow-100 text-yellow-900 hover:bg-yellow-100">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              id="team"
+            >
+              <Badge className="mb-2 bg-gradient-to-r from-yellow-100 to-amber-50 text-yellow-800 ring-1 ring-yellow-200/50 hover:bg-yellow-100">
                 {t("team.badge")}
               </Badge>
               <div className="mt-3 space-y-2">
-                {ATTORNEYS.map((att) => (
-                  <div key={att.name} className="flex items-start gap-3 rounded-lg border border-stone-200 bg-white p-3 shadow-sm">
-                    <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-slate-800 text-yellow-300">
+                {ATTORNEYS.map((att, i) => (
+                  <motion.div
+                    key={att.name}
+                    initial={{ opacity: 0, y: 8 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.35, delay: i * 0.05 }}
+                    className="flex items-start gap-3 rounded-xl border border-slate-100 bg-white p-3 shadow-sm ring-1 ring-slate-50 transition-all hover:shadow-md hover:border-yellow-200 hover:ring-yellow-50"
+                  >
+                    <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-slate-700 to-slate-800 text-yellow-300 shadow-sm">
                       <Landmark className="h-4 w-4" />
                     </div>
                     <div>
@@ -1488,30 +1542,42 @@ export default function App() {
                       <p className="text-xs text-yellow-700">{t(`team.${att.role}`)}</p>
                       <p className="text-xs text-stone-500">{att.desc[lang]}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Location Map */}
-      <section id="location" className="bg-stone-50">
+      <section id="location" className="bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-          <div className="mb-10 max-w-2xl">
-            <Badge className="mb-3 bg-slate-100 text-slate-800 hover:bg-slate-100">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="mb-10 max-w-2xl"
+          >
+            <Badge className="mb-3 bg-blue-50 text-blue-800 ring-1 ring-blue-100 hover:bg-blue-50">
               <MapPin className="mr-1 h-3 w-3" />
               {t("location.badge")}
             </Badge>
             <h2 className="font-serif text-3xl text-slate-900 sm:text-4xl">
               {t("location.title")}
             </h2>
-            <p className="mt-3 text-stone-600">
+            <p className="mt-3 text-stone-500">
               {t("location.desc")}
             </p>
-          </div>
-          <div className="overflow-hidden rounded-2xl border border-stone-200 shadow-lg">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/40 ring-1 ring-slate-100"
+          >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.0!2d3.0576111!3d36.7785553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb30059bee70f%3A0xb887aa1b8ffc3b92!2sSoci%C3%A9t%C3%A9%20D%27avocats%20HANIFI%20%26%20BENAICHA!5e0!3m2!1sen!2sdz!4v1700000000000!5m2!1sen!2sdz"
               width="100%"
@@ -1522,12 +1588,12 @@ export default function App() {
               referrerPolicy="no-referrer-when-downgrade"
               title="H&B Law Firm Location"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-stone-200 bg-slate-900 text-yellow-50/80">
+      <footer className="border-t border-slate-200/50 bg-gradient-to-br from-[#0c1929] via-[#132743] to-[#0f1f3a] text-yellow-50/80">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-4">
           <div className="sm:col-span-2">
             <div className="flex items-center gap-3">
