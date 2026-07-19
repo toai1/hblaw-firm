@@ -111,6 +111,7 @@ const en: Dict = {
   "topbar.languages": "Français · العربية · English",
   "hero.tagline": "Over forty years of experience at the service of businesses, institutions, and individuals.",
   "hero.cta.book": "Reserve a consultation",
+  "hero.cta.team": "Meet the team",
   "hero.stat.years": "Years practice",
   "hero.stat.attorneys": "Attorneys at Law",
   "hero.stat.clients": "Major Clients",
@@ -140,8 +141,7 @@ const en: Dict = {
   "refs.stat3.label": "International Arbitrations",
   "refs.expertise.title": "Selected Expertise",
   "refs.expertise.1": "Drafting all types of contracts, dispute resolution, and legal support for highway, industrial, and port projects.",
-  "refs.expertise.2": "Support in international arbitration, mediation, and judicial expertise procedures.",
-  "refs.expertise.3": "Assistance to public and private project owners, engineering firms, and project management teams.",
+  "refs.expertise.2": "Assistance to public and private project owners, engineering firms, and project management teams.",
   "book.badge": "Consultation",
   "book.title": "Reserve your appointment",
   "book.desc": "Choose a practice area, pick a time that suits you, and your email client will open to send the request to our attorneys.",
@@ -223,8 +223,7 @@ const fr: Dict = {
   "refs.stat3.label": "Arbitrages Internationaux",
   "refs.expertise.title": "Expertise Sélectionnée",
   "refs.expertise.1": "Élaboration de tous types de marchés, traitement des litiges, appui juridique en projets autoroutiers, industriels et portuaires.",
-  "refs.expertise.2": "Accompagnement en arbitrage international, médiation et procédures d'expertise judiciaire.",
-  "refs.expertise.3": "Assistance aux maîtres d'ouvrages publics et privés, bureaux d'études et directions de projets.",
+  "refs.expertise.2": "Assistance aux maîtres d'ouvrages publics et privés, bureaux d'études et directions de projets.",
   "book.badge": "Consultation",
   "book.title": "Réservez votre rendez-vous",
   "book.desc": "Choisissez un domaine de pratique, sélectionnez une heure qui vous convient, et votre client de messagerie s'ouvrira pour envoyer la demande à nos avocats.",
@@ -306,8 +305,7 @@ const ar: Dict = {
   "refs.stat3.label": "تحكيمات دولية",
   "refs.expertise.title": "خبرة مختارة",
   "refs.expertise.1": "صياغة جميع أنواع العقود، وتسوية النزاعات، والدعم القانوني لمشاريع الطرق السريعة والصناعية والموانئ.",
-  "refs.expertise.2": "الدعم في التحكيم الدولي، والوساطة، وإجراءات الخبرة القضائية.",
-  "refs.expertise.3": "المساعدة لأصحاب المشاريع العامة والخاصة، ومكاتب الهندسة، وفرق إدارة المشاريع.",
+  "refs.expertise.2": "المساعدة لأصحاب المشاريع العامة والخاصة، ومكاتب الهندسة، وفرق إدارة المشاريع.",
   "book.badge": "استشارة",
   "book.title": "احجز موعدك",
   "book.desc": "اختر مجال الممارسة، واختر الوقت الذي يناسبك، وسيتم فتح برنامج البريد الإلكتروني الخاص بك لإرسال الطلب إلى محامينا.",
@@ -1192,7 +1190,7 @@ const ATTORNEYS: Attorney[] = [
   },
 ];
 
-const EXPERTISE_ICONS = [HardHat, Gavel, Building];
+const EXPERTISE_ICONS = [HardHat, Building];
 
 export default function App() {
   const [lang] = useLang();
@@ -1277,11 +1275,13 @@ export default function App() {
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
-            <img
-              src="/logo.png"
-              alt="H&B Law Firm"
-              className="h-40 w-auto md:h-52"
-            />
+            <div className="relative mx-auto mb-6 flex h-56 w-56 items-center justify-center rounded-full border border-yellow-200/20 bg-white/10 shadow-[0_0_60px_rgba(251,191,36,0.15)] backdrop-blur-sm md:h-72 md:w-72">
+              <img
+                src="/logo.png"
+                alt="H&B Law Firm"
+                className="h-44 w-auto drop-shadow-[0_2px_12px_rgba(251,191,36,0.2)] md:h-60"
+              />
+            </div>
           </motion.div>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -1311,7 +1311,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Practice Areas + Our Team */}
       <section id="services" className="mx-auto max-w-6xl px-4 py-16 md:py-20">
         <div className="mb-10 max-w-2xl">
           <Badge className="mb-3 bg-slate-100 text-slate-800 hover:bg-slate-100">
@@ -1353,11 +1353,10 @@ export default function App() {
             );
           })}
         </div>
-      </section>
 
-      {/* Team */}
-      <section id="team" className="bg-gradient-to-b from-stone-100 to-stone-50">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <Separator className="my-14 bg-stone-200" />
+
+        <div id="team">
           <div className="mb-10 max-w-2xl">
             <Badge className="mb-3 bg-yellow-100 text-yellow-900 hover:bg-yellow-100">
               {t("team.badge")}
@@ -1441,7 +1440,7 @@ export default function App() {
               {t("refs.expertise.title")}
             </h3>
             <ul className="space-y-4">
-              {[1, 2, 3].map((n) => {
+              {[1, 2].map((n) => {
                 const Icon = EXPERTISE_ICONS[n - 1];
                 return (
                   <motion.li
