@@ -110,12 +110,12 @@ const en: Dict = {
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.badge": "Est. 1985 · 40+ years of counsel",
-  "hero.title": "Expert legal counsel for infrastructure, corporate, and international disputes.",
+  "hero.title": "Legal counsel for infrastructure, corporate, and international disputes.",
   "hero.desc": "H&B Law Firm is a Civil Professional Company of Lawyers led by Maître HANIFI Boubkeur, providing rigorous representation in public projects, contract law, and international arbitration.",
   "hero.cta.book": "Reserve a consultation",
   "hero.cta.team": "Meet the team",
   "hero.stat.years": "Years practice",
-  "hero.stat.attorneys": "Expert Attorneys",
+  "hero.stat.attorneys": "Attorneys at Law",
   "hero.stat.clients": "Major Clients",
   "hero.card.title": "S.C.P.A",
   "hero.card.loc": "Algiers, Algeria",
@@ -179,7 +179,7 @@ const en: Dict = {
   "location.desc": "Located in Algiers, Algeria. We welcome clients for in-person consultations.",
   "footer.about": "Société Civile Professionnelle d'Avocats. Providing expert legal counsel in Algeria and internationally since 1985.",
   "footer.contact": "Contact",
-  "footer.fax": "Fax: +213 28 17 09 00",
+  "footer.fax": "Fax: 028170900",
   "footer.languages": "Languages",
   "footer.rights": "© {year} H&B Law Firm. All rights reserved.",
 };
@@ -195,7 +195,7 @@ const fr: Dict = {
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.badge": "Depuis 1985 · 40+ ans d'expérience",
-  "hero.title": "Conseil juridique expert en infrastructure, droit des sociétés et litiges internationaux.",
+  "hero.title": "Conseil juridique en infrastructure, droit des sociétés et litiges internationaux.",
   "hero.desc": "Le Cabinet H&B est une Société Civile Professionnelle d'Avocats dirigée par Maître HANIFI Boubkeur, offrant une représentation rigoureuse dans les projets publics, le droit des contrats et l'arbitrage international.",
   "hero.cta.book": "Réserver une consultation",
   "hero.cta.team": "Rencontrer l'équipe",
@@ -264,7 +264,7 @@ const fr: Dict = {
   "location.title": "Visitez Notre Bureau",
   "location.desc": "Situé à Alger, Algérie. Nous accueillons les clients pour des consultations en personne.",
   "footer.contact": "Contact",
-  "footer.fax": "Fax : +213 28 17 09 00",
+  "footer.fax": "Fax : 028170900",
   "footer.languages": "Langues",
   "footer.rights": "© {year} Cabinet H&B. Tous droits réservés.",
 };
@@ -349,7 +349,7 @@ const ar: Dict = {
   "location.desc": "يقع مكتبنا في الجزائر العاصمة، الجزائر. نرحب بالعملاء للاستشارات الشخصية.",
   "footer.about": "شركة مدنية مهنية للمحامين. نقدم استشارات قانونية متخصصة في الجزائر ودولياً منذ 1985.",
   "footer.contact": "اتصل بنا",
-  "footer.fax": "فاكس: +213 28 17 09 00",
+  "footer.fax": "فاكس: 028170900",
   "footer.languages": "اللغات",
   "footer.rights": "© {year} مكتب H&B. جميع الحقوق محفوظة.",
 };
@@ -1167,7 +1167,7 @@ const ATTORNEYS: Attorney[] = [
     name: "Maître HANIFI Boubkeur",
     role: "founder",
     desc: {
-      en: "Expert in public procurement law, tax procedures, and contract drafting.",
+      en: "Experienced in public procurement law, tax procedures, and contract drafting.",
       fr: "Spécialiste en droit des marchés publics, procédures fiscales et rédaction de contrats.",
       ar: "متخصص في قانون المناقصات العامة، والإجراءات الضريبية، وصياغة العقود.",
     },
@@ -1339,14 +1339,6 @@ export default function App() {
               <div>
                 <p className="font-serif text-2xl text-yellow-50">5</p>
                 <p className="uppercase tracking-wide text-xs">{t("hero.stat.attorneys")}</p>
-              </div>
-              <Separator
-                orientation="vertical"
-                className="hidden h-10 bg-yellow-200/30 sm:block"
-              />
-              <div>
-                <p className="font-serif text-2xl text-yellow-50">11+</p>
-                <p className="uppercase tracking-wide text-xs">{t("hero.stat.clients")}</p>
               </div>
             </div>
           </div>
