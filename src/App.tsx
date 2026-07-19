@@ -164,6 +164,7 @@ const en: Dict = {
   "form.select.slot": "Choose a time",
   "form.success": "Consultation reserved. Your email client will open to confirm.",
   "form.error": "Please complete all required fields.",
+  "form.error.email": "Booking saved, but email could not be sent. Our team will contact you.",
   "res.title": "Your Reservations",
   "res.subtitle": "Review or cancel your upcoming consultations.",
   "res.count": "booked",
@@ -248,6 +249,7 @@ const fr: Dict = {
   "form.select.slot": "Choisir une heure",
   "form.success": "Consultation réservée. Votre client de messagerie va s'ouvrir pour confirmer.",
   "form.error": "Veuillez remplir tous les champs obligatoires.",
+  "form.error.email": "Réservation enregistrée, mais l'e-mail n'a pas pu être envoyé. Notre équipe vous contactera.",
   "res.title": "Vos Réservations",
   "res.subtitle": "Consultez ou annulez vos rendez-vous à venir.",
   "res.count": "réservées",
@@ -332,6 +334,7 @@ const ar: Dict = {
   "form.select.slot": "اختر وقتًا",
   "form.success": "تم حجز الاستشارة. سيتم فتح برنامج البريد الإلكتروني الخاص بك للتأكيد.",
   "form.error": "يرجى إكمال جميع الحقول المطلوبة.",
+  "form.error.email": "تم حجز الموعد، لكن لم يتم إرسال البريد الإلكتروني. سيتواصل فريقنا معك.",
   "res.title": "حجوزاتك",
   "res.subtitle": "راجع أو ألغِ مواعيدك القادمة.",
   "res.count": "محجوز",
@@ -860,7 +863,8 @@ function BookingForm() {
       setSlot("");
       setNotes("");
     } catch {
-      setError(t("form.error"));
+      setError(t("form.error.email"));
+      setSuccess(false);
     } finally {
       setLoading(false);
     }
