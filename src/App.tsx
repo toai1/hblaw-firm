@@ -110,7 +110,7 @@ const en: Dict = {
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.badge": "Est. 1985 · 40+ years of counsel",
-  "hero.title": "Legal counsel for infrastructure, corporate, and international disputes.",
+  "hero.title": "Legal counsel for infrastructure and corporate matters.",
   "hero.desc": "H&B Law Firm is a Civil Professional Company of Lawyers led by Maître HANIFI Boubkeur, providing rigorous representation in public projects, contract law, and international arbitration.",
   "hero.cta.book": "Reserve a consultation",
   "hero.cta.team": "Meet the team",
@@ -195,7 +195,7 @@ const fr: Dict = {
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.badge": "Depuis 1985 · 40+ ans d'expérience",
-  "hero.title": "Conseil juridique en infrastructure, droit des sociétés et litiges internationaux.",
+  "hero.title": "Conseil juridique en infrastructure et droit des sociétés.",
   "hero.desc": "Le Cabinet H&B est une Société Civile Professionnelle d'Avocats dirigée par Maître HANIFI Boubkeur, offrant une représentation rigoureuse dans les projets publics, le droit des contrats et l'arbitrage international.",
   "hero.cta.book": "Réserver une consultation",
   "hero.cta.team": "Rencontrer l'équipe",
@@ -280,7 +280,7 @@ const ar: Dict = {
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.badge": "تأسست 1985 · أكثر من 40 عامًا من الخبرة",
-  "hero.title": "استشارات قانونية متخصصة في البنية التحتية والشركات والنزاعات الدولية.",
+  "hero.title": "استشارات قانونية في البنية التحتية والشركات.",
   "hero.desc": "مكتب H&B هو شركة مدنية مهنية للمحامين يديرها الأستاذ حنيفي بوبكر، يقدم تمثيلاً قانونياً دقيقاً في المشاريع العامة وقانون العقود والتحكيم الدولي.",
   "hero.cta.book": "احجز استشارة",
   "hero.cta.team": "تعرف على الفريق",
@@ -1485,17 +1485,15 @@ export default function App() {
           </div>
 
           {/* Stats Bar */}
-          <div className="mb-14 grid grid-cols-1 gap-6 rounded-2xl border border-yellow-200/20 bg-slate-800/40 p-6 backdrop-blur sm:grid-cols-3">
-            {[1, 2, 3].map((n) => (
-              <div key={n} className="text-center">
-                <p className="font-serif text-4xl text-yellow-300">
-                  {t(`refs.stat${n}.value`)}
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-yellow-100/70">
-                  {t(`refs.stat${n}.label`)}
-                </p>
-              </div>
-            ))}
+          <div className="mb-14 grid grid-cols-1 gap-6 rounded-2xl border border-yellow-200/20 bg-slate-800/40 p-6 backdrop-blur sm:grid-cols-1 max-w-sm mx-auto">
+            <div className="text-center">
+              <p className="font-serif text-4xl text-yellow-300">
+                {t("refs.stat1.value")}
+              </p>
+              <p className="mt-1 text-xs uppercase tracking-[0.18em] text-yellow-100/70">
+                {t("refs.stat1.label")}
+              </p>
+            </div>
           </div>
 
           {/* Expertise List */}
