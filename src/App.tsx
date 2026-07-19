@@ -1334,8 +1334,9 @@ export default function App() {
       </section>
 
       {/* Presentation */}
-      <section className="bg-gradient-to-b from-white to-slate-50/80">
-        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50/80">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url(/leaves-pattern.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="relative mx-auto max-w-6xl px-4 py-12 md:py-16">
           <div className="grid items-center gap-8 md:grid-cols-[1fr_1.2fr]">
             <motion.div
               initial={{ opacity: 0, x: -24 }}
@@ -1448,8 +1449,9 @@ export default function App() {
       </section>
 
       {/* Booking + Reservations */}
-      <section id="book" className="bg-gradient-to-b from-slate-50 to-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+      <section id="book" className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url(/leaves-pattern.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1475,8 +1477,9 @@ export default function App() {
       </section>
 
       {/* Practice Areas + Our Team (compact) */}
-      <section id="services" className="bg-gradient-to-b from-white to-slate-50/80">
-        <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
+      <section id="services" className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50/80">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url(/leaves-pattern.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="relative mx-auto max-w-6xl px-4 py-10 md:py-12">
           <div className="grid gap-6 lg:grid-cols-2">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -1548,8 +1551,9 @@ export default function App() {
       </section>
 
       {/* Location Map */}
-      <section id="location" className="bg-gradient-to-b from-slate-50 to-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+      <section id="location" className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url(/leaves-pattern.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
