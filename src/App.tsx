@@ -783,11 +783,11 @@ function LangSwitcher() {
 
   return (
     <div className="flex items-center gap-2">
-      <Globe className="h-4 w-4 text-amber-300" />
+      <Globe className="h-4 w-4 text-yellow-300" />
       <select
         value={lang}
         onChange={(e) => setLangFn(e.target.value as Lang)}
-        className="border-0 bg-transparent text-sm text-amber-50 focus:outline-none focus:ring-0"
+        className="border-0 bg-transparent text-sm text-yellow-50 focus:outline-none focus:ring-0"
       >
         {LANGS.map((l) => (
           <option key={l.id} value={l.id} className="text-stone-800">
@@ -869,7 +869,7 @@ function BookingForm() {
   return (
     <Card className="border-stone-200 bg-white shadow-lg">
       <CardHeader className="border-b border-stone-200 bg-stone-50/50">
-        <CardTitle className="font-serif text-2xl text-emerald-950">
+        <CardTitle className="font-serif text-2xl text-slate-900">
           {t("form.title")}
         </CardTitle>
         <CardDescription className="text-stone-600">
@@ -881,36 +881,36 @@ function BookingForm() {
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="name" className="flex items-center gap-1.5 text-stone-700">
-                <User className="h-3.5 w-3.5 text-emerald-700" />
-                {t("form.name")} <span className="text-amber-700">*</span>
+                <User className="h-3.5 w-3.5 text-slate-600" />
+                {t("form.name")} <span className="text-yellow-700">*</span>
               </Label>
               <Input
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="John Doe"
-                className="border-stone-300 focus:border-emerald-500 focus:ring-emerald-500"
+                className="border-stone-300 focus:border-slate-500 focus:ring-slate-500"
               />
             </div>
             <div className="space-y-2">
               <Label htmlFor="phone" className="flex items-center gap-1.5 text-stone-700">
-                <Phone className="h-3.5 w-3.5 text-emerald-700" />
-                {t("form.phone")} <span className="text-amber-700">*</span>
+                <Phone className="h-3.5 w-3.5 text-slate-600" />
+                {t("form.phone")} <span className="text-yellow-700">*</span>
               </Label>
               <Input
                 id="phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="+213..."
-                className="border-stone-300 focus:border-emerald-500 focus:ring-emerald-500"
+                className="border-stone-300 focus:border-slate-500 focus:ring-slate-500"
               />
             </div>
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="email" className="flex items-center gap-1.5 text-stone-700">
-              <Mail className="h-3.5 w-3.5 text-emerald-700" />
-              {t("form.email")} <span className="text-amber-700">*</span>
+              <Mail className="h-3.5 w-3.5 text-slate-600" />
+              {t("form.email")} <span className="text-yellow-700">*</span>
             </Label>
             <Input
               id="email"
@@ -918,20 +918,20 @@ function BookingForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
-              className="border-stone-300 focus:border-emerald-500 focus:ring-emerald-500"
+              className="border-stone-300 focus:border-slate-500 focus:ring-slate-500"
             />
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="service" className="flex items-center gap-1.5 text-stone-700">
-              <FileText className="h-3.5 w-3.5 text-emerald-700" />
-              {t("form.service")} <span className="text-amber-700">*</span>
+              <FileText className="h-3.5 w-3.5 text-slate-600" />
+              {t("form.service")} <span className="text-yellow-700">*</span>
             </Label>
             <select
               id="service"
               value={service}
               onChange={(e) => setService(e.target.value)}
-              className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+              className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm focus:border-slate-500 focus:ring-2 focus:ring-slate-500 focus:outline-none"
             >
               <option value="">{t("form.select.service")}</option>
               {SERVICES.map((s) => (
@@ -945,27 +945,27 @@ function BookingForm() {
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="date" className="flex items-center gap-1.5 text-stone-700">
-                <CalendarDays className="h-3.5 w-3.5 text-emerald-700" />
-                {t("form.date")} <span className="text-amber-700">*</span>
+                <CalendarDays className="h-3.5 w-3.5 text-slate-600" />
+                {t("form.date")} <span className="text-yellow-700">*</span>
               </Label>
               <Input
                 id="date"
                 type="date"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                className="border-stone-300 focus:border-emerald-500 focus:ring-emerald-500"
+                className="border-stone-300 focus:border-slate-500 focus:ring-slate-500"
               />
             </div>
             <div className="space-y-2">
               <Label htmlFor="slot" className="flex items-center gap-1.5 text-stone-700">
-                <Clock className="h-3.5 w-3.5 text-emerald-700" />
-                {t("form.slot")} <span className="text-amber-700">*</span>
+                <Clock className="h-3.5 w-3.5 text-slate-600" />
+                {t("form.slot")} <span className="text-yellow-700">*</span>
               </Label>
               <select
                 id="slot"
                 value={slot}
                 onChange={(e) => setSlot(e.target.value)}
-                className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+                className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm focus:border-slate-500 focus:ring-2 focus:ring-slate-500 focus:outline-none"
               >
                 <option value="">{t("form.select.slot")}</option>
                 {FORM_SLOTS.map((s) => (
@@ -986,7 +986,7 @@ function BookingForm() {
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder={t("form.notes.ph")}
-              className="min-h-[100px] border-stone-300 focus:border-emerald-500 focus:ring-emerald-500"
+              className="min-h-[100px] border-stone-300 focus:border-slate-500 focus:ring-slate-500"
             />
           </div>
 
@@ -1011,7 +1011,7 @@ function BookingForm() {
             <motion.div
               initial={{ opacity: 0, y: -5 }}
               animate={{ opacity: 1, y: 0 }}
-              className="flex items-center gap-2 rounded-lg bg-emerald-50 p-3 text-sm text-emerald-800 border border-emerald-200"
+              className="flex items-center gap-2 rounded-lg bg-slate-50 p-3 text-sm text-slate-700 border border-slate-200"
             >
               <CheckCircle2 className="h-4 w-4" />
               {t("form.success")}
@@ -1022,7 +1022,7 @@ function BookingForm() {
             type="submit"
             size="lg"
             disabled={loading}
-            className="w-full bg-emerald-900 text-amber-50 shadow hover:bg-emerald-800"
+            className="w-full bg-slate-800 text-yellow-50 shadow hover:bg-slate-700"
           >
             <Mail className="mr-2 h-4 w-4" />
             {loading ? t("form.sending") : t("form.submit")}
@@ -1051,10 +1051,10 @@ function Reservations() {
     <Card className="border-stone-200 bg-white/90 shadow-md">
       <CardHeader className="border-b border-stone-100">
         <div className="flex items-center justify-between">
-          <CardTitle className="font-serif text-2xl text-emerald-950">
+          <CardTitle className="font-serif text-2xl text-slate-900">
             {t("res.title")}
           </CardTitle>
-          <Badge className="bg-amber-100 text-amber-900 hover:bg-amber-100">
+          <Badge className="bg-yellow-100 text-yellow-900 hover:bg-yellow-100">
             {allBookings.length} {t("res.count")}
           </Badge>
         </div>
@@ -1081,23 +1081,23 @@ function Reservations() {
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="min-w-0">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-serif text-lg text-emerald-950">
+                      <span className="font-serif text-lg text-slate-900">
                         {b.name}
                       </span>
                       <Badge
                         variant="outline"
-                        className="border-emerald-300 text-emerald-800"
+                        className="border-slate-300 text-slate-700"
                       >
                         {serviceTitle(b.service)}
                       </Badge>
                     </div>
                     <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-stone-600">
                       <span className="inline-flex items-center gap-1.5">
-                        <CalendarDays className="h-4 w-4 text-amber-700" />
+                        <CalendarDays className="h-4 w-4 text-yellow-700" />
                         {format(parseISO(b.date), "EEEE, MMM d, yyyy")}
                       </span>
                       <span className="inline-flex items-center gap-1.5">
-                        <Clock className="h-4 w-4 text-amber-700" />
+                        <Clock className="h-4 w-4 text-yellow-700" />
                         {b.slot}
                       </span>
                     </div>
@@ -1179,15 +1179,15 @@ export default function App() {
   return (
     <div className="min-h-screen bg-stone-50 text-stone-800 antialiased">
       {/* Top contact bar */}
-      <div className="bg-emerald-950 text-amber-50/90">
+      <div className="bg-slate-900 text-yellow-50/90">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-2 text-xs sm:text-sm">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             <span className="inline-flex items-center gap-1.5">
-              <Phone className="h-3.5 w-3.5 text-amber-300" />
+              <Phone className="h-3.5 w-3.5 text-yellow-300" />
               {t("topbar.phone")}
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <Mail className="h-3.5 w-3.5 text-amber-300" />
+              <Mail className="h-3.5 w-3.5 text-yellow-300" />
               {t("topbar.email")}
             </span>
           </div>
@@ -1199,11 +1199,9 @@ export default function App() {
       <header className="sticky top-0 z-20 border-b border-stone-200 bg-stone-50/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-900 text-amber-300 shadow-sm">
-              <Scale className="h-6 w-6" />
-            </div>
+            <img src="/logo.png" alt="H&B Law Firm" className="h-11 w-auto" />
             <div className="leading-tight">
-              <p className="font-serif text-xl text-emerald-950">
+              <p className="font-serif text-xl text-slate-900">
                 H&amp;B Law Firm
               </p>
               <p className="text-xs uppercase tracking-[0.18em] text-stone-500">
@@ -1212,25 +1210,25 @@ export default function App() {
             </div>
           </div>
           <nav className="hidden items-center gap-6 text-sm font-medium text-stone-600 md:flex">
-            <a href="#services" className="transition hover:text-emerald-900">
+            <a href="#services" className="transition hover:text-slate-800">
               {t("nav.practice")}
             </a>
-            <a href="#team" className="transition hover:text-emerald-900">
+            <a href="#team" className="transition hover:text-slate-800">
               {t("nav.team")}
             </a>
-            <a href="#references" className="transition hover:text-emerald-900">
+            <a href="#references" className="transition hover:text-slate-800">
               {t("nav.references")}
             </a>
-            <a href="#book" className="transition hover:text-emerald-900">
+            <a href="#book" className="transition hover:text-slate-800">
               {t("nav.consult")}
             </a>
-            <a href="#location" className="transition hover:text-emerald-900">
+            <a href="#location" className="transition hover:text-slate-800">
               {t("nav.location")}
             </a>
           </nav>
           <Button
             asChild
-            className="bg-amber-500 text-emerald-950 shadow-sm hover:bg-amber-400"
+            className="bg-yellow-500 text-slate-900 shadow-sm hover:bg-yellow-400"
           >
             <a href="#book">{t("cta.book")}</a>
           </Button>
@@ -1238,7 +1236,7 @@ export default function App() {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-800 text-amber-50">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-yellow-50">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.07]"
           style={{
@@ -1248,7 +1246,7 @@ export default function App() {
         />
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 md:grid-cols-[1.4fr_1fr] md:py-24">
           <div>
-            <Badge className="mb-5 border-amber-300/40 bg-amber-300/10 text-amber-200 hover:bg-amber-300/10">
+            <Badge className="mb-5 border-yellow-300/40 bg-yellow-300/10 text-yellow-200 hover:bg-yellow-300/10">
               <ShieldCheck className="mr-1.5 h-3.5 w-3.5" />
               {t("hero.badge")}
             </Badge>
@@ -1256,7 +1254,7 @@ export default function App() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="font-serif text-4xl leading-tight text-amber-50 sm:text-5xl md:text-6xl"
+              className="font-serif text-4xl leading-tight text-yellow-50 sm:text-5xl md:text-6xl"
             >
               {t("hero.title")}
             </motion.h1>
@@ -1264,7 +1262,7 @@ export default function App() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mt-5 max-w-xl text-lg text-amber-100/80"
+              className="mt-5 max-w-xl text-lg text-yellow-100/80"
             >
               {t("hero.desc")}
             </motion.p>
@@ -1272,7 +1270,7 @@ export default function App() {
               <Button
                 asChild
                 size="lg"
-                className="bg-amber-500 text-emerald-950 shadow hover:bg-amber-400"
+                className="bg-yellow-500 text-slate-900 shadow hover:bg-yellow-400"
               >
                 <a href="#book">{t("hero.cta.book")}</a>
               </Button>
@@ -1280,30 +1278,30 @@ export default function App() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-amber-200/40 bg-transparent text-amber-50 hover:bg-amber-50/10 hover:text-amber-50"
+                className="border-yellow-200/40 bg-transparent text-yellow-50 hover:bg-yellow-50/10 hover:text-yellow-50"
               >
                 <a href="#team">{t("hero.cta.team")}</a>
               </Button>
             </div>
-            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-amber-100/80">
+            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-yellow-100/80">
               <div>
-                <p className="font-serif text-2xl text-amber-50">40+</p>
+                <p className="font-serif text-2xl text-yellow-50">40+</p>
                 <p className="uppercase tracking-wide text-xs">{t("hero.stat.years")}</p>
               </div>
               <Separator
                 orientation="vertical"
-                className="hidden h-10 bg-amber-200/30 sm:block"
+                className="hidden h-10 bg-yellow-200/30 sm:block"
               />
               <div>
-                <p className="font-serif text-2xl text-amber-50">5</p>
+                <p className="font-serif text-2xl text-yellow-50">5</p>
                 <p className="uppercase tracking-wide text-xs">{t("hero.stat.attorneys")}</p>
               </div>
               <Separator
                 orientation="vertical"
-                className="hidden h-10 bg-amber-200/30 sm:block"
+                className="hidden h-10 bg-yellow-200/30 sm:block"
               />
               <div>
-                <p className="font-serif text-2xl text-amber-50">11+</p>
+                <p className="font-serif text-2xl text-yellow-50">11+</p>
                 <p className="uppercase tracking-wide text-xs">{t("hero.stat.clients")}</p>
               </div>
             </div>
@@ -1315,14 +1313,14 @@ export default function App() {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="relative mx-auto w-full max-w-sm"
           >
-            <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-amber-200/20 shadow-2xl">
+            <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-yellow-200/20 shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80"
                 alt="Law library"
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-5 -left-5 hidden rounded-xl border border-stone-200 bg-stone-50 p-4 text-emerald-950 shadow-lg sm:block">
+            <div className="absolute -bottom-5 -left-5 hidden rounded-xl border border-stone-200 bg-stone-50 p-4 text-slate-900 shadow-lg sm:block">
               <p className="font-serif text-lg">{t("hero.card.title")}</p>
               <p className="text-xs uppercase tracking-[0.18em] text-stone-500">
                 {t("hero.card.loc")}
@@ -1335,10 +1333,10 @@ export default function App() {
       {/* Services */}
       <section id="services" className="mx-auto max-w-6xl px-4 py-16 md:py-20">
         <div className="mb-10 max-w-2xl">
-          <Badge className="mb-3 bg-emerald-100 text-emerald-900 hover:bg-emerald-100">
+          <Badge className="mb-3 bg-slate-100 text-slate-800 hover:bg-slate-100">
             {t("services.badge")}
           </Badge>
-          <h2 className="font-serif text-3xl text-emerald-950 sm:text-4xl">
+          <h2 className="font-serif text-3xl text-slate-900 sm:text-4xl">
             {t("services.title")}
           </h2>
           <p className="mt-3 text-stone-600">
@@ -1356,12 +1354,12 @@ export default function App() {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.35, delay: i * 0.05 }}
               >
-                <Card className="group h-full border-stone-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-emerald-300 hover:shadow-md">
+                <Card className="group h-full border-stone-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-slate-300 hover:shadow-md">
                   <CardContent className="p-6">
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-800 ring-1 ring-emerald-100 transition group-hover:bg-emerald-900 group-hover:text-amber-300">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-700 ring-1 ring-slate-100 transition group-hover:bg-slate-800 group-hover:text-yellow-300">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <h3 className="font-serif text-xl text-emerald-950">
+                    <h3 className="font-serif text-xl text-slate-900">
                       {s.title[lang]}
                     </h3>
                     <p className="mt-2 text-sm text-stone-600">{s.blurb[lang]}</p>
@@ -1370,7 +1368,7 @@ export default function App() {
                       <span className="text-xs uppercase tracking-wide text-stone-500">
                         {t("services.rate")}
                       </span>
-                      <span className="font-semibold text-amber-700">
+                      <span className="font-semibold text-yellow-700">
                         {t("services.onrequest")}
                       </span>
                     </div>
@@ -1386,10 +1384,10 @@ export default function App() {
       <section id="team" className="bg-gradient-to-b from-stone-100 to-stone-50">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
           <div className="mb-10 max-w-2xl">
-            <Badge className="mb-3 bg-amber-100 text-amber-900 hover:bg-amber-100">
+            <Badge className="mb-3 bg-yellow-100 text-yellow-900 hover:bg-yellow-100">
               {t("team.badge")}
             </Badge>
-            <h2 className="font-serif text-3xl text-emerald-950 sm:text-4xl">
+            <h2 className="font-serif text-3xl text-slate-900 sm:text-4xl">
               {t("team.title")}
             </h2>
             <p className="mt-3 text-stone-600">
@@ -1407,13 +1405,13 @@ export default function App() {
               >
                 <Card className="h-full border-stone-200 bg-white shadow-sm transition hover:shadow-md">
                   <CardContent className="p-6">
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-900 text-amber-300">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-800 text-yellow-300">
                       <Landmark className="h-6 w-6" />
                     </div>
-                    <h3 className="font-serif text-xl text-emerald-950">
+                    <h3 className="font-serif text-xl text-slate-900">
                       {att.name}
                     </h3>
-                    <p className="text-sm font-medium text-amber-700">
+                    <p className="text-sm font-medium text-yellow-700">
                       {t(`team.${att.role}`)}
                     </p>
                     <Separator className="my-3 bg-stone-200" />
@@ -1429,7 +1427,7 @@ export default function App() {
       </section>
 
       {/* References / Track Record */}
-      <section id="references" className="relative overflow-hidden bg-emerald-950 text-amber-50">
+      <section id="references" className="relative overflow-hidden bg-slate-900 text-yellow-50">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.05]"
           style={{
@@ -1439,25 +1437,25 @@ export default function App() {
         />
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <div className="mb-12 max-w-2xl">
-            <Badge className="mb-3 border-amber-300/40 bg-amber-300/10 text-amber-200 hover:bg-amber-300/10">
+            <Badge className="mb-3 border-yellow-300/40 bg-yellow-300/10 text-yellow-200 hover:bg-yellow-300/10">
               {t("refs.badge")}
             </Badge>
-            <h2 className="font-serif text-3xl text-amber-50 sm:text-4xl">
+            <h2 className="font-serif text-3xl text-yellow-50 sm:text-4xl">
               {t("refs.title")}
             </h2>
-            <p className="mt-3 text-amber-100/80">
+            <p className="mt-3 text-yellow-100/80">
               {t("refs.desc")}
             </p>
           </div>
 
           {/* Stats Bar */}
-          <div className="mb-14 grid grid-cols-1 gap-6 rounded-2xl border border-amber-200/20 bg-emerald-900/40 p-6 backdrop-blur sm:grid-cols-3">
+          <div className="mb-14 grid grid-cols-1 gap-6 rounded-2xl border border-yellow-200/20 bg-slate-800/40 p-6 backdrop-blur sm:grid-cols-3">
             {[1, 2, 3].map((n) => (
               <div key={n} className="text-center">
-                <p className="font-serif text-4xl text-amber-300">
+                <p className="font-serif text-4xl text-yellow-300">
                   {t(`refs.stat${n}.value`)}
                 </p>
-                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-amber-100/70">
+                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-yellow-100/70">
                   {t(`refs.stat${n}.label`)}
                 </p>
               </div>
@@ -1466,7 +1464,7 @@ export default function App() {
 
           {/* Expertise List */}
           <div className="mx-auto max-w-3xl">
-            <h3 className="mb-6 text-center font-serif text-2xl text-amber-50">
+            <h3 className="mb-6 text-center font-serif text-2xl text-yellow-50">
               {t("refs.expertise.title")}
             </h3>
             <ul className="space-y-4">
@@ -1479,12 +1477,12 @@ export default function App() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.3, delay: n * 0.1 }}
-                    className="flex items-start gap-4 rounded-xl border border-amber-200/10 bg-emerald-900/30 p-4"
+                    className="flex items-start gap-4 rounded-xl border border-yellow-200/10 bg-slate-800/30 p-4"
                   >
-                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-500/20 text-amber-300">
+                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-yellow-500/20 text-yellow-300">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <p className="text-sm text-amber-100/90">
+                    <p className="text-sm text-yellow-100/90">
                       {t(`refs.expertise.${n}`)}
                     </p>
                   </motion.li>
@@ -1499,10 +1497,10 @@ export default function App() {
       <section id="book" className="bg-gradient-to-b from-stone-100 to-stone-50">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
           <div className="mb-10 max-w-2xl">
-            <Badge className="mb-3 bg-amber-100 text-amber-900 hover:bg-amber-100">
+            <Badge className="mb-3 bg-yellow-100 text-yellow-900 hover:bg-yellow-100">
               {t("book.badge")}
             </Badge>
-            <h2 className="font-serif text-3xl text-emerald-950 sm:text-4xl">
+            <h2 className="font-serif text-3xl text-slate-900 sm:text-4xl">
               {t("book.title")}
             </h2>
             <p className="mt-3 text-stone-600">
@@ -1520,11 +1518,11 @@ export default function App() {
       <section id="location" className="bg-stone-50">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
           <div className="mb-10 max-w-2xl">
-            <Badge className="mb-3 bg-emerald-100 text-emerald-900 hover:bg-emerald-100">
+            <Badge className="mb-3 bg-slate-100 text-slate-800 hover:bg-slate-100">
               <MapPin className="mr-1 h-3 w-3" />
               {t("location.badge")}
             </Badge>
-            <h2 className="font-serif text-3xl text-emerald-950 sm:text-4xl">
+            <h2 className="font-serif text-3xl text-slate-900 sm:text-4xl">
               {t("location.title")}
             </h2>
             <p className="mt-3 text-stone-600">
@@ -1547,42 +1545,40 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-stone-200 bg-emerald-950 text-amber-50/80">
+      <footer className="border-t border-stone-200 bg-slate-900 text-yellow-50/80">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-4">
           <div className="sm:col-span-2">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500 text-emerald-950">
-                <Scale className="h-5 w-5" />
-              </div>
-              <p className="font-serif text-xl text-amber-50">
+              <img src="/logo.png" alt="H&B Law Firm" className="h-10 w-auto" />
+              <p className="font-serif text-xl text-yellow-50">
                 H&amp;B Law Firm
               </p>
             </div>
-            <p className="mt-3 max-w-sm text-sm text-amber-100/70">
+            <p className="mt-3 max-w-sm text-sm text-yellow-100/70">
               {t("footer.about")}
             </p>
           </div>
           <div>
-            <p className="mb-3 text-xs uppercase tracking-[0.18em] text-amber-300">
+            <p className="mb-3 text-xs uppercase tracking-[0.18em] text-yellow-300">
               {t("footer.contact")}
             </p>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-amber-300" />
+                <Mail className="h-4 w-4 text-yellow-300" />
                 {t("topbar.email")}
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-amber-300" />
+                <Phone className="h-4 w-4 text-yellow-300" />
                 {t("topbar.phone")}
               </li>
               <li className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-amber-300" />
+                <Clock className="h-4 w-4 text-yellow-300" />
                 {t("footer.fax")}
               </li>
             </ul>
           </div>
           <div>
-            <p className="mb-3 text-xs uppercase tracking-[0.18em] text-amber-300">
+            <p className="mb-3 text-xs uppercase tracking-[0.18em] text-yellow-300">
               {t("footer.languages")}
             </p>
             <ul className="space-y-2 text-sm">
@@ -1592,7 +1588,7 @@ export default function App() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-amber-50/10 px-4 py-5 text-center text-xs text-amber-100/60">
+        <div className="border-t border-yellow-50/10 px-4 py-5 text-center text-xs text-yellow-100/60">
           {t("footer.rights", { year: String(new Date().getFullYear()) })}
         </div>
       </footer>
