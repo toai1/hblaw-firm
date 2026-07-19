@@ -11,11 +11,15 @@ app.use(cors());
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.MAIL_USER,
     pass: process.env.MAIL_PASS,
   },
+  tls: { rejectUnauthorized: false },
+  family: 4,
 });
 
 app.post("/api/send-email", async (req, res) => {
