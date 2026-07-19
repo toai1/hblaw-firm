@@ -10,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 const MAIL_TO = process.env.MAIL_TO || "avocat.hanifi@gmail.com";
+const RESEND_KEY = process.env.RESEND_API_KEY;
 
 app.post("/api/send-email", async (req, res) => {
   const { name, phone, email, service, date, slot, notes } = req.body;
@@ -33,43 +34,29 @@ app.post("/api/send-email", async (req, res) => {
 
   try {
     const recipients = MAIL_TO.split(",").map((r) => r.trim());
-    let anySuccess = false;
 
-    for (const to of recipients) {
-      try {
-        const r = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            subject,
-            message: body,
-            _captcha: "false",
-          }),
-        });
+    const r = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${RESEND_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "H&B Booking <onboarding@resend.dev>",
+        to: recipients,
+        subject,
+        text: body,
+        reply_to: email,
+      }),
+    });
 
-        const text = await r.text();
-        try {
-          const json = JSON.parse(text);
-          if (json.success === "true" || json.message) {
-            anySuccess = true;
-          }
-        } catch {
-          console.log(`FormSubmit response for ${to}:`, text.substring(0, 200));
-          anySuccess = true;
-        }
-      } catch (err) {
-        console.error(`FormSubmit error for ${to}:`, err);
-      }
-    }
+    const data = await r.json();
 
-    if (anySuccess) {
+    if (r.ok && data.id) {
+      console.log("Email sent:", data.id);
       res.json({ ok: true });
     } else {
+      console.error("Resend error:", data);
       res.status(500).json({ error: "Failed to send email" });
     }
   } catch (err) {
