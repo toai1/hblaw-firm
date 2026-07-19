@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const MAIL_TO = process.env.MAIL_TO || "avocat.hanifi@gmail.com";
+const MAIL_TO = "aspect.zero04@gmail.com";
 const RESEND_KEY = process.env.RESEND_API_KEY;
 
 app.post("/api/send-email", async (req, res) => {
