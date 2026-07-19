@@ -85,7 +85,7 @@ type AttorneyRole = "founder" | "partner" | "attorney";
 interface Attorney {
   name: string;
   role: AttorneyRole;
-  cred: 1 | 2;
+  desc: Localized;
 }
 
 // ── i18n ───────────────────────────────────────────────────────────────────
@@ -1159,11 +1159,51 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 const ATTORNEYS: Attorney[] = [
-  { name: "Maître HANIFI Boubkeur", role: "founder", cred: 1 },
-  { name: "Maître BENAICHA Houria", role: "partner", cred: 1 },
-  { name: "Maître BENSADOUN Mohamed", role: "partner", cred: 1 },
-  { name: "Maître HANIFI Zakaria", role: "attorney", cred: 2 },
-  { name: "Maître BOUZID Noureddine", role: "attorney", cred: 2 },
+  {
+    name: "Maître HANIFI Boubkeur",
+    role: "founder",
+    desc: {
+      en: "Expert in public procurement law, tax procedures, and contract drafting.",
+      fr: "Spécialiste en droit des marchés publics, procédures fiscales et rédaction de contrats.",
+      ar: "متخصص في قانون المناقصات العامة، والإجراءات الضريبية، وصياغة العقود.",
+    },
+  },
+  {
+    name: "Maître BENAICHA Houria",
+    role: "partner",
+    desc: {
+      en: "Specializing in family law and criminal procedure.",
+      fr: "Spécialisée en droit de la famille et procédure pénale.",
+      ar: "متخصصة في قانون الأسرة والإجراءات الجنائية.",
+    },
+  },
+  {
+    name: "Maître BENSADOUN Mohamed",
+    role: "attorney",
+    desc: {
+      en: "Experienced in property law and real estate transactions.",
+      fr: "Expérimenté en droit de la propriété et transactions immobilières.",
+      ar: "ذو خبرة في قانون العقارات وصفقات العقارات.",
+    },
+  },
+  {
+    name: "Maître HANIFI Zakaria",
+    role: "attorney",
+    desc: {
+      en: "Penalist specializing in criminal law, contracts, and liability.",
+      fr: "Pénaliste spécialisé en droit pénal, contrats et responsabilité.",
+      ar: "متخصص في القانون الجنائي، والعقود، والمسؤولية.",
+    },
+  },
+  {
+    name: "Maître BOUZID Noureddine",
+    role: "attorney",
+    desc: {
+      en: "Experienced in civil law and cyber & electronic crimes law.",
+      fr: "Expérimenté en droit civil et droit de la cybercriminalité et des crimes électroniques.",
+      ar: "ذو خبرة في القانون المدني وقانون الجرائم الإلكترونية وال virtuelle.",
+    },
+  },
 ];
 
 const EXPERTISE_ICONS = [HardHat, Gavel, Building];
@@ -1416,7 +1456,7 @@ export default function App() {
                     </p>
                     <Separator className="my-3 bg-stone-200" />
                     <p className="text-sm text-stone-600">
-                      {t(`team.cred${att.cred}`)}
+                      {att.desc[lang]}
                     </p>
                   </CardContent>
                 </Card>
