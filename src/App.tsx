@@ -1275,7 +1275,7 @@ export default function App() {
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
-            <div className="relative mx-auto mb-6 flex h-56 w-56 items-center justify-center rounded-full border border-yellow-200/20 bg-white/10 shadow-[0_0_60px_rgba(251,191,36,0.15)] backdrop-blur-sm md:h-72 md:w-72">
+            <div className="mb-6 flex items-center justify-center">
               <img
                 src="/logo.png"
                 alt="H&B Law Firm"
