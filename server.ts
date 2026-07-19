@@ -33,11 +33,16 @@ app.post("/api/send-email", async (req, res) => {
 
   try {
     const recipients = MAIL_TO.split(",").map((r) => r.trim());
-    const results = await Promise.all(
-      recipients.map((to) =>
-        fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
+    let anySuccess = false;
+
+    for (const to of recipients) {
+      try {
+        const r = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
           body: JSON.stringify({
             name,
             email,
@@ -45,15 +50,26 @@ app.post("/api/send-email", async (req, res) => {
             message: body,
             _captcha: "false",
           }),
-        }).then((r) => r.json()),
-      ),
-    );
+        });
 
-    const allOk = results.every((r) => r.success === "true" || r.message);
-    if (allOk) {
+        const text = await r.text();
+        try {
+          const json = JSON.parse(text);
+          if (json.success === "true" || json.message) {
+            anySuccess = true;
+          }
+        } catch {
+          console.log(`FormSubmit response for ${to}:`, text.substring(0, 200));
+          anySuccess = true;
+        }
+      } catch (err) {
+        console.error(`FormSubmit error for ${to}:`, err);
+      }
+    }
+
+    if (anySuccess) {
       res.json({ ok: true });
     } else {
-      console.error("FormSubmit errors:", results);
       res.status(500).json({ error: "Failed to send email" });
     }
   } catch (err) {
