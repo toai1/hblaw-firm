@@ -109,11 +109,8 @@ const en: Dict = {
   "topbar.phone": "+213 661 53 18 65",
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
-  "hero.badge": "Est. 1985 · 40+ years of counsel",
-  "hero.title": "Legal counsel for infrastructure and corporate matters.",
-  "hero.desc": "H&B Law Firm is a Civil Professional Company of Lawyers led by Maître HANIFI Boubkeur, providing rigorous representation in public projects, contract law, and international arbitration.",
+  "hero.tagline": "Over forty years of experience at the service of businesses, institutions, and individuals.",
   "hero.cta.book": "Reserve a consultation",
-  "hero.cta.team": "Meet the team",
   "hero.stat.years": "Years practice",
   "hero.stat.attorneys": "Attorneys at Law",
   "hero.stat.clients": "Major Clients",
@@ -194,9 +191,7 @@ const fr: Dict = {
   "topbar.phone": "+213 661 53 18 65",
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
-  "hero.badge": "Depuis 1985 · 40+ ans d'expérience",
-  "hero.title": "Conseil juridique en infrastructure et droit des sociétés.",
-  "hero.desc": "Le Cabinet H&B est une Société Civile Professionnelle d'Avocats dirigée par Maître HANIFI Boubkeur, offrant une représentation rigoureuse dans les projets publics, le droit des contrats et l'arbitrage international.",
+  "hero.tagline": "Plus de quarante ans d'expérience au service des entreprises, des institutions et des particuliers.",
   "hero.cta.book": "Réserver une consultation",
   "hero.cta.team": "Rencontrer l'équipe",
   "hero.stat.years": "Ans de pratique",
@@ -279,9 +274,7 @@ const ar: Dict = {
   "topbar.phone": "+213 661 53 18 65",
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
-  "hero.badge": "تأسست 1985 · أكثر من 40 عامًا من الخبرة",
-  "hero.title": "استشارات قانونية في البنية التحتية والشركات.",
-  "hero.desc": "مكتب H&B هو شركة مدنية مهنية للمحامين يديرها الأستاذ حنيفي بوبكر، يقدم تمثيلاً قانونياً دقيقاً في المشاريع العامة وقانون العقود والتحكيم الدولي.",
+  "hero.tagline": "أكثر من أربعين عامًا من الخبرة في خدمة الشركات والمؤسسات والأفراد.",
   "hero.cta.book": "احجز استشارة",
   "hero.cta.team": "تعرف على الفريق",
   "hero.stat.years": "سنوات الممارسة",
@@ -457,17 +450,6 @@ const SERVICES: Service[] = [
     },
     rate: "onrequest",
     icon: "Building2",
-  },
-  {
-    id: "international-arbitration",
-    title: { en: "International Arbitration", fr: "Arbitrage International", ar: "التحكيم الدولي" },
-    blurb: {
-      en: "Support and accompaniment in international arbitration proceedings for cross-border disputes.",
-      fr: "Accompagnement dans les procédures d'arbitrage international pour les litiges transfrontaliers.",
-      ar: "دعم ومرافقة في إجراءات التحكيم الدولي للنزاعات العابرة للحدود.",
-    },
-    rate: "onrequest",
-    icon: "Globe",
   },
   {
     id: "corporate-law",
@@ -1288,81 +1270,44 @@ export default function App() {
               "radial-gradient(circle at 20% 20%, #fbbf24 0, transparent 40%), radial-gradient(circle at 80% 60%, #34d399 0, transparent 45%)",
           }}
         />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 md:grid-cols-[1.4fr_1fr] md:py-24">
-          <div>
-            <Badge className="mb-5 border-yellow-300/40 bg-yellow-300/10 text-yellow-200 hover:bg-yellow-300/10">
-              <ShieldCheck className="mr-1.5 h-3.5 w-3.5" />
-              {t("hero.badge")}
-            </Badge>
-            <motion.h1
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="font-serif text-4xl leading-tight text-yellow-50 sm:text-5xl md:text-6xl"
-            >
-              {t("hero.title")}
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="mt-5 max-w-xl text-lg text-yellow-100/80"
-            >
-              {t("hero.desc")}
-            </motion.p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Button
-                asChild
-                size="lg"
-                className="bg-yellow-500 text-slate-900 shadow hover:bg-yellow-400"
-              >
-                <a href="#book">{t("hero.cta.book")}</a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-yellow-200/40 bg-transparent text-yellow-50 hover:bg-yellow-50/10 hover:text-yellow-50"
-              >
-                <a href="#team">{t("hero.cta.team")}</a>
-              </Button>
-            </div>
-            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-yellow-100/80">
-              <div>
-                <p className="font-serif text-2xl text-yellow-50">40+</p>
-                <p className="uppercase tracking-wide text-xs">{t("hero.stat.years")}</p>
-              </div>
-              <Separator
-                orientation="vertical"
-                className="hidden h-10 bg-yellow-200/30 sm:block"
-              />
-              <div>
-                <p className="font-serif text-2xl text-yellow-50">5</p>
-                <p className="uppercase tracking-wide text-xs">{t("hero.stat.attorneys")}</p>
-              </div>
-            </div>
-          </div>
-
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 py-16 text-center md:py-24">
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-            className="relative mx-auto w-full max-w-sm"
+            transition={{ duration: 0.5 }}
+            className="mb-8"
           >
-            <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-yellow-200/20 shadow-2xl">
-              <img
-                src="/hero.jpg"
-                alt="H&B Law Firm"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-5 -left-5 hidden rounded-xl border border-stone-200 bg-stone-50 p-4 text-slate-900 shadow-lg sm:block">
-              <p className="font-serif text-lg">{t("hero.card.title")}</p>
-              <p className="text-xs uppercase tracking-[0.18em] text-stone-500">
-                {t("hero.card.loc")}
-              </p>
-            </div>
+            <img
+              src="/logo.png"
+              alt="H&B Law Firm"
+              className="h-40 w-auto md:h-52"
+            />
           </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="max-w-2xl text-lg text-yellow-100/80 md:text-xl"
+          >
+            {t("hero.tagline")}
+          </motion.p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <Button
+              asChild
+              size="lg"
+              className="bg-yellow-500 text-slate-900 shadow hover:bg-yellow-400"
+            >
+              <a href="#book">{t("hero.cta.book")}</a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-yellow-200/40 bg-transparent text-yellow-50 hover:bg-yellow-50/10 hover:text-yellow-50"
+            >
+              <a href="#team">{t("hero.cta.team")}</a>
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -1372,12 +1317,6 @@ export default function App() {
           <Badge className="mb-3 bg-slate-100 text-slate-800 hover:bg-slate-100">
             {t("services.badge")}
           </Badge>
-          <h2 className="font-serif text-3xl text-slate-900 sm:text-4xl">
-            {t("services.title")}
-          </h2>
-          <p className="mt-3 text-stone-600">
-            {t("services.desc")}
-          </p>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => {
