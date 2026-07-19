@@ -118,6 +118,11 @@ const en: Dict = {
   "hero.card.title": "S.C.P.A",
   "hero.card.loc": "Algiers, Algeria",
   "services.badge": "Practice Areas",
+  "pres.badge": "About Us",
+  "pres.title": "Maître Hanifi & Associés",
+  "pres.p1": "Founded on a rigorous vision of the legal profession, the law firm Maître Hanifi & Associés has been supporting businesses, public institutions, investors, and individuals with their most complex legal challenges for over forty years.",
+  "pres.p2": "Our firm operates in both advisory and litigation capacities, with an approach rooted in legal rigor, confidentiality, availability, and the constant pursuit of effective solutions.",
+  "pres.p3": "Our team brings together lawyers with complementary expertise to offer comprehensive support covering the main areas of law.",
   "services.title": "Areas of Expertise",
   "services.desc": "From contract negotiation to international arbitration, we provide comprehensive legal support for your most complex projects.",
   "services.rate": "Initial consult",
@@ -200,6 +205,11 @@ const fr: Dict = {
   "hero.card.title": "S.C.P.A",
   "hero.card.loc": "Alger, Algérie",
   "services.badge": "Domaines de pratique",
+  "pres.badge": "À propos",
+  "pres.title": "Maître Hanifi & Associés",
+  "pres.p1": "Fondé sur une vision rigoureuse de la profession d'avocat, le cabinet Maître Hanifi & Associés accompagne les entreprises, les institutions publiques, les investisseurs et les particuliers dans leurs défis juridiques les plus complexes depuis plus de quarante ans.",
+  "pres.p2": "Notre cabinet intervient tant en conseil qu'en contentieux, avec une approche ancrée dans la rigueur juridique, la confidentialité, la disponibilité et la recherche constante de solutions efficaces.",
+  "pres.p3": "Notre équipe réunit des avocats aux compétences complémentaires pour offrir un accompagnement couvrant les principaux domaines du droit.",
   "services.title": "Domaines de Compétence",
   "services.desc": "De la négociation de contrats à l'arbitrage international, nous offrons un soutien juridique complet pour vos projets les plus complexes.",
   "services.rate": "Consultation initiale",
@@ -282,6 +292,11 @@ const ar: Dict = {
   "hero.card.title": "S.C.P.A",
   "hero.card.loc": "الجزائر العاصمة، الجزائر",
   "services.badge": "مجالات الممارسة",
+  "pres.badge": "من نحن",
+  "pres.title": "مكتب الأستاذ حنيفي وشركاه",
+  "pres.p1": "تأسس مكتب الأستاذ حنيفي وشركاه على رؤية رصينة لمهنة المحاماة، وهو يرافق الشركات والمؤسسات العامة والمستثمرين والأفراد في أصعب تحدياتهم القانونية منذ أكثر من أربعين عامًا.",
+  "pres.p2": "يعمل مكتبنا في الاستشارات وال CONTENTIEUX، مع نهج يرتكز على الدقة القانونية والسرية والتوفر والسعي الدائم نحو حلول فعّالة.",
+  "pres.p3": "يجمع فريقنا بين محامين ذوي خبرات مكملة لتقديم دعم شامل يغطي المجالات الرئيسية للقانون.",
   "services.title": "مجالات الخبرة",
   "services.desc": "من التفاوض على العقود إلى التحكيم الدولي، نقدم دعماً قانونياً شاملاً لمشاريعك الأكثر تعقيداً.",
   "services.rate": "استشارة أولية",
@@ -1307,6 +1322,45 @@ export default function App() {
             >
               <a href="#team">{t("hero.cta.team")}</a>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Presentation */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
+          <div className="grid items-center gap-8 md:grid-cols-[1fr_1.2fr]">
+            <motion.div
+              initial={{ opacity: 0, x: -16 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.45 }}
+              className="overflow-hidden rounded-2xl shadow-lg"
+            >
+              <img
+                src="/presentation.jpg"
+                alt="H&B Law Firm"
+                className="h-full w-full object-cover"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 16 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.45, delay: 0.1 }}
+            >
+              <Badge className="mb-3 bg-slate-100 text-slate-800 hover:bg-slate-100">
+                {t("pres.badge")}
+              </Badge>
+              <h2 className="font-serif text-2xl text-slate-900 sm:text-3xl">
+                {t("pres.title")}
+              </h2>
+              <div className="mt-4 space-y-3 text-sm leading-relaxed text-stone-600">
+                <p>{t("pres.p1")}</p>
+                <p>{t("pres.p2")}</p>
+                <p>{t("pres.p3")}</p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
