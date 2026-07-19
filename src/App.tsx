@@ -1312,13 +1312,13 @@ export default function App() {
       </section>
 
       {/* Practice Areas + Our Team */}
-      <section id="services" className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-        <div className="mb-10 max-w-2xl">
-          <Badge className="mb-3 bg-slate-100 text-slate-800 hover:bg-slate-100">
+      <section id="services" className="mx-auto max-w-6xl px-4 py-10 md:py-14">
+        <div className="mb-6 max-w-2xl">
+          <Badge className="mb-2 bg-slate-100 text-slate-800 hover:bg-slate-100">
             {t("services.badge")}
           </Badge>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => {
             const Icon = ICONS[s.icon] ?? ScrollText;
             return (
@@ -1330,23 +1330,14 @@ export default function App() {
                 transition={{ duration: 0.35, delay: i * 0.05 }}
               >
                 <Card className="group h-full border-stone-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-slate-300 hover:shadow-md">
-                  <CardContent className="p-6">
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-700 ring-1 ring-slate-100 transition group-hover:bg-slate-800 group-hover:text-yellow-300">
-                      <Icon className="h-6 w-6" />
+                  <CardContent className="p-4">
+                    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-slate-50 text-slate-700 ring-1 ring-slate-100 transition group-hover:bg-slate-800 group-hover:text-yellow-300">
+                      <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="font-serif text-xl text-slate-900">
+                    <h3 className="font-serif text-lg text-slate-900">
                       {s.title[lang]}
                     </h3>
-                    <p className="mt-2 text-sm text-stone-600">{s.blurb[lang]}</p>
-                    <Separator className="my-4 bg-stone-200" />
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs uppercase tracking-wide text-stone-500">
-                        {t("services.rate")}
-                      </span>
-                      <span className="font-semibold text-yellow-700">
-                        {t("services.onrequest")}
-                      </span>
-                    </div>
+                    <p className="mt-1 text-xs text-stone-600">{s.blurb[lang]}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -1354,21 +1345,18 @@ export default function App() {
           })}
         </div>
 
-        <Separator className="my-14 bg-stone-200" />
+        <Separator className="my-8 bg-stone-200" />
 
         <div id="team">
-          <div className="mb-10 max-w-2xl">
-            <Badge className="mb-3 bg-yellow-100 text-yellow-900 hover:bg-yellow-100">
+          <div className="mb-6 max-w-2xl">
+            <Badge className="mb-2 bg-yellow-100 text-yellow-900 hover:bg-yellow-100">
               {t("team.badge")}
             </Badge>
-            <h2 className="font-serif text-3xl text-slate-900 sm:text-4xl">
+            <h2 className="font-serif text-2xl text-slate-900 sm:text-3xl">
               {t("team.title")}
             </h2>
-            <p className="mt-3 text-stone-600">
-              {t("team.desc")}
-            </p>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {ATTORNEYS.map((att, i) => (
               <motion.div
                 key={att.name}
@@ -1378,18 +1366,17 @@ export default function App() {
                 transition={{ duration: 0.35, delay: i * 0.05 }}
               >
                 <Card className="h-full border-stone-200 bg-white shadow-sm transition hover:shadow-md">
-                  <CardContent className="p-6">
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-800 text-yellow-300">
-                      <Landmark className="h-6 w-6" />
+                  <CardContent className="p-4">
+                    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-slate-800 text-yellow-300">
+                      <Landmark className="h-5 w-5" />
                     </div>
-                    <h3 className="font-serif text-xl text-slate-900">
+                    <h3 className="font-serif text-lg text-slate-900">
                       {att.name}
                     </h3>
-                    <p className="text-sm font-medium text-yellow-700">
+                    <p className="text-xs font-medium text-yellow-700">
                       {t(`team.${att.role}`)}
                     </p>
-                    <Separator className="my-3 bg-stone-200" />
-                    <p className="text-sm text-stone-600">
+                    <p className="mt-1 text-xs text-stone-600">
                       {att.desc[lang]}
                     </p>
                   </CardContent>
