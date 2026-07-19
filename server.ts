@@ -1,9 +1,6 @@
 import "dotenv/config";
-import dns from "dns";
-dns.setDefaultResultOrder("ipv4first");
 import express from "express";
 import cors from "cors";
-import nodemailer from "nodemailer";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -12,18 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  requireTLS: true,
-  auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASS,
-  },
-  tls: { rejectUnauthorized: false },
-  family: 4,
-});
+const MAIL_TO = process.env.MAIL_TO || "avocat.hanifi@gmail.com";
 
 app.post("/api/send-email", async (req, res) => {
   const { name, phone, email, service, date, slot, notes } = req.body;
@@ -46,14 +32,30 @@ app.post("/api/send-email", async (req, res) => {
   ].join("\n");
 
   try {
-    await transporter.sendMail({
-      from: `"H&B Booking" <${process.env.MAIL_USER}>`,
-      to: process.env.MAIL_TO,
-      replyTo: email,
-      subject,
-      text: body,
-    });
-    res.json({ ok: true });
+    const recipients = MAIL_TO.split(",").map((r) => r.trim());
+    const results = await Promise.all(
+      recipients.map((to) =>
+        fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            email,
+            subject,
+            message: body,
+            _captcha: "false",
+          }),
+        }).then((r) => r.json()),
+      ),
+    );
+
+    const allOk = results.every((r) => r.success === "true" || r.message);
+    if (allOk) {
+      res.json({ ok: true });
+    } else {
+      console.error("FormSubmit errors:", results);
+      res.status(500).json({ error: "Failed to send email" });
+    }
   } catch (err) {
     console.error("Email error:", err);
     res.status(500).json({ error: "Failed to send email" });
