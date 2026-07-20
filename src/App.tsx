@@ -48,12 +48,15 @@ function cn(...inputs: ClassValue[]) {
 type Lang = "en" | "fr" | "ar";
 
 type ServiceId =
-  | "contract-drafting"
-  | "contract-management"
-  | "dispute-resolution"
-  | "infrastructure-projects"
-  | "international-arbitration"
-  | "corporate-law";
+  | "public-procurement"
+  | "business-law"
+  | "corporate-law"
+  | "arbitration-mediation"
+  | "tax-law"
+  | "criminal-law"
+  | "land-real-estate"
+  | "labor-family"
+  | "intellectual-property";
 
 interface Localized {
   en: string;
@@ -102,14 +105,14 @@ type Dict = Record<string, string>;
 const en: Dict = {
   "nav.practice": "Practice",
   "nav.team": "Team",
-  "nav.references": "Track Record",
   "nav.consult": "Consult",
   "nav.location": "Location",
   "cta.book": "Book Now",
   "topbar.phone": "+213 661 53 18 65",
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
-  "hero.tagline": "Over forty years of experience at the service of businesses, institutions, and individuals.",
+  "hero.tagline": "Legal excellence at the service of your ambitions.",
+  "hero.subtitle": "Legal excellence at the service of your ambitions.",
   "hero.cta.book": "Reserve a consultation",
   "hero.cta.team": "Meet the team",
   "hero.stat.years": "Years practice",
@@ -120,9 +123,10 @@ const en: Dict = {
   "services.badge": "Practice Areas",
   "pres.badge": "About Us",
   "pres.title": "Maître Hanifi & Associés",
-  "pres.p1": "Founded on a rigorous vision of the legal profession, the law firm Maître Hanifi & Associés has been supporting businesses, public institutions, investors, and individuals with their most complex legal challenges for over forty years.",
-  "pres.p2": "Our firm operates in both advisory and litigation capacities, with an approach rooted in legal rigor, confidentiality, availability, and the constant pursuit of effective solutions.",
-  "pres.p3": "Our team brings together lawyers with complementary expertise to offer comprehensive support covering the main areas of law.",
+  "pres.p1": "The firm supports businesses, institutions, and individuals in legal risk prevention, strategic counseling, negotiation, and the defense of their interests.",
+  "pres.p2": "Our team combines complementary skills to offer comprehensive support across the main areas of law. We prioritize an approach built on active listening, legal rigor, confidentiality, and the pursuit of solutions tailored to each client's objectives.",
+  "pres.p3": "With over forty years of experience, the firm has developed recognized expertise in business law, public procurement, arbitration, taxation, and litigation, while expanding its capabilities to meet the emerging challenges of digital law and artificial intelligence.",
+  "pres.p4": "Our mission is to transform legal complexity into clear, strategic solutions tailored to our clients' needs.",
   "services.title": "Areas of Expertise",
   "services.desc": "From contract negotiation to international arbitration, we provide comprehensive legal support for your most complex projects.",
   "services.rate": "Initial consult",
@@ -135,18 +139,6 @@ const en: Dict = {
   "team.attorney": "Attorney",
   "team.cred1": "Attorney at the Court, accredited by the Supreme Court and the Council of State",
   "team.cred2": "Member of the World Order of International Experts (OMEI – Geneva)",
-  "refs.badge": "Track Record",
-  "refs.title": "Four Decades of Landmark Projects",
-  "refs.desc": "We have guided major national and international public and mixed companies through complex infrastructure and construction mandates.",
-  "refs.stat1.value": "40+",
-  "refs.stat1.label": "Years of Practice",
-  "refs.stat2.value": "11+",
-  "refs.stat2.label": "Major Clients Assisted",
-  "refs.stat3.value": "3",
-  "refs.stat3.label": "International Arbitrations",
-  "refs.expertise.title": "Selected Expertise",
-  "refs.expertise.1": "Drafting all types of contracts, dispute resolution, and legal support for highway, industrial, and port projects.",
-  "refs.expertise.2": "Assistance to public and private project owners, engineering firms, and project management teams.",
   "book.badge": "Consultation",
   "book.title": "Reserve your appointment",
   "book.desc": "Choose a practice area, pick a time that suits you, and your email client will open to send the request to our attorneys.",
@@ -189,14 +181,14 @@ const en: Dict = {
 const fr: Dict = {
   "nav.practice": "Pratique",
   "nav.team": "Équipe",
-  "nav.references": "Réalisations",
   "nav.consult": "Consultation",
   "nav.location": "Emplacement",
   "cta.book": "Réserver",
   "topbar.phone": "+213 661 53 18 65",
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
-  "hero.tagline": "Plus de quarante ans d'expérience au service des entreprises, des institutions et des particuliers.",
+  "hero.tagline": "L'excellence juridique au service de vos ambitions.",
+  "hero.subtitle": "L'excellence juridique au service de vos ambitions.",
   "hero.cta.book": "Réserver une consultation",
   "hero.cta.team": "Rencontrer l'équipe",
   "hero.stat.years": "Ans de pratique",
@@ -207,9 +199,10 @@ const fr: Dict = {
   "services.badge": "Domaines de pratique",
   "pres.badge": "À propos",
   "pres.title": "Maître Hanifi & Associés",
-  "pres.p1": "Fondé sur une vision rigoureuse de la profession d'avocat, le cabinet Maître Hanifi & Associés accompagne les entreprises, les institutions publiques, les investisseurs et les particuliers dans leurs défis juridiques les plus complexes depuis plus de quarante ans.",
-  "pres.p2": "Notre cabinet intervient tant en conseil qu'en contentieux, avec une approche ancrée dans la rigueur juridique, la confidentialité, la disponibilité et la recherche constante de solutions efficaces.",
-  "pres.p3": "Notre équipe réunit des avocats aux compétences complémentaires pour offrir un accompagnement couvrant les principaux domaines du droit.",
+  "pres.p1": "Le cabinet accompagne les entreprises, les institutions et les particuliers dans la prévention des risques juridiques, le conseil stratégique, la négociation et la défense de leurs intérêts.",
+  "pres.p2": "Notre équipe allie des compétences complémentaires pour offrir un accompagnement global dans les principaux domaines du droit. Nous privilégions une approche fondée sur l'écoute active, la rigueur juridique, la confidentialité et la recherche de solutions adaptées aux objectifs de chaque client.",
+  "pres.p3": "Avec plus de quarante ans d'expérience, le cabinet a développé une expertise reconnue en droit des affaires, marchés publics, arbitrage, fiscalité et contentieux, tout en élargissant ses compétences pour répondre aux défis émergents du droit du numérique et de l'intelligence artificielle.",
+  "pres.p4": "Notre mission est de transformer la complexité juridique en solutions claires et stratégiques adaptées aux besoins de nos clients.",
   "services.title": "Domaines de Compétence",
   "services.desc": "De la négociation de contrats à l'arbitrage international, nous offrons un soutien juridique complet pour vos projets les plus complexes.",
   "services.rate": "Consultation initiale",
@@ -222,18 +215,6 @@ const fr: Dict = {
   "team.attorney": "Avocat",
   "team.cred1": "Avocat à la Cour, agréé près du Tribunal Suprême et du Conseil d'État",
   "team.cred2": "Membre de l'Ordre Mondial des Experts Internationaux (OMEI – Genève)",
-  "refs.badge": "Réalisations",
-  "refs.title": "Quatre Décennies de Projets Majeurs",
-  "refs.desc": "Nous avons accompagné de grandes sociétés publiques et mixtes, nationales et internationales, dans des mandats complexes d'infrastructure et de construction.",
-  "refs.stat1.value": "40+",
-  "refs.stat1.label": "Ans de Pratique",
-  "refs.stat2.value": "11+",
-  "refs.stat2.label": "Grands Clients Assistés",
-  "refs.stat3.value": "3",
-  "refs.stat3.label": "Arbitrages Internationaux",
-  "refs.expertise.title": "Expertise Sélectionnée",
-  "refs.expertise.1": "Élaboration de tous types de marchés, traitement des litiges, appui juridique en projets autoroutiers, industriels et portuaires.",
-  "refs.expertise.2": "Assistance aux maîtres d'ouvrages publics et privés, bureaux d'études et directions de projets.",
   "book.badge": "Consultation",
   "book.title": "Réservez votre rendez-vous",
   "book.desc": "Choisissez un domaine de pratique, sélectionnez une heure qui vous convient, et votre client de messagerie s'ouvrira pour envoyer la demande à nos avocats.",
@@ -276,14 +257,14 @@ const fr: Dict = {
 const ar: Dict = {
   "nav.practice": "الممارسة",
   "nav.team": "الفريق",
-  "nav.references": "سجل الإنجازات",
   "nav.consult": "استشارة",
   "nav.location": "الموقع",
   "cta.book": "احجز الآن",
   "topbar.phone": "+213 661 53 18 65",
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
-  "hero.tagline": "أكثر من أربعين عامًا من الخبرة في خدمة الشركات والمؤسسات والأفراد.",
+  "hero.tagline": "التميز القانوني في خدمة طموحاتك.",
+  "hero.subtitle": "التميز القانوني في خدمة طموحاتك.",
   "hero.cta.book": "احجز استشارة",
   "hero.cta.team": "تعرف على الفريق",
   "hero.stat.years": "سنوات الممارسة",
@@ -294,9 +275,10 @@ const ar: Dict = {
   "services.badge": "مجالات الممارسة",
   "pres.badge": "من نحن",
   "pres.title": "مكتب الأستاذ حنيفي وشركاه",
-  "pres.p1": "تأسس مكتب الأستاذ حنيفي وشركاه على رؤية رصينة لمهنة المحاماة، وهو يرافق الشركات والمؤسسات العامة والمستثمرين والأفراد في أصعب تحدياتهم القانونية منذ أكثر من أربعين عامًا.",
-  "pres.p2": "يعمل مكتبنا في الاستشارات وال CONTENTIEUX، مع نهج يرتكز على الدقة القانونية والسرية والتوفر والسعي الدائم نحو حلول فعّالة.",
-  "pres.p3": "يجمع فريقنا بين محامين ذوي خبرات مكملة لتقديم دعم شامل يغطي المجالات الرئيسية للقانون.",
+  "pres.p1": "يرافق المكتب الشركات والمؤسسات والأفراد في الوقاية من المخاطر القانونية والاستشارات الاستراتيجية والتفاوض والدفاع عن مصالحهم.",
+  "pres.p2": "يجمع فريقنا بين مهارات مكملة لتقديم دعم شامل عبر المجالات الرئيسية للقانون. نحن نعطي الأولوية لنهج يرتكز على الاستماع الفعال والدقة القانونية والسرية والسعي نحو حلول مصممة وفق أهداف كل عميل.",
+  "pres.p3": "بخبرة تمتد لأكثر من أربعين عامًا، طوّر المكتب خبرة معترف بها في قانون الأعمال والمناقصات العامة والتحكيم والضرائب والDUCTIEUX، ووسع قدراته لmeet تحديات قانوني الرقمي والذكاء الاصطناعي الناشئة.",
+  "pres.p4": "مهمتنا هي تحويل التعقيد القانوني إلى حلول واضحة واستراتيجية مصممة وفق احتياجات عملائنا.",
   "services.title": "مجالات الخبرة",
   "services.desc": "من التفاوض على العقود إلى التحكيم الدولي، نقدم دعماً قانونياً شاملاً لمشاريعك الأكثر تعقيداً.",
   "services.rate": "استشارة أولية",
@@ -309,18 +291,6 @@ const ar: Dict = {
   "team.attorney": "محامٍ",
   "team.cred1": "محامٍ في المحكمة، معتمد لدى المحكمة العليا ومجلس الدولة",
   "team.cred2": "عضو في النظام العالمي للخبراء الدوليين (OMEI – جنيف)",
-  "refs.badge": "سجل الإنجازات",
-  "refs.title": "أربعة عقود من المشاريع البارزة",
-  "refs.desc": "لقد قمنا بتوجيه كبرى الشركات العامة والمختلطة الوطنية والدولية خلال تكليفات البنية التحتية والإنشاءات المعقدة.",
-  "refs.stat1.value": "+40",
-  "refs.stat1.label": "سنوات من الممارسة",
-  "refs.stat2.value": "+11",
-  "refs.stat2.label": "عملاء كبار تمت مساعدتهم",
-  "refs.stat3.value": "3",
-  "refs.stat3.label": "تحكيمات دولية",
-  "refs.expertise.title": "خبرة مختارة",
-  "refs.expertise.1": "صياغة جميع أنواع العقود، وتسوية النزاعات، والدعم القانوني لمشاريع الطرق السريعة والصناعية والموانئ.",
-  "refs.expertise.2": "المساعدة لأصحاب المشاريع العامة والخاصة، ومكاتب الهندسة، وفرق إدارة المشاريع.",
   "book.badge": "استشارة",
   "book.title": "احجز موعدك",
   "book.desc": "اختر مجال الممارسة، واختر الوقت الذي يناسبك، وسيتم فتح برنامج البريد الإلكتروني الخاص بك لإرسال الطلب إلى محامينا.",
@@ -421,59 +391,103 @@ function dir(): "ltr" | "rtl" {
 
 const SERVICES: Service[] = [
   {
-    id: "contract-drafting",
-    title: { en: "Contract Drafting & Negotiation", fr: "Rédaction et Négociation de Contrats", ar: "صياغة وتفاوض العقود" },
+    id: "public-procurement",
+    title: { en: "🏛️ Public Procurement", fr: "🏛️ Marchés Publics", ar: "🏛️ المناقصات العامة" },
     blurb: {
-      en: "Drafting and negotiation of administrative and legal specifications, analysis of bids, and execution of contracts.",
-      fr: "Élaboration et négociation de cahiers des charges administratifs et juridiques, analyse des offres et exécution des contrats.",
-      ar: "صياغة وتفاوض دفاتر الشروط الإدارية والقانونية، وتحليل العطاءات، وتنفيذ العقود.",
-    },
-    rate: "onrequest",
-    icon: "FileSignature",
-  },
-  {
-    id: "contract-management",
-    title: { en: "Contract Management & Claims", fr: "Gestion des Contrats et Réclamations", ar: "إدارة العقود والمطالبات" },
-    blurb: {
-      en: "Contract management monitoring, contractual administration, handling claims and amendments for major projects.",
-      fr: "Suivi de gestion contractuelle, administration contractuelle, traitement des réclamations et avenants pour les grands projets.",
-      ar: "متابعة إدارة العقود، والإدارة التعاقدية، والتعامل مع المطالبات والتعديلات للمشاريع الكبرى.",
-    },
-    rate: "onrequest",
-    icon: "ScrollText",
-  },
-  {
-    id: "dispute-resolution",
-    title: { en: "Dispute Resolution & Mediation", fr: "Règlement des Litiges et Médiation", ar: "تسوية النزاعات والوساطة" },
-    blurb: {
-      en: "Amicable dispute resolution, extrajudicial mediation, and legal support for litigation of all types of contracts.",
-      fr: "Règlement amiable des litiges, médiation extrajudiciaire et appui juridique pour les litiges de tous types de contrats.",
-      ar: "تسوية النزاعات ودياً، والوساطة خارج المحكمة، والدعم القانوني للنزاعات لجميع أنواع العقود.",
-    },
-    rate: "onrequest",
-    icon: "Scale",
-  },
-  {
-    id: "infrastructure-projects",
-    title: { en: "Infrastructure & Public Projects", fr: "Infrastructure et Projets Publics", ar: "البنية التحتية والمشاريع العامة" },
-    blurb: {
-      en: "Expertise in public projects, highways, and infrastructure. Legal support for industrial and port projects.",
-      fr: "Expertise dans les projets publics, autoroutiers et d'infrastructure. Appui juridique pour les projets industriels et portuaires.",
-      ar: "خبرة في المشاريع العامة والطرق السريعة والبنية التحتية. دعم قانوني للمشاريع الصناعية والموانئ.",
+      en: "Public procurement is one of the firm's core areas of excellence. With several decades of experience, we support businesses, public entities, and investors through every stage of their operations, from the preparation of bids to the resolution of disputes.",
+      fr: "Les marchés publics constituent l'un des domaines d'excellence du cabinet. Avec plusieurs décennies d'expérience, nous accompagnons les entreprises, les entités publiques et les investisseurs à chaque étape de leurs opérations, de la préparation des offres à la résolution des litiges.",
+      ar: "المناقصات العامة هي إحدى مجالات التميز الأساسية للمكتب. مع عقود من الخبرة، نرافق الشركات والكيانات العامة والمستثمرين في كل مرحلة من مراحل عملياتهم، من إعداد العروض إلى حل النزاعات.",
     },
     rate: "onrequest",
     icon: "Building2",
   },
   {
-    id: "corporate-law",
-    title: { en: "Corporate & Employment Law", fr: "Droit des Sociétés et du Travail", ar: "قانون الشركات والعمل" },
+    id: "business-law",
+    title: { en: "💼 Business Law", fr: "💼 Droit des Affaires", ar: "💼 قانون الأعمال" },
     blurb: {
-      en: "Drafting statutes for Algerian companies, internal regulations, collective agreements, and employment contracts.",
-      fr: "Élaboration des statuts des sociétés algériennes, règlements intérieurs, conventions collectives et contrats de travail.",
-      ar: "صياغة أنظمة الشركات الجزائرية، واللوائح الداخلية، والاتفاقيات الجماعية، وعقود العمل.",
+      en: "The firm supports businesses, executives, and investors in their day-to-day operations as well as their growth strategies. Our approach aims to secure economic transactions, mitigate legal risks, and deliver solutions tailored to each client's specific commercial challenges.",
+      fr: "Le cabinet accompagne les entreprises, les dirigeants et les investisseurs dans leurs activités quotidiennes ainsi que dans leurs stratégies de croissance. Notre approche vise à sécuriser les transactions économiques, atténuer les risques juridiques et offrir des solutions adaptées aux défis commerciaux spécifiques de chaque client.",
+      ar: "يرافق المكتب الشركات والمديرين والمستثمرين في أنشطتهم اليومية وكذلك في استراتيجيات نموهم. يهدف نهجنا إلى تأمين المعاملات الاقتصادية، والتخفيف من المخاطر القانونية، وتقديم حلول مصممة وفق التحديات التجارية الخاصة لكل عميل.",
     },
     rate: "onrequest",
     icon: "Briefcase",
+  },
+  {
+    id: "corporate-law",
+    title: { en: "🏢 Corporate Law", fr: "🏢 Droit des Sociétés", ar: "🏢 قانون الشركات" },
+    blurb: {
+      en: "We assist companies at every stage of their development, from creation to restructuring, ensuring the legal compliance of their corporate structure and protecting the interests of shareholders and executives.",
+      fr: "Nous assistons les entreprises à chaque étape de leur développement, de la création à la restructuration, en assurant la conformité juridique de leur structure et en protégeant les intérêts des actionnaires et des dirigeants.",
+      ar: "نساعد الشركات في كل مرحلة من مراحل تطورها، من التأسيس إلى إعادة الهيكلة، مع ضمان الامتثال القانوني لهيكلها corporate وحماية مصالح المساهمين والمديرين.",
+    },
+    rate: "onrequest",
+    icon: "Building",
+  },
+  {
+    id: "arbitration-mediation",
+    title: { en: "🤝 Arbitration & Mediation", fr: "🤝 Arbitrage & Médiation", ar: "🤝 التحكيم والوساطة" },
+    blurb: {
+      en: "The firm prioritizes dispute resolution methods that are efficient, confidential, and tailored to the stakes of each case. We guide our clients through arbitration and mediation procedures to facilitate swift and sustainable solutions.",
+      fr: "Le cabinet privilégie des méthodes de résolution des litiges efficaces, confidentielles et adaptées aux enjeux de chaque affaire. Nous guidons nos clients à travers les procédures d'arbitrage et de médiation pour faciliter des solutions rapides et durables.",
+      ar: "يحرص المكتب على طرق تسوية النزاعات الفعالة والسرية والمصممة وفق أهمية كل قضية. نرافق عملاءنا في إجراءات التحكيم والوساطة لتسهيل حلول سريعة ومستدامة.",
+    },
+    rate: "onrequest",
+    icon: "Scale",
+  },
+  {
+    id: "tax-law",
+    title: { en: "📊 Tax Law", fr: "📊 Droit Fiscal", ar: "📊 القانون الضريبي" },
+    blurb: {
+      en: "Taxation is a strategic priority for businesses and individuals alike. Our firm provides rigorous support in advisory services, compliance, and tax litigation management, with the ultimate goal of securing our clients' decisions and effectively defending their interests before the relevant tax authorities.",
+      fr: "La fiscalité est une priorité stratégique pour les entreprises et les particuliers. Notre cabinet offre un accompagnement rigoureux en conseil, conformité et gestion du contentieux fiscal, avec l'objectif final de sécuriser les décisions de nos clients et défendre efficacement leurs intérêts devant les autorités fiscales compétentes.",
+      ar: "الضرائب هي أولوية استراتيجية للشركات والأفراد على حد سواء. يوفر مكتبنا دعمًا صارمًا في الاستشارات والامتثال وإدارة النزاعات الضريبية، بهدف تأمين قرارات عملائنا والدفاع بفعالية عن مصالحهم أمام الجهات الضريبية المختصة.",
+    },
+    rate: "onrequest",
+    icon: "FileText",
+  },
+  {
+    id: "criminal-law",
+    title: { en: "⚖️ Criminal Law", fr: "⚖️ Droit Pénal", ar: "⚖️ القانون الجنائي" },
+    blurb: {
+      en: "We provide defense and legal assistance to our clients at every stage of criminal proceedings, with particular emphasis on upholding their rights, maintaining confidentiality, and implementing a defense strategy tailored to each situation.",
+      fr: "Nous assurons la défense et l'assistance juridique de nos clients à chaque étape de la procédure pénale, en insistant particulièrement sur le respect de leurs droits, le maintien de la confidentialité et la mise en œuvre d'une stratégie de défense adaptée à chaque situation.",
+      ar: "نقدم الدفاع والمساعدة القانونية لعملائنا في كل مرحلة من مراحل الإجراءات الجنائية، مع التأكيد على حفظ حقوقهم والحفاظ على السرية وتطبيق استراتيجية دفاع مصممة لكل موقف.",
+    },
+    rate: "onrequest",
+    icon: "Gavel",
+  },
+  {
+    id: "land-real-estate",
+    title: { en: "🏠 Land & Real Estate Law", fr: "🏠 Droit Foncier et Immobilier", ar: "🏠 قانون العقارات والأراضي" },
+    blurb: {
+      en: "The firm supports individuals, companies, and investors in their real estate transactions and property matters. We leverage our expertise to secure projects and resolve disputes related to property ownership and real estate.",
+      fr: "Le cabinet accompagne les particuliers, les entreprises et les investisseurs dans leurs transactions immobilières et leurs questions foncières. Nous exploitons notre expertise pour sécuriser les projets et résoudre les litiges liés à la propriété immobilière.",
+      ar: "يرافق المكتب الأفراد والشركات والمستثمرين في صفقاتهم العقارية وشؤون ملكيتهم. نستفيد من خبرتنا لتأمين المشاريع وحل النزاعات المتعلقة بالملكية العقارية.",
+    },
+    rate: "onrequest",
+    icon: "HardHat",
+  },
+  {
+    id: "labor-family",
+    title: { en: "👥 Labor & Family Law", fr: "👥 Droit du Travail et de la Famille", ar: "👥 قانون العمل والأسرة" },
+    blurb: {
+      en: "We handle both individual and collective employment relations, as well as family law matters. Our firm emphasizes an approach that is simultaneously empathetic, rigorous, and pragmatic, supporting our clients through what are often defining moments in their personal or professional lives.",
+      fr: "Nous gérons les relations individuelles et collectives de travail, ainsi que les questions de droit de la famille. Notre cabinet met l'accent sur une approche à la fois empathique, rigoureuse et pragmatique, accompagnant nos clients à travers ce qui sont souvent des moments déterminants de leur vie personnelle ou professionnelle.",
+      ar: "نتعامل مع علاقات العمل الفردية والجماعية، فضلاً عن قضايا قانون الأسرة. يؤكد مكتبنا على نهج متزامن بين التعاطف والصرامة والعملية، مساندين عملاءنا خلال ما هي في كثير من الأحيان لحظات محورية في حياتهم الشخصية أو المهنية.",
+    },
+    rate: "onrequest",
+    icon: "User",
+  },
+  {
+    id: "intellectual-property",
+    title: { en: "💡 Intellectual Property", fr: "💡 Propriété Intellectuelle", ar: "💡 الملكية الفكرية" },
+    blurb: {
+      en: "The firm assists clients in protecting and maximizing the value of their intellectual property rights—particularly regarding trademarks, copyright, designs, and models—as well as in preventing and resolving disputes related to these intangible assets.",
+      fr: "Le cabinet assiste les clients dans la protection et la valorisation de leurs droits de propriété intellectuelle—notamment marques, droits d'auteur, dessins et modèles—ainsi que dans la prévention et la résolution des litiges liés à ces actifs immatériels.",
+      ar: "يساعد المكتب عملاءهم في حماية وتعظيم قيمة حقوق الملكية الفكرية لديهم — لا سيما العلامات التجارية وحقوق النمط والتصاميم والنماذج — وكذلك في الوقاية وحل النزاعات المتعلقة بهذه الأصول غير المادية.",
+    },
+    rate: "onrequest",
+    icon: "Globe",
   },
 ];
 
@@ -818,7 +832,7 @@ function BookingForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !phone || !email || !service || !date || !slot) {
+    if (!name || !phone || !service || !date || !slot) {
       setError(t("form.error"));
       setSuccess(false);
       return;
@@ -909,7 +923,7 @@ function BookingForm() {
           <div className="space-y-2">
             <Label htmlFor="email" className="flex items-center gap-1.5 text-stone-700">
               <Mail className="h-3.5 w-3.5 text-slate-600" />
-              {t("form.email")} <span className="text-yellow-700">*</span>
+              {t("form.email")}
             </Label>
             <Input
               id="email"
@@ -1155,57 +1169,60 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   Building2,
   Globe,
   Briefcase,
+  Building,
+  Gavel,
+  HardHat,
+  User,
+  FileText,
 };
 
 const ATTORNEYS: Attorney[] = [
   {
-    name: "Maître HANIFI Boubkeur",
+    name: "Hanifi Boubkeur",
     role: "founder",
     desc: {
-      en: "Experienced in public procurement law, tax procedures, and contract drafting.",
-      fr: "Spécialiste en droit des marchés publics, procédures fiscales et rédaction de contrats.",
-      ar: "متخصص في قانون المناقصات العامة، والإجراءات الضريبية، وصياغة العقود.",
+      en: "Approved by the International Order of Experts. Focuses primarily on public procurement, business law, corporate law, and taxation.",
+      fr: "Agréé par l'Ordre International des Experts. Spécialisé principalement en marchés publics, droit des affaires, droit des sociétés et fiscalité.",
+      ar: "معتمد من النظام الدولي للخبراء. متخصص بشكل أساسي في المناقصات العامة وقانون الأعمال وقانون الشركات والضرائب.",
     },
   },
   {
-    name: "Maître BENAICHA Houria",
+    name: "Benaicha Houria",
     role: "partner",
     desc: {
-      en: "Specializing in family law and criminal procedure.",
-      fr: "Spécialisée en droit de la famille et procédure pénale.",
-      ar: "متخصصة في قانون الأسرة والإجراءات الجنائية.",
+      en: "Specializes in family law, successions/inheritance, and estate law.",
+      fr: "Spécialisée en droit de la famille, successions et droit des successions.",
+      ar: "متخصصة في قانون الأسرة والوراثة وقانون الإرث.",
     },
   },
   {
-    name: "Maître BENSADOUN Mohamed",
+    name: "Bensadoun Mohamed",
     role: "attorney",
     desc: {
-      en: "Experienced in property law and real estate transactions.",
-      fr: "Expérimenté en droit de la propriété et transactions immobilières.",
-      ar: "ذو خبرة في قانون العقارات وصفقات العقارات.",
+      en: "Property and real estate law.",
+      fr: "Droit de la propriété et droit immobilier.",
+      ar: "قانون العقارات والأراضي.",
     },
   },
   {
-    name: "Maître HANIFI Zakaria",
+    name: "Hanifi Zakaria",
     role: "attorney",
     desc: {
-      en: "Penalist specializing in criminal law, contracts, and liability.",
-      fr: "Pénaliste spécialisé en droit pénal, contrats et responsabilité.",
-      ar: "متخصص في القانون الجنائي، والعقود، والمسؤولية.",
+      en: "Contract law, liability, criminal law, and business law.",
+      fr: "Droit des contrats, responsabilité, droit pénal et droit des affaires.",
+      ar: "قانون العقود والمسؤولية والقانون الجنائي وقانون الأعمال.",
     },
   },
   {
-    name: "Maître BOUZID Noureddine",
+    name: "Bouzid Noureddine",
     role: "attorney",
     desc: {
-      en: "Experienced in civil law and cyber & electronic crimes law.",
-      fr: "Expérimenté en droit civil et droit de la cybercriminalité et des crimes électroniques.",
-      ar: "ذو خبرة في القانون المدني وقانون الجرائم الإلكترونية وال virtuelle.",
+      en: "Labor/social law, cybercriminality, and intellectual property law.",
+      fr: "Droit du travail/social, cybercriminalité et droit de la propriété intellectuelle.",
+      ar: "قانون العمل الاجتماعي والجرائم الإلكترونية وقانون الملكية الفكرية.",
     },
   },
 ];
-
-const EXPERTISE_ICONS = [HardHat, Building];
 
 export default function App() {
   const [lang] = useLang();
@@ -1241,7 +1258,7 @@ export default function App() {
             <img src="/logo.png" alt="H&B Law Firm" className="h-10 w-auto" />
             <div className="leading-tight">
               <p className="font-serif text-xl text-slate-900">
-                H&amp;B Law Firm
+                H&amp;B <span className="italic">Law Firm</span>
               </p>
               <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">
                 Attorneys at Law · Algeria
@@ -1254,9 +1271,6 @@ export default function App() {
             </a>
             <a href="#team" className="transition hover:text-blue-800">
               {t("nav.team")}
-            </a>
-            <a href="#references" className="transition hover:text-blue-800">
-              {t("nav.references")}
             </a>
             <a href="#book" className="transition hover:text-blue-800">
               {t("nav.consult")}
@@ -1299,6 +1313,14 @@ export default function App() {
               />
             </div>
           </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="mb-4 font-serif text-xl italic text-yellow-300/80 md:text-2xl"
+          >
+            {lang === "en" ? "Legal excellence at the service of your ambitions." : lang === "fr" ? "L'excellence juridique au service de vos ambitions." : "التميز القانوني في خدمة طموحاتك."}
+          </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -1366,84 +1388,6 @@ export default function App() {
                 <p>{t("pres.p3")}</p>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* References / Track Record */}
-      <section id="references" className="relative overflow-hidden bg-gradient-to-br from-[#0c1929] via-[#132743] to-[#0f1f3a] text-yellow-50">
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            backgroundImage:
-              "radial-gradient(ellipse 50% 50% at 10% 10%, rgba(251,191,36,0.1) 0%, transparent 60%), radial-gradient(ellipse 40% 50% at 90% 80%, rgba(59,130,246,0.06) 0%, transparent 50%)",
-          }}
-        />
-        <div className="pointer-events-none absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fbbf24' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
-        <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-12 max-w-2xl"
-          >
-            <Badge className="mb-3 border-yellow-300/30 bg-yellow-300/10 text-yellow-200 hover:bg-yellow-300/10">
-              {t("refs.badge")}
-            </Badge>
-            <h2 className="font-serif text-3xl text-yellow-50 sm:text-4xl">
-              {t("refs.title")}
-            </h2>
-            <p className="mt-3 text-blue-100/60">
-              {t("refs.desc")}
-            </p>
-          </motion.div>
-
-          {/* Stats Bar */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mb-14 rounded-2xl border border-yellow-200/15 bg-gradient-to-r from-yellow-500/10 via-slate-800/40 to-blue-500/10 p-8 backdrop-blur max-w-sm mx-auto"
-          >
-            <div className="text-center">
-              <p className="font-serif text-5xl bg-gradient-to-r from-yellow-300 to-amber-400 bg-clip-text text-transparent">
-                {t("refs.stat1.value")}
-              </p>
-              <p className="mt-2 text-xs uppercase tracking-[0.18em] text-yellow-100/60">
-                {t("refs.stat1.label")}
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Expertise List */}
-          <div className="mx-auto max-w-3xl">
-            <h3 className="mb-6 text-center font-serif text-2xl text-yellow-50">
-              {t("refs.expertise.title")}
-            </h3>
-            <ul className="space-y-4">
-              {[1, 2].map((n) => {
-                const Icon = EXPERTISE_ICONS[n - 1];
-                return (
-                  <motion.li
-                    key={n}
-                    initial={{ opacity: 0, x: -16 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.4, delay: n * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                    className="flex items-start gap-4 rounded-xl border border-yellow-200/10 bg-gradient-to-r from-yellow-500/5 to-blue-500/5 p-4 transition-colors hover:border-yellow-200/20 hover:from-yellow-500/10 hover:to-blue-500/10"
-                  >
-                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-yellow-500/20 text-yellow-300">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <p className="text-sm text-yellow-100/90">
-                      {t(`refs.expertise.${n}`)}
-                    </p>
-                  </motion.li>
-                );
-              })}
-            </ul>
           </div>
         </div>
       </section>
