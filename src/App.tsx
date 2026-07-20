@@ -871,7 +871,7 @@ function BookingForm() {
   return (
     <Card className="border-blue-100 bg-white shadow-xl shadow-blue-900/5 rounded-3xl">
       <CardHeader className="border-b border-blue-50 bg-gradient-to-r from-blue-50/50 to-amber-50/30 rounded-t-3xl">
-        <CardTitle className="font-serif text-2xl text-[#0a1628]">
+        <CardTitle className="font-serif text-2xl text-[#061826]">
           {t("form.title")}
         </CardTitle>
         <CardDescription className="text-stone-600">
@@ -1053,7 +1053,7 @@ function Reservations() {
     <Card className="border-blue-100 bg-white/90 shadow-xl shadow-blue-900/5 rounded-3xl">
       <CardHeader className="border-b border-blue-50 bg-gradient-to-r from-blue-50/50 to-amber-50/30 rounded-t-3xl">
         <div className="flex items-center justify-between">
-          <CardTitle className="font-serif text-2xl text-[#0a1628]">
+          <CardTitle className="font-serif text-2xl text-[#061826]">
             {t("res.title")}
           </CardTitle>
           <Badge className="bg-amber-50 text-amber-700 ring-1 ring-amber-200/60">
@@ -1210,7 +1210,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-800 antialiased">
       {/* Top contact bar */}
-      <div className="bg-[#0a1628] text-blue-100/80">
+      <div className="bg-[#061826] text-blue-100/80">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-2 text-xs sm:text-sm">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             <span className="inline-flex items-center gap-1.5">
@@ -1232,7 +1232,7 @@ export default function App() {
           <div className="flex items-center gap-3">
             <img src="/logo.png" alt="H&B Law Firm" className="h-10 w-auto" />
             <div className="leading-tight">
-              <p className="font-serif text-xl text-[#0a1628]">
+              <p className="font-serif text-xl text-[#061826]">
                 H&amp;B <span className="italic">Law Firm</span>
               </p>
               <p className="text-[10px] uppercase tracking-[0.2em] text-blue-400">
@@ -1256,7 +1256,7 @@ export default function App() {
           </nav>
           <Button
             asChild
-            className="bg-gradient-to-r from-amber-500 to-yellow-400 text-[#0a1628] font-semibold shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/35 hover:from-amber-400 hover:to-yellow-300 transition-all"
+            className="bg-gradient-to-r from-amber-500 to-yellow-400 text-[#061826] font-semibold shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/35 hover:from-amber-400 hover:to-yellow-300 transition-all"
           >
             <a href="#book">{t("cta.book")}</a>
           </Button>
@@ -1264,7 +1264,7 @@ export default function App() {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#1e40af] text-white">
+      <section className="relative overflow-hidden bg-[#061826] text-white">
         <div className="pointer-events-none absolute inset-0" style={{ backgroundImage: "linear-gradient(135deg, rgba(245,158,11,0.08) 0%, transparent 50%), linear-gradient(225deg, rgba(255,255,255,0.05) 0%, transparent 50%)" }} />
         <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 py-16 text-center md:py-24">
           <motion.div
@@ -1302,7 +1302,7 @@ export default function App() {
             <Button
               asChild
               size="lg"
-              className="bg-amber-500 text-[#0a1628] font-semibold shadow-lg shadow-amber-500/30 hover:bg-amber-400 transition-all"
+              className="bg-amber-500 text-[#061826] font-semibold shadow-lg shadow-amber-500/30 hover:bg-amber-400 transition-all"
             >
               <a href="#book">{t("hero.cta.book")}</a>
             </Button>
@@ -1350,7 +1350,7 @@ export default function App() {
                 <p>{t("pres.p1")}</p>
                 <p>{t("pres.p2")}</p>
                 <p>{t("pres.p3")}</p>
-                <p className="font-medium text-[#0a1628]">{t("pres.p4")}</p>
+                <p className="font-medium text-[#061826]">{t("pres.p4")}</p>
               </div>
             </motion.div>
           </div>
@@ -1367,10 +1367,10 @@ export default function App() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="mb-10 max-w-2xl"
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#1e40af] px-4 py-1.5 text-sm font-semibold text-white">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#061826] px-4 py-1.5 text-sm font-semibold text-white">
               {t("book.badge")}
             </div>
-            <h2 className="mt-4 font-serif text-3xl text-[#0a1628] sm:text-4xl">
+            <h2 className="mt-4 font-serif text-3xl text-[#061826] sm:text-4xl">
               {t("book.title")}
             </h2>
             <p className="mt-3 text-slate-500">
@@ -1385,7 +1385,7 @@ export default function App() {
       </section>
 
       {/* Practice Areas + Our Team (compact) */}
-      <section id="services" className="bg-[#1e40af] text-white">
+      <section id="services" className="bg-[#061826] text-white">
         <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
           <div className="grid gap-8 lg:grid-cols-2">
             <motion.div
@@ -1420,7 +1420,7 @@ export default function App() {
               transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               id="team"
             >
-              <div className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-4 py-1.5 text-sm font-semibold text-[#0a1628]">
+              <div className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-4 py-1.5 text-sm font-semibold text-[#061826]">
                 {t("team.badge")}
               </div>
               <div className="mt-5 space-y-2">
@@ -1457,7 +1457,7 @@ export default function App() {
             <div className="inline-flex items-center gap-2 rounded-full bg-amber-50 px-4 py-1.5 text-sm font-semibold text-amber-700">
               {t("location.badge")}
             </div>
-            <h2 className="mt-4 font-serif text-3xl text-[#0a1628] sm:text-4xl">
+            <h2 className="mt-4 font-serif text-3xl text-[#061826] sm:text-4xl">
               {t("location.title")}
             </h2>
             <p className="mt-3 text-slate-500">
@@ -1486,7 +1486,7 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0a1628] text-blue-100/80">
+      <footer className="bg-[#061826] text-blue-100/80">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:grid-cols-2 md:grid-cols-4">
           <div className="sm:col-span-2">
             <div className="flex items-center gap-3">
