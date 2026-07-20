@@ -796,11 +796,11 @@ function LangSwitcher() {
 
   return (
     <div className="flex items-center gap-2">
-      <Globe className="h-4 w-4 text-yellow-300" />
+      <Globe className="h-4 w-4 text-amber-400" />
       <select
         value={lang}
         onChange={(e) => setLangFn(e.target.value as Lang)}
-        className="border-0 bg-transparent text-sm text-yellow-50 focus:outline-none focus:ring-0"
+        className="border-0 bg-transparent text-sm text-blue-100/80 focus:outline-none focus:ring-0"
       >
         {LANGS.map((l) => (
           <option key={l.id} value={l.id} className="text-stone-800">
@@ -880,9 +880,9 @@ function BookingForm() {
   };
 
   return (
-    <Card className="border-stone-200 bg-white shadow-lg">
-      <CardHeader className="border-b border-stone-200 bg-stone-50/50">
-        <CardTitle className="font-serif text-2xl text-slate-900">
+    <Card className="border-blue-100 bg-white shadow-xl shadow-blue-900/5 rounded-3xl">
+      <CardHeader className="border-b border-blue-50 bg-gradient-to-r from-blue-50/50 to-amber-50/30 rounded-t-3xl">
+        <CardTitle className="font-serif text-2xl text-[#0a1628]">
           {t("form.title")}
         </CardTitle>
         <CardDescription className="text-stone-600">
@@ -1035,7 +1035,7 @@ function BookingForm() {
             type="submit"
             size="lg"
             disabled={loading}
-            className="w-full bg-slate-800 text-yellow-50 shadow hover:bg-slate-700"
+            className="w-full bg-gradient-to-r from-[#0a1628] to-[#1e40af] text-white shadow-lg shadow-blue-900/20 hover:shadow-xl hover:shadow-blue-900/30 transition-all font-semibold"
           >
             <Mail className="mr-2 h-4 w-4" />
             {loading ? t("form.sending") : t("form.submit")}
@@ -1061,13 +1061,13 @@ function Reservations() {
     SERVICES.find((s) => s.id === id)?.title[lang] ?? id;
 
   return (
-    <Card className="border-stone-200 bg-white/90 shadow-md">
-      <CardHeader className="border-b border-stone-100">
+    <Card className="border-blue-100 bg-white/90 shadow-xl shadow-blue-900/5 rounded-3xl">
+      <CardHeader className="border-b border-blue-50 bg-gradient-to-r from-blue-50/50 to-amber-50/30 rounded-t-3xl">
         <div className="flex items-center justify-between">
-          <CardTitle className="font-serif text-2xl text-slate-900">
+          <CardTitle className="font-serif text-2xl text-[#0a1628]">
             {t("res.title")}
           </CardTitle>
-          <Badge className="bg-yellow-100 text-yellow-900 hover:bg-yellow-100">
+          <Badge className="bg-amber-50 text-amber-700 ring-1 ring-amber-200/60">
             {allBookings.length} {t("res.count")}
           </Badge>
         </div>
@@ -1233,17 +1233,17 @@ export default function App() {
   }, [lang]);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 antialiased">
+    <div className="min-h-screen bg-white text-slate-800 antialiased">
       {/* Top contact bar */}
-      <div className="bg-gradient-to-r from-[#0c1929] via-[#132743] to-[#0c1929] text-yellow-50/90">
+      <div className="bg-[#0a1628] text-blue-100/80">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-2 text-xs sm:text-sm">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             <span className="inline-flex items-center gap-1.5">
-              <Phone className="h-3.5 w-3.5 text-yellow-400" />
+              <Phone className="h-3.5 w-3.5 text-amber-400" />
               {t("topbar.phone")}
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <Mail className="h-3.5 w-3.5 text-yellow-400" />
+              <Mail className="h-3.5 w-3.5 text-amber-400" />
               {t("topbar.email")}
             </span>
           </div>
@@ -1252,36 +1252,36 @@ export default function App() {
       </div>
 
       {/* Header */}
-      <header className="sticky top-0 z-20 border-b border-slate-200/60 bg-white/80 backdrop-blur-md shadow-sm shadow-slate-200/20">
+      <header className="sticky top-0 z-20 border-b border-blue-100 bg-white/90 backdrop-blur-xl shadow-lg shadow-blue-900/5">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-3">
             <img src="/logo.png" alt="H&B Law Firm" className="h-10 w-auto" />
             <div className="leading-tight">
-              <p className="font-serif text-xl text-slate-900">
+              <p className="font-serif text-xl text-[#0a1628]">
                 H&amp;B <span className="italic">Law Firm</span>
               </p>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-blue-400">
                 Attorneys at Law · Algeria
               </p>
             </div>
           </div>
           <nav className="hidden items-center gap-6 text-sm font-medium text-slate-500 md:flex">
-            <a href="#services" className="transition hover:text-blue-800">
+            <a href="#services" className="transition hover:text-[#1e40af]">
               {t("nav.practice")}
             </a>
-            <a href="#team" className="transition hover:text-blue-800">
+            <a href="#team" className="transition hover:text-[#1e40af]">
               {t("nav.team")}
             </a>
-            <a href="#book" className="transition hover:text-blue-800">
+            <a href="#book" className="transition hover:text-[#1e40af]">
               {t("nav.consult")}
             </a>
-            <a href="#location" className="transition hover:text-blue-800">
+            <a href="#location" className="transition hover:text-[#1e40af]">
               {t("nav.location")}
             </a>
           </nav>
           <Button
             asChild
-            className="bg-gradient-to-r from-yellow-500 to-amber-500 text-slate-900 shadow-sm shadow-yellow-500/20 hover:from-yellow-400 hover:to-amber-400 hover:shadow-md hover:shadow-yellow-500/25"
+            className="bg-gradient-to-r from-amber-500 to-yellow-400 text-[#0a1628] font-semibold shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/35 hover:from-amber-400 hover:to-yellow-300 transition-all"
           >
             <a href="#book">{t("cta.book")}</a>
           </Button>
@@ -1289,56 +1289,47 @@ export default function App() {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0c1929] via-[#132743] to-[#0f1f3a] text-yellow-50">
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            backgroundImage:
-              "radial-gradient(ellipse 60% 50% at 15% 15%, rgba(251,191,36,0.12) 0%, transparent 70%), radial-gradient(ellipse 50% 60% at 85% 70%, rgba(59,130,246,0.08) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(251,191,36,0.03) 0%, transparent 50%)",
-          }}
-        />
-        <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fbbf24' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#0f2340] to-[#1a3a6b] text-white">
+        <div className="pointer-events-none absolute inset-0" style={{ backgroundImage: "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(59,130,246,0.15) 0%, transparent 70%), radial-gradient(circle at 20% 80%, rgba(245,158,11,0.12) 0%, transparent 50%), radial-gradient(circle at 85% 20%, rgba(59,130,246,0.1) 0%, transparent 40%)" }} />
+        <div className="pointer-events-none absolute inset-0 opacity-[0.015]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f59e0b' fill-opacity='1'%3E%3Ccircle cx='1' cy='1' r='0.5'/%3E%3C/g%3E%3C/svg%3E\")" }} />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent" />
         <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 py-20 text-center md:py-28">
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-8"
+            className="mb-6"
           >
-            <div className="mb-6 flex items-center justify-center">
-              <img
-                src="/logo.png"
-                alt="H&B Law Firm"
-                className="h-44 w-auto md:h-60"
-              />
+            <div className="flex items-center justify-center">
+              <img src="/logo.png" alt="H&B Law Firm" className="h-44 w-auto md:h-60" />
             </div>
           </motion.div>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="mb-4 font-serif text-xl italic text-yellow-300/80 md:text-2xl"
+            className="mb-3 font-serif text-2xl italic text-amber-400 md:text-3xl"
           >
             {lang === "en" ? "Legal excellence at the service of your ambitions." : lang === "fr" ? "L'excellence juridique au service de vos ambitions." : "التميز القانوني في خدمة طموحاتك."}
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="max-w-2xl text-lg text-blue-100/70 md:text-xl"
+            transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
+            className="max-w-2xl text-lg text-blue-200/70 md:text-xl"
           >
             {t("hero.tagline")}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             className="mt-10 flex flex-wrap items-center justify-center gap-4"
           >
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-yellow-500 to-amber-500 text-slate-900 shadow-lg shadow-yellow-500/20 transition-all hover:shadow-xl hover:shadow-yellow-500/30 hover:from-yellow-400 hover:to-amber-400"
+              className="bg-gradient-to-r from-amber-500 to-yellow-400 text-[#0a1628] font-semibold shadow-xl shadow-amber-500/25 hover:shadow-2xl hover:shadow-amber-500/40 hover:from-amber-400 hover:to-yellow-300 transition-all"
             >
               <a href="#book">{t("hero.cta.book")}</a>
             </Button>
@@ -1346,27 +1337,27 @@ export default function App() {
               asChild
               size="lg"
               variant="outline"
-              className="border-yellow-200/30 bg-white/5 text-yellow-50 backdrop-blur-sm transition-all hover:bg-white/10 hover:border-yellow-200/50 hover:text-yellow-50"
+              className="border-white/20 bg-white/5 text-white backdrop-blur-sm hover:bg-white/10 hover:border-amber-400/40 transition-all"
             >
               <a href="#team">{t("hero.cta.team")}</a>
             </Button>
           </motion.div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-yellow-500/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* Presentation */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50/80">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.12]" style={{ backgroundImage: "url(/leaves-pattern.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
-        <div className="relative mx-auto max-w-6xl px-4 py-12 md:py-16">
-          <div className="grid items-center gap-8 md:grid-cols-[1fr_1.2fr]">
+      <section className="bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
+          <div className="grid items-center gap-10 md:grid-cols-[1fr_1.3fr]">
             <motion.div
-              initial={{ opacity: 0, x: -24 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="overflow-hidden rounded-2xl shadow-xl shadow-slate-200/50 ring-1 ring-slate-100"
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="relative overflow-hidden rounded-3xl shadow-2xl shadow-blue-900/10"
             >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-amber-500/10 z-10" />
               <img
                 src="/presentation.jpg"
                 alt="H&B Law Firm"
@@ -1374,15 +1365,16 @@ export default function App() {
               />
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 24 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Badge className="mb-3 bg-blue-50 text-blue-800 ring-1 ring-blue-100 hover:bg-blue-50">
+              <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-blue-100">
+                <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
                 {t("pres.badge")}
-              </Badge>
-              <div className="mt-4 space-y-3 text-sm leading-relaxed text-stone-600">
+              </div>
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-slate-600">
                 <p>{t("pres.p1")}</p>
                 <p>{t("pres.p2")}</p>
                 <p>{t("pres.p3")}</p>
@@ -1393,8 +1385,8 @@ export default function App() {
       </section>
 
       {/* Booking + Reservations */}
-      <section id="book" className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.12]" style={{ backgroundImage: "url(/leaves-pattern.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
+      <section id="book" className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-blue-50/30 to-slate-50">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232563eb' fill-opacity='1'%3E%3Ccircle cx='1' cy='1' r='0.5'/%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1403,13 +1395,14 @@ export default function App() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="mb-10 max-w-2xl"
           >
-            <Badge className="mb-3 bg-gradient-to-r from-yellow-100 to-amber-50 text-yellow-800 ring-1 ring-yellow-200/50 hover:bg-yellow-100">
+            <div className="inline-flex items-center gap-2 rounded-full bg-amber-50 px-4 py-1.5 text-sm font-semibold text-amber-700 ring-1 ring-amber-200/60">
+              <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
               {t("book.badge")}
-            </Badge>
-            <h2 className="font-serif text-3xl text-slate-900 sm:text-4xl">
+            </div>
+            <h2 className="mt-4 font-serif text-3xl text-[#0a1628] sm:text-4xl">
               {t("book.title")}
             </h2>
-            <p className="mt-3 text-stone-500">
+            <p className="mt-3 text-slate-500">
               {t("book.desc")}
             </p>
           </motion.div>
@@ -1421,37 +1414,37 @@ export default function App() {
       </section>
 
       {/* Practice Areas + Our Team (compact) */}
-      <section id="services" className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50/80">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.12]" style={{ backgroundImage: "url(/leaves-pattern.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
-        <div className="relative mx-auto max-w-6xl px-4 py-10 md:py-12">
-          <div className="grid gap-6 lg:grid-cols-2">
+      <section id="services" className="bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div className="grid gap-8 lg:grid-cols-2">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Badge className="mb-2 bg-blue-50 text-blue-800 ring-1 ring-blue-100 hover:bg-blue-50">
+              <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-blue-100">
+                <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
                 {t("services.badge")}
-              </Badge>
-              <ul className="mt-3 space-y-2">
+              </div>
+              <ul className="mt-5 space-y-2.5">
                 {SERVICES.map((s, i) => {
                   const Icon = ICONS[s.icon] ?? ScrollText;
                   return (
                     <motion.li
                       key={s.id}
-                      initial={{ opacity: 0, y: 8 }}
+                      initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.35, delay: i * 0.05 }}
-                      className="flex items-start gap-3 rounded-xl border border-slate-100 bg-white p-3 shadow-sm ring-1 ring-slate-50 transition-all hover:shadow-md hover:border-blue-100 hover:ring-blue-50"
+                      transition={{ duration: 0.35, delay: i * 0.04 }}
+                      className="group flex items-start gap-3.5 rounded-2xl border border-slate-100 bg-gradient-to-r from-white to-slate-50/50 p-3.5 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-900/5"
                     >
-                      <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-slate-700 to-slate-800 text-yellow-300 shadow-sm">
+                      <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#1e40af] to-[#2563eb] text-white shadow-md shadow-blue-600/20 transition group-hover:shadow-lg group-hover:shadow-blue-600/30">
                         <Icon className="h-4 w-4" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-slate-900">{s.title[lang]}</p>
-                        <p className="text-xs text-stone-500">{s.blurb[lang]}</p>
+                        <p className="text-sm font-semibold text-[#0a1628]">{s.title[lang]}</p>
+                        <p className="mt-0.5 text-xs leading-relaxed text-slate-500">{s.blurb[lang]}</p>
                       </div>
                     </motion.li>
                   );
@@ -1459,32 +1452,33 @@ export default function App() {
               </ul>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               id="team"
             >
-              <Badge className="mb-2 bg-gradient-to-r from-yellow-100 to-amber-50 text-yellow-800 ring-1 ring-yellow-200/50 hover:bg-yellow-100">
+              <div className="inline-flex items-center gap-2 rounded-full bg-amber-50 px-4 py-1.5 text-sm font-semibold text-amber-700 ring-1 ring-amber-200/60">
+                <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
                 {t("team.badge")}
-              </Badge>
-              <div className="mt-3 space-y-2">
+              </div>
+              <div className="mt-5 space-y-2.5">
                 {ATTORNEYS.map((att, i) => (
                   <motion.div
                     key={att.name}
-                    initial={{ opacity: 0, y: 8 }}
+                    initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.35, delay: i * 0.05 }}
-                    className="flex items-start gap-3 rounded-xl border border-slate-100 bg-white p-3 shadow-sm ring-1 ring-slate-50 transition-all hover:shadow-md hover:border-yellow-200 hover:ring-yellow-50"
+                    transition={{ duration: 0.35, delay: i * 0.04 }}
+                    className="group flex items-start gap-3.5 rounded-2xl border border-slate-100 bg-gradient-to-r from-white to-slate-50/50 p-3.5 transition-all hover:border-amber-200 hover:shadow-lg hover:shadow-amber-900/5"
                   >
-                    <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-slate-700 to-slate-800 text-yellow-300 shadow-sm">
+                    <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#0a1628] to-[#1e40af] text-amber-400 shadow-md shadow-slate-900/20 transition group-hover:shadow-lg group-hover:shadow-slate-900/30">
                       <Landmark className="h-4 w-4" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-slate-900">{att.name}</p>
-                      <p className="text-xs text-yellow-700">{t(`team.${att.role}`)}</p>
-                      <p className="text-xs text-stone-500">{att.desc[lang]}</p>
+                      <p className="text-sm font-semibold text-[#0a1628]">{att.name}</p>
+                      <p className="text-xs font-medium text-amber-600">{t(`team.${att.role}`)}</p>
+                      <p className="mt-0.5 text-xs leading-relaxed text-slate-500">{att.desc[lang]}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -1495,9 +1489,8 @@ export default function App() {
       </section>
 
       {/* Location Map */}
-      <section id="location" className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.12]" style={{ backgroundImage: "url(/leaves-pattern.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
-        <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
+      <section id="location" className="bg-gradient-to-b from-slate-50 to-white">
+        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1505,14 +1498,14 @@ export default function App() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="mb-10 max-w-2xl"
           >
-            <Badge className="mb-3 bg-blue-50 text-blue-800 ring-1 ring-blue-100 hover:bg-blue-50">
-              <MapPin className="mr-1 h-3 w-3" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-blue-100">
+              <MapPin className="h-3.5 w-3.5" />
               {t("location.badge")}
-            </Badge>
-            <h2 className="font-serif text-3xl text-slate-900 sm:text-4xl">
+            </div>
+            <h2 className="mt-4 font-serif text-3xl text-[#0a1628] sm:text-4xl">
               {t("location.title")}
             </h2>
-            <p className="mt-3 text-stone-500">
+            <p className="mt-3 text-slate-500">
               {t("location.desc")}
             </p>
           </motion.div>
@@ -1521,7 +1514,7 @@ export default function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/40 ring-1 ring-slate-100"
+            className="overflow-hidden rounded-3xl border border-slate-100 shadow-2xl shadow-blue-900/5"
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.0!2d3.0576111!3d36.7785553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb30059bee70f%3A0xb887aa1b8ffc3b92!2sSoci%C3%A9t%C3%A9%20D%27avocats%20HANIFI%20%26%20BENAICHA!5e0!3m2!1sen!2sdz!4v1700000000000!5m2!1sen!2sdz"
@@ -1538,50 +1531,50 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200/50 bg-gradient-to-br from-[#0c1929] via-[#132743] to-[#0f1f3a] text-yellow-50/80">
-        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-4">
+      <footer className="bg-[#0a1628] text-blue-100/80">
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:grid-cols-2 md:grid-cols-4">
           <div className="sm:col-span-2">
             <div className="flex items-center gap-3">
               <img src="/logo.png" alt="H&B Law Firm" className="h-10 w-auto" />
-              <p className="font-serif text-xl text-yellow-50">
-                H&amp;B Law Firm
+              <p className="font-serif text-xl text-white">
+                H&amp;B <span className="italic">Law Firm</span>
               </p>
             </div>
-            <p className="mt-3 max-w-sm text-sm text-yellow-100/70">
+            <p className="mt-3 max-w-sm text-sm text-blue-200/60">
               {t("footer.about")}
             </p>
           </div>
           <div>
-            <p className="mb-3 text-xs uppercase tracking-[0.18em] text-yellow-300">
+            <p className="mb-3 text-xs uppercase tracking-[0.18em] text-amber-400 font-semibold">
               {t("footer.contact")}
             </p>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2.5 text-sm">
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-yellow-300" />
+                <Mail className="h-4 w-4 text-amber-400" />
                 {t("topbar.email")}
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-yellow-300" />
+                <Phone className="h-4 w-4 text-amber-400" />
                 {t("topbar.phone")}
               </li>
               <li className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-yellow-300" />
+                <Clock className="h-4 w-4 text-amber-400" />
                 {t("footer.fax")}
               </li>
             </ul>
           </div>
           <div>
-            <p className="mb-3 text-xs uppercase tracking-[0.18em] text-yellow-300">
+            <p className="mb-3 text-xs uppercase tracking-[0.18em] text-amber-400 font-semibold">
               {t("footer.languages")}
             </p>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2.5 text-sm">
               <li>Français</li>
               <li>العربية</li>
               <li>English</li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-yellow-50/10 px-4 py-5 text-center text-xs text-yellow-100/60">
+        <div className="border-t border-white/5 px-4 py-5 text-center text-xs text-blue-200/40">
           {t("footer.rights", { year: String(new Date().getFullYear()) })}
         </div>
       </footer>
