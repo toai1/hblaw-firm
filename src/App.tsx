@@ -2,21 +2,10 @@ import { useState, useEffect, useSyncExternalStore } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import {
-  Scale,
-  ScrollText,
-  Building2,
-  FileSignature,
-  Globe,
-  Briefcase,
   Phone,
   Mail,
   Clock,
-  ShieldCheck,
-  Landmark,
-  Gavel,
-  HardHat,
-  Building,
-  MapPin,
+  Globe,
   CalendarDays,
   User,
   FileText,
@@ -1162,20 +1151,6 @@ function Reservations() {
 
 // ── App ────────────────────────────────────────────────────────────────────
 
-const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
-  FileSignature,
-  ScrollText,
-  Scale,
-  Building2,
-  Globe,
-  Briefcase,
-  Building,
-  Gavel,
-  HardHat,
-  User,
-  FileText,
-};
-
 const ATTORNEYS: Attorney[] = [
   {
     name: "Hanifi Boubkeur",
@@ -1289,11 +1264,9 @@ export default function App() {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#0f2340] to-[#1a3a6b] text-white">
-        <div className="pointer-events-none absolute inset-0" style={{ backgroundImage: "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(59,130,246,0.15) 0%, transparent 70%), radial-gradient(circle at 20% 80%, rgba(245,158,11,0.12) 0%, transparent 50%), radial-gradient(circle at 85% 20%, rgba(59,130,246,0.1) 0%, transparent 40%)" }} />
-        <div className="pointer-events-none absolute inset-0 opacity-[0.015]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f59e0b' fill-opacity='1'%3E%3Ccircle cx='1' cy='1' r='0.5'/%3E%3C/g%3E%3C/svg%3E\")" }} />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent" />
-        <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 py-20 text-center md:py-28">
+      <section className="relative overflow-hidden bg-[#1e40af] text-white">
+        <div className="pointer-events-none absolute inset-0" style={{ backgroundImage: "linear-gradient(135deg, rgba(245,158,11,0.08) 0%, transparent 50%), linear-gradient(225deg, rgba(255,255,255,0.05) 0%, transparent 50%)" }} />
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 py-16 text-center md:py-24">
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -1308,28 +1281,28 @@ export default function App() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="mb-3 font-serif text-2xl italic text-amber-400 md:text-3xl"
+            className="mb-3 font-serif text-2xl italic text-amber-300 md:text-3xl"
           >
             {lang === "en" ? "Legal excellence at the service of your ambitions." : lang === "fr" ? "L'excellence juridique au service de vos ambitions." : "التميز القانوني في خدمة طموحاتك."}
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
-            className="max-w-2xl text-lg text-blue-200/70 md:text-xl"
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="max-w-2xl text-lg text-blue-100/80 md:text-xl"
           >
             {t("hero.tagline")}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-10 flex flex-wrap items-center justify-center gap-4"
           >
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-amber-500 to-yellow-400 text-[#0a1628] font-semibold shadow-xl shadow-amber-500/25 hover:shadow-2xl hover:shadow-amber-500/40 hover:from-amber-400 hover:to-yellow-300 transition-all"
+              className="bg-amber-500 text-[#0a1628] font-semibold shadow-lg shadow-amber-500/30 hover:bg-amber-400 transition-all"
             >
               <a href="#book">{t("hero.cta.book")}</a>
             </Button>
@@ -1337,13 +1310,12 @@ export default function App() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white/20 bg-white/5 text-white backdrop-blur-sm hover:bg-white/10 hover:border-amber-400/40 transition-all"
+              className="border-white/30 bg-white/10 text-white hover:bg-white/20 transition-all"
             >
               <a href="#team">{t("hero.cta.team")}</a>
             </Button>
           </motion.div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* Presentation */}
@@ -1378,6 +1350,7 @@ export default function App() {
                 <p>{t("pres.p1")}</p>
                 <p>{t("pres.p2")}</p>
                 <p>{t("pres.p3")}</p>
+                <p className="font-medium text-[#0a1628]">{t("pres.p4")}</p>
               </div>
             </motion.div>
           </div>
@@ -1385,9 +1358,8 @@ export default function App() {
       </section>
 
       {/* Booking + Reservations */}
-      <section id="book" className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-blue-50/30 to-slate-50">
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232563eb' fill-opacity='1'%3E%3Ccircle cx='1' cy='1' r='0.5'/%3E%3C/g%3E%3C/svg%3E\")" }} />
-        <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
+      <section id="book" className="bg-gradient-to-b from-amber-50 to-white">
+        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1395,8 +1367,7 @@ export default function App() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="mb-10 max-w-2xl"
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-amber-50 px-4 py-1.5 text-sm font-semibold text-amber-700 ring-1 ring-amber-200/60">
-              <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#1e40af] px-4 py-1.5 text-sm font-semibold text-white">
               {t("book.badge")}
             </div>
             <h2 className="mt-4 font-serif text-3xl text-[#0a1628] sm:text-4xl">
@@ -1414,8 +1385,8 @@ export default function App() {
       </section>
 
       {/* Practice Areas + Our Team (compact) */}
-      <section id="services" className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <section id="services" className="bg-[#1e40af] text-white">
+        <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
           <div className="grid gap-8 lg:grid-cols-2">
             <motion.div
               initial={{ opacity: 0, x: -24 }}
@@ -1423,32 +1394,23 @@ export default function App() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-blue-100">
-                <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold text-amber-300">
                 {t("services.badge")}
               </div>
-              <ul className="mt-5 space-y-2.5">
-                {SERVICES.map((s, i) => {
-                  const Icon = ICONS[s.icon] ?? ScrollText;
-                  return (
-                    <motion.li
-                      key={s.id}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.35, delay: i * 0.04 }}
-                      className="group flex items-start gap-3.5 rounded-2xl border border-slate-100 bg-gradient-to-r from-white to-slate-50/50 p-3.5 transition-all hover:border-blue-200 hover:shadow-lg hover:shadow-blue-900/5"
-                    >
-                      <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#1e40af] to-[#2563eb] text-white shadow-md shadow-blue-600/20 transition group-hover:shadow-lg group-hover:shadow-blue-600/30">
-                        <Icon className="h-4 w-4" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold text-[#0a1628]">{s.title[lang]}</p>
-                        <p className="mt-0.5 text-xs leading-relaxed text-slate-500">{s.blurb[lang]}</p>
-                      </div>
-                    </motion.li>
-                  );
-                })}
+              <ul className="mt-5 space-y-2">
+                {SERVICES.map((s, i) => (
+                  <motion.li
+                    key={s.id}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.35, delay: i * 0.04 }}
+                    className="rounded-xl bg-white/10 p-3 transition-all hover:bg-white/15"
+                  >
+                    <p className="text-sm font-semibold text-white">{s.title[lang]}</p>
+                    <p className="mt-0.5 text-xs leading-relaxed text-blue-200">{s.blurb[lang]}</p>
+                  </motion.li>
+                ))}
               </ul>
             </motion.div>
             <motion.div
@@ -1458,11 +1420,10 @@ export default function App() {
               transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               id="team"
             >
-              <div className="inline-flex items-center gap-2 rounded-full bg-amber-50 px-4 py-1.5 text-sm font-semibold text-amber-700 ring-1 ring-amber-200/60">
-                <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-4 py-1.5 text-sm font-semibold text-[#0a1628]">
                 {t("team.badge")}
               </div>
-              <div className="mt-5 space-y-2.5">
+              <div className="mt-5 space-y-2">
                 {ATTORNEYS.map((att, i) => (
                   <motion.div
                     key={att.name}
@@ -1470,16 +1431,11 @@ export default function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.35, delay: i * 0.04 }}
-                    className="group flex items-start gap-3.5 rounded-2xl border border-slate-100 bg-gradient-to-r from-white to-slate-50/50 p-3.5 transition-all hover:border-amber-200 hover:shadow-lg hover:shadow-amber-900/5"
+                    className="rounded-xl bg-white/10 p-3 transition-all hover:bg-white/15"
                   >
-                    <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#0a1628] to-[#1e40af] text-amber-400 shadow-md shadow-slate-900/20 transition group-hover:shadow-lg group-hover:shadow-slate-900/30">
-                      <Landmark className="h-4 w-4" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-[#0a1628]">{att.name}</p>
-                      <p className="text-xs font-medium text-amber-600">{t(`team.${att.role}`)}</p>
-                      <p className="mt-0.5 text-xs leading-relaxed text-slate-500">{att.desc[lang]}</p>
-                    </div>
+                    <p className="text-sm font-semibold text-white">{att.name}</p>
+                    <p className="text-xs font-medium text-amber-300">{t(`team.${att.role}`)}</p>
+                    <p className="mt-0.5 text-xs leading-relaxed text-blue-200">{att.desc[lang]}</p>
                   </motion.div>
                 ))}
               </div>
@@ -1489,7 +1445,7 @@ export default function App() {
       </section>
 
       {/* Location Map */}
-      <section id="location" className="bg-gradient-to-b from-slate-50 to-white">
+      <section id="location" className="bg-white">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1498,8 +1454,7 @@ export default function App() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="mb-10 max-w-2xl"
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-blue-100">
-              <MapPin className="h-3.5 w-3.5" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-amber-50 px-4 py-1.5 text-sm font-semibold text-amber-700">
               {t("location.badge")}
             </div>
             <h2 className="mt-4 font-serif text-3xl text-[#0a1628] sm:text-4xl">
