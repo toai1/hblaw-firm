@@ -45,7 +45,8 @@ type ServiceId =
   | "criminal-law"
   | "land-real-estate"
   | "labor-family"
-  | "intellectual-property";
+  | "intellectual-property"
+  | "other";
 
 interface Localized {
   en: string;
@@ -812,6 +813,7 @@ function BookingForm() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [service, setService] = useState("");
+  const [customService, setCustomService] = useState("");
   const [date, setDate] = useState("");
   const [slot, setSlot] = useState("");
   const [notes, setNotes] = useState("");
@@ -821,7 +823,7 @@ function BookingForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !phone || !service || !date || !slot) {
+    if (!name || !phone || !service || (service === "other" && !customService.trim()) || !date || !slot) {
       setError(t("form.error"));
       setSuccess(false);
       return;
@@ -830,14 +832,14 @@ function BookingForm() {
     setLoading(true);
 
     const svc = SERVICES.find((s) => s.id === service);
-    const svcTitle = svc ? svc.title[lang] : service;
+    const svcTitle = service === "other" ? customService.trim() : svc ? svc.title[lang] : service;
 
     addBooking({
       id: crypto.randomUUID(),
       name,
       phone,
       email,
-      service: service as ServiceId,
+      service: service === "other" ? "other" as ServiceId : service as ServiceId,
       date,
       slot,
       notes,
@@ -857,6 +859,7 @@ function BookingForm() {
       setPhone("");
       setEmail("");
       setService("");
+      setCustomService("");
       setDate("");
       setSlot("");
       setNotes("");
@@ -941,7 +944,17 @@ function BookingForm() {
                   {s.title[lang]}
                 </option>
               ))}
+              <option value="other">{lang === "en" ? "Other" : lang === "fr" ? "Autre" : "أخرى"}</option>
             </select>
+            {service === "other" && (
+              <input
+                type="text"
+                value={customService}
+                onChange={(e) => setCustomService(e.target.value)}
+                placeholder={lang === "en" ? "Describe your legal concern..." : lang === "fr" ? "Décrivez votre problème juridique..." : "صف مشكلتك القانونية..."}
+                className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm focus:border-slate-500 focus:ring-2 focus:ring-slate-500 focus:outline-none"
+              />
+            )}
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
@@ -1165,9 +1178,9 @@ const ATTORNEYS: Attorney[] = [
     name: "Benaicha Houria",
     role: "partner",
     desc: {
-      en: "Specializes in family law, successions/inheritance, and estate law.",
-      fr: "Spécialisée en droit de la famille, successions et droit des successions.",
-      ar: "متخصصة في قانون الأسرة والوراثة وقانون الإرث.",
+      en: "Specializes in family law, and estate law.",
+      fr: "Spécialisée en droit de la famille et droit des successions.",
+      ar: "متخصصة في قانون الأسرة وقانون الإرث.",
     },
   },
   {
@@ -1183,18 +1196,18 @@ const ATTORNEYS: Attorney[] = [
     name: "Hanifi Zakaria",
     role: "attorney",
     desc: {
-      en: "Contract law, liability, criminal law, and business law.",
-      fr: "Droit des contrats, responsabilité, droit pénal et droit des affaires.",
-      ar: "قانون العقود والمسؤولية والقانون الجنائي وقانون الأعمال.",
+      en: "Criminal law, liability, and contract law.",
+      fr: "Droit pénal, responsabilité et droit des contrats.",
+      ar: "القانون الجنائي والمسؤولية وقانون العقود.",
     },
   },
   {
     name: "Bouzid Noureddine",
     role: "attorney",
     desc: {
-      en: "Labor/social law, cybercriminality, and intellectual property law.",
-      fr: "Droit du travail/social, cybercriminalité et droit de la propriété intellectuelle.",
-      ar: "قانون العمل الاجتماعي والجرائم الإلكترونية وقانون الملكية الفكرية.",
+      en: "Labor law, cybercriminality, and intellectual property law.",
+      fr: "Droit du travail, cybercriminalité et droit de la propriété intellectuelle.",
+      ar: "قانون العمل والجرائم الإلكترونية وقانون الملكية الفكرية.",
     },
   },
 ];
@@ -1284,14 +1297,6 @@ export default function App() {
             className="mb-3 font-serif text-2xl italic text-amber-300 md:text-3xl"
           >
             {lang === "en" ? "Legal excellence at the service of your ambitions." : lang === "fr" ? "L'excellence juridique au service de vos ambitions." : "التميز القانوني في خدمة طموحاتك."}
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            className="max-w-2xl text-lg text-blue-100/80 md:text-xl"
-          >
-            {t("hero.tagline")}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
