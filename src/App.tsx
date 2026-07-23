@@ -99,6 +99,7 @@ const en: Dict = {
   "nav.location": "Location",
   "cta.book": "Book Now",
   "topbar.phone": "+213 661 53 18 65",
+  "topbar.firm": "Firm: 028 17 09 00",
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.tagline": "Legal excellence at the service of your ambitions.",
@@ -163,6 +164,7 @@ const en: Dict = {
   "location.desc": "Located in Algiers, Algeria. We welcome clients for in-person consultations.",
   "footer.about": "Société Civile Professionnelle d'Avocats. Providing expert legal counsel in Algeria and internationally since 1985.",
   "footer.contact": "Contact",
+  "footer.email": "contact.mhblaw@gmail.com",
   "footer.fax": "Fax: 028170900",
   "footer.languages": "Languages",
   "footer.rights": "© {year} H&B Law Firm. All rights reserved.",
@@ -175,6 +177,7 @@ const fr: Dict = {
   "nav.location": "Emplacement",
   "cta.book": "Réserver",
   "topbar.phone": "+213 661 53 18 65",
+  "topbar.firm": "Firm: 028 17 09 00",
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.tagline": "L'excellence juridique au service de vos ambitions.",
@@ -239,6 +242,7 @@ const fr: Dict = {
   "location.title": "Visitez Notre Bureau",
   "location.desc": "Situé à Alger, Algérie. Nous accueillons les clients pour des consultations en personne.",
   "footer.contact": "Contact",
+  "footer.email": "contact.mhblaw@gmail.com",
   "footer.fax": "Fax : 028170900",
   "footer.languages": "Langues",
   "footer.rights": "© {year} Cabinet H&B. Tous droits réservés.",
@@ -251,6 +255,7 @@ const ar: Dict = {
   "nav.location": "الموقع",
   "cta.book": "احجز الآن",
   "topbar.phone": "+213 661 53 18 65",
+  "topbar.firm": "Firm: 028 17 09 00",
   "topbar.email": "avocat.hanifi@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.tagline": "التميز القانوني في خدمة طموحاتك.",
@@ -315,6 +320,7 @@ const ar: Dict = {
   "location.desc": "يقع مكتبنا في الجزائر العاصمة، الجزائر. نرحب بالعملاء للاستشارات الشخصية.",
   "footer.about": "شركة مدنية مهنية للمحامين. نقدم استشارات قانونية متخصصة في الجزائر ودولياً منذ 1985.",
   "footer.contact": "اتصل بنا",
+  "footer.email": "contact.mhblaw@gmail.com",
   "footer.fax": "فاكس: 028170900",
   "footer.languages": "اللغات",
   "footer.rights": "© {year} مكتب H&B. جميع الحقوق محفوظة.",
@@ -1196,9 +1202,9 @@ const ATTORNEYS: Attorney[] = [
     name: "Hanifi Zakaria",
     role: "attorney",
     desc: {
-      en: "Criminal law, liability, and contract law.",
-      fr: "Droit pénal, responsabilité et droit des contrats.",
-      ar: "القانون الجنائي والمسؤولية وقانون العقود.",
+      en: "Contact law, liability, and business law.",
+      fr: "Droit des contacts, responsabilité et droit des affaires.",
+      ar: "قانون الاتصال والمسؤولية وقانون الأعمال.",
     },
   },
   {
@@ -1229,6 +1235,10 @@ export default function App() {
             <span className="inline-flex items-center gap-1.5">
               <Phone className="h-3.5 w-3.5 text-amber-400" />
               {t("topbar.phone")}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Phone className="h-3.5 w-3.5 text-amber-400" />
+              {t("topbar.firm")}
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Mail className="h-3.5 w-3.5 text-amber-400" />
@@ -1511,11 +1521,15 @@ export default function App() {
             <ul className="space-y-2.5 text-sm">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-amber-400" />
-                {t("topbar.email")}
+                {t("footer.email")}
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-amber-400" />
                 {t("topbar.phone")}
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-amber-400" />
+                {t("topbar.firm")}
               </li>
               <li className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-amber-400" />
