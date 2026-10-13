@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useSyncExternalStore } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import {
