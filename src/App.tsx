@@ -26,13 +26,13 @@ import * as SeparatorPrimitive from "@radix-ui/react-separator";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { Slot } from "@radix-ui/react-slot";
 
-// ── cn utility ─────────────────────────────────────────────────────────────
+// â”€â”€ cn utility â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// ── Types ──────────────────────────────────────────────────────────────────
+// â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 type Lang = "en" | "fr" | "ar";
 
@@ -82,12 +82,12 @@ interface Attorney {
   desc: Localized;
 }
 
-// ── i18n ───────────────────────────────────────────────────────────────────
+// â”€â”€ i18n â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const LANGS: { id: Lang; label: string; dir: "ltr" | "rtl" }[] = [
   { id: "en", label: "English", dir: "ltr" },
-  { id: "fr", label: "Français", dir: "ltr" },
-  { id: "ar", label: "العربية", dir: "rtl" },
+  { id: "fr", label: "FranÃ§ais", dir: "ltr" },
+  { id: "ar", label: "Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©", dir: "rtl" },
 ];
 
 type Dict = Record<string, string>;
@@ -100,8 +100,8 @@ const en: Dict = {
   "cta.book": "Book Now",
   "topbar.phone": "+213 661 53 18 65",
   "topbar.firm": "Firm: 028 17 09 00",
-  "topbar.email": "contact.mehblaw@gmail.com",
-  "topbar.languages": "Français · العربية · English",
+  "topbar.email": "hb.legalcontact@gmail.com",
+  "topbar.languages": "FranÃ§ais Â· Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Â· English",
   "hero.tagline": "Legal excellence at the service of your ambitions.",
   "hero.subtitle": "Legal excellence at the service of your ambitions.",
   "hero.cta.book": "Reserve a consultation",
@@ -113,7 +113,7 @@ const en: Dict = {
   "hero.card.loc": "Algiers, Algeria",
   "services.badge": "Practice Areas",
   "pres.badge": "About Us",
-  "pres.title": "Maître Hanifi & Associés",
+  "pres.title": "MaÃ®tre Hanifi & AssociÃ©s",
   "pres.p1": "The firm supports businesses, institutions, and individuals in legal risk prevention, strategic counseling, negotiation, and the defense of their interests.",
   "pres.p2": "Our team combines complementary skills to offer comprehensive support across the main areas of law. We prioritize an approach built on active listening, legal rigor, confidentiality, and the pursuit of solutions tailored to each client's objectives.",
   "pres.p3": "With over forty years of experience, the firm has developed recognized expertise in business law, public procurement, arbitration, taxation, and litigation, while expanding its capabilities to meet the emerging challenges of digital law and artificial intelligence.",
@@ -129,7 +129,7 @@ const en: Dict = {
   "team.partner": "Partner",
   "team.attorney": "Attorney",
   "team.cred1": "Attorney at the Court, accredited by the Supreme Court and the Council of State",
-  "team.cred2": "Member of the World Order of International Experts (OMEI – Geneva)",
+  "team.cred2": "Member of the World Order of International Experts (OMEI â€“ Geneva)",
   "book.badge": "Consultation",
   "book.title": "Reserve your appointment",
   "book.desc": "Choose a practice area, pick a time that suits you, and your email client will open to send the request to our attorneys.",
@@ -162,168 +162,168 @@ const en: Dict = {
   "location.badge": "Our Location",
   "location.title": "Visit Our Office",
   "location.desc": "Located in Algiers, Algeria. We welcome clients for in-person consultations.",
-  "footer.about": "Société Civile Professionnelle d'Avocats. Providing expert legal counsel in Algeria and internationally since 1985.",
+  "footer.about": "SociÃ©tÃ© Civile Professionnelle d'Avocats. Providing expert legal counsel in Algeria and internationally since 1985.",
   "footer.contact": "Contact",
-  "footer.email": "contact.mehblaw@gmail.com",
+  "footer.email": "hb.legalcontact@gmail.com",
   "footer.fax": "Fax: 028170900",
   "footer.languages": "Languages",
-  "footer.rights": "© {year} H&B Law Firm. All rights reserved.",
+  "footer.rights": "Â© {year} H&B Law Firm. All rights reserved.",
 };
 
 const fr: Dict = {
   "nav.practice": "Pratique",
-  "nav.team": "Équipe",
+  "nav.team": "Ã‰quipe",
   "nav.consult": "Consultation",
   "nav.location": "Emplacement",
-  "cta.book": "Réserver",
+  "cta.book": "RÃ©server",
   "topbar.phone": "+213 661 53 18 65",
   "topbar.firm": "Firm: 028 17 09 00",
-  "topbar.email": "contact.mehblaw@gmail.com",
-  "topbar.languages": "Français · العربية · English",
+  "topbar.email": "hb.legalcontact@gmail.com",
+  "topbar.languages": "FranÃ§ais Â· Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Â· English",
   "hero.tagline": "L'excellence juridique au service de vos ambitions.",
   "hero.subtitle": "L'excellence juridique au service de vos ambitions.",
-  "hero.cta.book": "Réserver une consultation",
-  "hero.cta.team": "Rencontrer l'équipe",
+  "hero.cta.book": "RÃ©server une consultation",
+  "hero.cta.team": "Rencontrer l'Ã©quipe",
   "hero.stat.years": "Ans de pratique",
   "hero.stat.attorneys": "Avocats experts",
   "hero.stat.clients": "Grands clients",
   "hero.card.title": "S.C.P.A",
-  "hero.card.loc": "Alger, Algérie",
+  "hero.card.loc": "Alger, AlgÃ©rie",
   "services.badge": "Domaines de pratique",
-  "pres.badge": "À propos",
-  "pres.title": "Maître Hanifi & Associés",
-  "pres.p1": "Le cabinet accompagne les entreprises, les institutions et les particuliers dans la prévention des risques juridiques, le conseil stratégique, la négociation et la défense de leurs intérêts.",
-  "pres.p2": "Notre équipe allie des compétences complémentaires pour offrir un accompagnement global dans les principaux domaines du droit. Nous privilégions une approche fondée sur l'écoute active, la rigueur juridique, la confidentialité et la recherche de solutions adaptées aux objectifs de chaque client.",
-  "pres.p3": "Avec plus de quarante ans d'expérience, le cabinet a développé une expertise reconnue en droit des affaires, marchés publics, arbitrage, fiscalité et contentieux, tout en élargissant ses compétences pour répondre aux défis émergents du droit du numérique et de l'intelligence artificielle.",
-  "pres.p4": "Notre mission est de transformer la complexité juridique en solutions claires et stratégiques adaptées aux besoins de nos clients.",
-  "services.title": "Domaines de Compétence",
-  "services.desc": "De la négociation de contrats à l'arbitrage international, nous offrons un soutien juridique complet pour vos projets les plus complexes.",
+  "pres.badge": "Ã€ propos",
+  "pres.title": "MaÃ®tre Hanifi & AssociÃ©s",
+  "pres.p1": "Le cabinet accompagne les entreprises, les institutions et les particuliers dans la prÃ©vention des risques juridiques, le conseil stratÃ©gique, la nÃ©gociation et la dÃ©fense de leurs intÃ©rÃªts.",
+  "pres.p2": "Notre Ã©quipe allie des compÃ©tences complÃ©mentaires pour offrir un accompagnement global dans les principaux domaines du droit. Nous privilÃ©gions une approche fondÃ©e sur l'Ã©coute active, la rigueur juridique, la confidentialitÃ© et la recherche de solutions adaptÃ©es aux objectifs de chaque client.",
+  "pres.p3": "Avec plus de quarante ans d'expÃ©rience, le cabinet a dÃ©veloppÃ© une expertise reconnue en droit des affaires, marchÃ©s publics, arbitrage, fiscalitÃ© et contentieux, tout en Ã©largissant ses compÃ©tences pour rÃ©pondre aux dÃ©fis Ã©mergents du droit du numÃ©rique et de l'intelligence artificielle.",
+  "pres.p4": "Notre mission est de transformer la complexitÃ© juridique en solutions claires et stratÃ©giques adaptÃ©es aux besoins de nos clients.",
+  "services.title": "Domaines de CompÃ©tence",
+  "services.desc": "De la nÃ©gociation de contrats Ã  l'arbitrage international, nous offrons un soutien juridique complet pour vos projets les plus complexes.",
   "services.rate": "Consultation initiale",
   "services.onrequest": "Sur demande",
-  "team.badge": "Notre Équipe",
+  "team.badge": "Notre Ã‰quipe",
   "team.title": "Rencontrez les Avocats",
-  "team.desc": "Une équipe dévouée de professionnels du droit accrédités par les plus hautes juridictions.",
-  "team.founder": "Associé Fondateur",
-  "team.partner": "Associée",
+  "team.desc": "Une Ã©quipe dÃ©vouÃ©e de professionnels du droit accrÃ©ditÃ©s par les plus hautes juridictions.",
+  "team.founder": "AssociÃ© Fondateur",
+  "team.partner": "AssociÃ©e",
   "team.attorney": "Avocat",
-  "team.cred1": "Avocat à la Cour, agréé près du Tribunal Suprême et du Conseil d'État",
-  "team.cred2": "Membre de l'Ordre Mondial des Experts Internationaux (OMEI – Genève)",
+  "team.cred1": "Avocat Ã  la Cour, agrÃ©Ã© prÃ¨s du Tribunal SuprÃªme et du Conseil d'Ã‰tat",
+  "team.cred2": "Membre de l'Ordre Mondial des Experts Internationaux (OMEI â€“ GenÃ¨ve)",
   "book.badge": "Consultation",
-  "book.title": "Réservez votre rendez-vous",
-  "book.desc": "Choisissez un domaine de pratique, sélectionnez une heure qui vous convient, et votre client de messagerie s'ouvrira pour envoyer la demande à nos avocats.",
-  "form.title": "Réserver une Consultation",
-  "form.subtitle": "Prenez un rendez-vous privé avec notre équipe. Les champs marqués * sont obligatoires.",
+  "book.title": "RÃ©servez votre rendez-vous",
+  "book.desc": "Choisissez un domaine de pratique, sÃ©lectionnez une heure qui vous convient, et votre client de messagerie s'ouvrira pour envoyer la demande Ã  nos avocats.",
+  "form.title": "RÃ©server une Consultation",
+  "form.subtitle": "Prenez un rendez-vous privÃ© avec notre Ã©quipe. Les champs marquÃ©s * sont obligatoires.",
   "form.name": "Nom complet",
-  "form.phone": "Téléphone",
+  "form.phone": "TÃ©lÃ©phone",
   "form.email": "E-mail",
   "form.service": "Domaine de pratique",
-  "form.date": "Date préférée",
-  "form.slot": "Créneau horaire",
+  "form.date": "Date prÃ©fÃ©rÃ©e",
+  "form.slot": "CrÃ©neau horaire",
   "form.notes": "Notes sur le dossier (optionnel)",
-  "form.notes.ph": "Décrivez brièvement votre situation. Tout ce que vous partagez est confidentiel.",
-  "form.disclaimer": "En soumettant, votre client de messagerie s'ouvrira pour envoyer la demande à nos avocats.",
-  "form.submit": "Confirmer la réservation",
+  "form.notes.ph": "DÃ©crivez briÃ¨vement votre situation. Tout ce que vous partagez est confidentiel.",
+  "form.disclaimer": "En soumettant, votre client de messagerie s'ouvrira pour envoyer la demande Ã  nos avocats.",
+  "form.submit": "Confirmer la rÃ©servation",
   "form.sending": "Traitement...",
-  "form.select.service": "Sélectionner un domaine",
+  "form.select.service": "SÃ©lectionner un domaine",
   "form.select.slot": "Choisir une heure",
-  "form.success": "Consultation réservée. Votre client de messagerie va s'ouvrir pour confirmer.",
+  "form.success": "Consultation rÃ©servÃ©e. Votre client de messagerie va s'ouvrir pour confirmer.",
   "form.error": "Veuillez remplir tous les champs obligatoires.",
-  "form.error.email": "Réservation enregistrée, mais l'e-mail n'a pas pu être envoyé. Notre équipe vous contactera.",
-  "res.title": "Vos Réservations",
-  "res.subtitle": "Consultez ou annulez vos rendez-vous à venir.",
-  "res.count": "réservées",
-  "res.empty.title": "Aucune réservation",
-  "res.empty.desc": "Utilisez le formulaire pour réserver votre première consultation.",
+  "form.error.email": "RÃ©servation enregistrÃ©e, mais l'e-mail n'a pas pu Ãªtre envoyÃ©. Notre Ã©quipe vous contactera.",
+  "res.title": "Vos RÃ©servations",
+  "res.subtitle": "Consultez ou annulez vos rendez-vous Ã  venir.",
+  "res.count": "rÃ©servÃ©es",
+  "res.empty.title": "Aucune rÃ©servation",
+  "res.empty.desc": "Utilisez le formulaire pour rÃ©server votre premiÃ¨re consultation.",
   "res.cancel": "Annuler",
-  "res.cancelled": "Réservation annulée",
+  "res.cancelled": "RÃ©servation annulÃ©e",
   "res.notes": "Notes :",
-  "footer.about": "Société Civile Professionnelle d'Avocats. Offrant un conseil juridique expert en Algérie et à l'international depuis 1985.",
+  "footer.about": "SociÃ©tÃ© Civile Professionnelle d'Avocats. Offrant un conseil juridique expert en AlgÃ©rie et Ã  l'international depuis 1985.",
   "location.badge": "Notre Emplacement",
   "location.title": "Visitez Notre Bureau",
-  "location.desc": "Situé à Alger, Algérie. Nous accueillons les clients pour des consultations en personne.",
+  "location.desc": "SituÃ© Ã  Alger, AlgÃ©rie. Nous accueillons les clients pour des consultations en personne.",
   "footer.contact": "Contact",
-  "footer.email": "contact.mehblaw@gmail.com",
+  "footer.email": "hb.legalcontact@gmail.com",
   "footer.fax": "Fax : 028170900",
   "footer.languages": "Langues",
-  "footer.rights": "© {year} Cabinet H&B. Tous droits réservés.",
+  "footer.rights": "Â© {year} Cabinet H&B. Tous droits rÃ©servÃ©s.",
 };
 
 const ar: Dict = {
-  "nav.practice": "الممارسة",
-  "nav.team": "الفريق",
-  "nav.consult": "استشارة",
-  "nav.location": "الموقع",
-  "cta.book": "احجز الآن",
+  "nav.practice": "Ø§Ù„Ù…Ù…Ø§Ø±Ø³Ø©",
+  "nav.team": "Ø§Ù„ÙØ±ÙŠÙ‚",
+  "nav.consult": "Ø§Ø³ØªØ´Ø§Ø±Ø©",
+  "nav.location": "Ø§Ù„Ù…ÙˆÙ‚Ø¹",
+  "cta.book": "Ø§Ø­Ø¬Ø² Ø§Ù„Ø¢Ù†",
   "topbar.phone": "+213 661 53 18 65",
   "topbar.firm": "Firm: 028 17 09 00",
-  "topbar.email": "contact.mehblaw@gmail.com",
-  "topbar.languages": "Français · العربية · English",
-  "hero.tagline": "التميز القانوني في خدمة طموحاتك.",
-  "hero.subtitle": "التميز القانوني في خدمة طموحاتك.",
-  "hero.cta.book": "احجز استشارة",
-  "hero.cta.team": "تعرف على الفريق",
-  "hero.stat.years": "سنوات الممارسة",
-  "hero.stat.attorneys": "محامون خبراء",
-  "hero.stat.clients": "عملاء كبار",
+  "topbar.email": "hb.legalcontact@gmail.com",
+  "topbar.languages": "FranÃ§ais Â· Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Â· English",
+  "hero.tagline": "Ø§Ù„ØªÙ…ÙŠØ² Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠ ÙÙŠ Ø®Ø¯Ù…Ø© Ø·Ù…ÙˆØ­Ø§ØªÙƒ.",
+  "hero.subtitle": "Ø§Ù„ØªÙ…ÙŠØ² Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠ ÙÙŠ Ø®Ø¯Ù…Ø© Ø·Ù…ÙˆØ­Ø§ØªÙƒ.",
+  "hero.cta.book": "Ø§Ø­Ø¬Ø² Ø§Ø³ØªØ´Ø§Ø±Ø©",
+  "hero.cta.team": "ØªØ¹Ø±Ù Ø¹Ù„Ù‰ Ø§Ù„ÙØ±ÙŠÙ‚",
+  "hero.stat.years": "Ø³Ù†ÙˆØ§Øª Ø§Ù„Ù…Ù…Ø§Ø±Ø³Ø©",
+  "hero.stat.attorneys": "Ù…Ø­Ø§Ù…ÙˆÙ† Ø®Ø¨Ø±Ø§Ø¡",
+  "hero.stat.clients": "Ø¹Ù…Ù„Ø§Ø¡ ÙƒØ¨Ø§Ø±",
   "hero.card.title": "S.C.P.A",
-  "hero.card.loc": "الجزائر العاصمة، الجزائر",
-  "services.badge": "مجالات الممارسة",
-  "pres.badge": "من نحن",
-  "pres.title": "مكتب الأستاذ حنيفي وشركاه",
-  "pres.p1": "يرافق المكتب الشركات والمؤسسات والأفراد في الوقاية من المخاطر القانونية والاستشارات الاستراتيجية والتفاوض والدفاع عن مصالحهم.",
-  "pres.p2": "يجمع فريقنا بين مهارات مكملة لتقديم دعم شامل عبر المجالات الرئيسية للقانون. نحن نعطي الأولوية لنهج يرتكز على الاستماع الفعال والدقة القانونية والسرية والسعي نحو حلول مصممة وفق أهداف كل عميل.",
-  "pres.p3": "بخبرة تمتد لأكثر من أربعين عامًا، طوّر المكتب خبرة معترف بها في قانون الأعمال والمناقصات العامة والتحكيم والضرائب والDUCTIEUX، ووسع قدراته لmeet تحديات قانوني الرقمي والذكاء الاصطناعي الناشئة.",
-  "pres.p4": "مهمتنا هي تحويل التعقيد القانوني إلى حلول واضحة واستراتيجية مصممة وفق احتياجات عملائنا.",
-  "services.title": "مجالات الخبرة",
-  "services.desc": "من التفاوض على العقود إلى التحكيم الدولي، نقدم دعماً قانونياً شاملاً لمشاريعك الأكثر تعقيداً.",
-  "services.rate": "استشارة أولية",
-  "services.onrequest": "عند الطلب",
-  "team.badge": "فريقنا",
-  "team.title": "تعرف على المحامين",
-  "team.desc": "فريق مكرس من المهنيين القانونيين المعتمدين من أعلى المحاكم.",
-  "team.founder": "الشريك المؤسس",
-  "team.partner": "شريك",
-  "team.attorney": "محامٍ",
-  "team.cred1": "محامٍ في المحكمة، معتمد لدى المحكمة العليا ومجلس الدولة",
-  "team.cred2": "عضو في النظام العالمي للخبراء الدوليين (OMEI – جنيف)",
-  "book.badge": "استشارة",
-  "book.title": "احجز موعدك",
-  "book.desc": "اختر مجال الممارسة، واختر الوقت الذي يناسبك، وسيتم فتح برنامج البريد الإلكتروني الخاص بك لإرسال الطلب إلى محامينا.",
-  "form.title": "احجز استشارة",
-  "form.subtitle": "احجز موعداً خاصاً مع فريقنا. الحقول المميزة بـ * مطلوبة.",
-  "form.name": "الاسم الكامل",
-  "form.phone": "الهاتف",
-  "form.email": "البريد الإلكتروني",
-  "form.service": "مجال الممارسة",
-  "form.date": "التاريخ المفضل",
-  "form.slot": "الفتحة الزمنية",
-  "form.notes": "ملاحظات القضية (اختياري)",
-  "form.notes.ph": "صف حالتك بإيجاز. كل ما تشاركه محمي بسرية تامة.",
-  "form.disclaimer": "بالإرسال، سيتم فتح برنامج البريد الإلكتروني الخاص بك لإرسال الطلب إلى محامينا.",
-  "form.submit": "تأكيد الحجز",
-  "form.sending": "جاري المعالجة...",
-  "form.select.service": "اختر مجال الممارسة",
-  "form.select.slot": "اختر وقتًا",
-  "form.success": "تم حجز الاستشارة. سيتم فتح برنامج البريد الإلكتروني الخاص بك للتأكيد.",
-  "form.error": "يرجى إكمال جميع الحقول المطلوبة.",
-  "form.error.email": "تم حجز الموعد، لكن لم يتم إرسال البريد الإلكتروني. سيتواصل فريقنا معك.",
-  "res.title": "حجوزاتك",
-  "res.subtitle": "راجع أو ألغِ مواعيدك القادمة.",
-  "res.count": "محجوز",
-  "res.empty.title": "لا توجد حجوزات بعد",
-  "res.empty.desc": "استخدم النموذج لحجز استشارتك الأولى.",
-  "res.cancel": "إلغاء",
-  "res.cancelled": "تم إلغاء الحجز",
-  "res.notes": "ملاحظات:",
-  "location.badge": "موقعنا",
-  "location.title": "زور مكتبنا",
-  "location.desc": "يقع مكتبنا في الجزائر العاصمة، الجزائر. نرحب بالعملاء للاستشارات الشخصية.",
-  "footer.about": "شركة مدنية مهنية للمحامين. نقدم استشارات قانونية متخصصة في الجزائر ودولياً منذ 1985.",
-  "footer.contact": "اتصل بنا",
-  "footer.email": "contact.mehblaw@gmail.com",
-  "footer.fax": "فاكس: 028170900",
-  "footer.languages": "اللغات",
-  "footer.rights": "© {year} مكتب H&B. جميع الحقوق محفوظة.",
+  "hero.card.loc": "Ø§Ù„Ø¬Ø²Ø§Ø¦Ø± Ø§Ù„Ø¹Ø§ØµÙ…Ø©ØŒ Ø§Ù„Ø¬Ø²Ø§Ø¦Ø±",
+  "services.badge": "Ù…Ø¬Ø§Ù„Ø§Øª Ø§Ù„Ù…Ù…Ø§Ø±Ø³Ø©",
+  "pres.badge": "Ù…Ù† Ù†Ø­Ù†",
+  "pres.title": "Ù…ÙƒØªØ¨ Ø§Ù„Ø£Ø³ØªØ§Ø° Ø­Ù†ÙŠÙÙŠ ÙˆØ´Ø±ÙƒØ§Ù‡",
+  "pres.p1": "ÙŠØ±Ø§ÙÙ‚ Ø§Ù„Ù…ÙƒØªØ¨ Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„Ù…Ø¤Ø³Ø³Ø§Øª ÙˆØ§Ù„Ø£ÙØ±Ø§Ø¯ ÙÙŠ Ø§Ù„ÙˆÙ‚Ø§ÙŠØ© Ù…Ù† Ø§Ù„Ù…Ø®Ø§Ø·Ø± Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠØ© ÙˆØ§Ù„Ø§Ø³ØªØ´Ø§Ø±Ø§Øª Ø§Ù„Ø§Ø³ØªØ±Ø§ØªÙŠØ¬ÙŠØ© ÙˆØ§Ù„ØªÙØ§ÙˆØ¶ ÙˆØ§Ù„Ø¯ÙØ§Ø¹ Ø¹Ù† Ù…ØµØ§Ù„Ø­Ù‡Ù….",
+  "pres.p2": "ÙŠØ¬Ù…Ø¹ ÙØ±ÙŠÙ‚Ù†Ø§ Ø¨ÙŠÙ† Ù…Ù‡Ø§Ø±Ø§Øª Ù…ÙƒÙ…Ù„Ø© Ù„ØªÙ‚Ø¯ÙŠÙ… Ø¯Ø¹Ù… Ø´Ø§Ù…Ù„ Ø¹Ø¨Ø± Ø§Ù„Ù…Ø¬Ø§Ù„Ø§Øª Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ© Ù„Ù„Ù‚Ø§Ù†ÙˆÙ†. Ù†Ø­Ù† Ù†Ø¹Ø·ÙŠ Ø§Ù„Ø£ÙˆÙ„ÙˆÙŠØ© Ù„Ù†Ù‡Ø¬ ÙŠØ±ØªÙƒØ² Ø¹Ù„Ù‰ Ø§Ù„Ø§Ø³ØªÙ…Ø§Ø¹ Ø§Ù„ÙØ¹Ø§Ù„ ÙˆØ§Ù„Ø¯Ù‚Ø© Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠØ© ÙˆØ§Ù„Ø³Ø±ÙŠØ© ÙˆØ§Ù„Ø³Ø¹ÙŠ Ù†Ø­Ùˆ Ø­Ù„ÙˆÙ„ Ù…ØµÙ…Ù…Ø© ÙˆÙÙ‚ Ø£Ù‡Ø¯Ø§Ù ÙƒÙ„ Ø¹Ù…ÙŠÙ„.",
+  "pres.p3": "Ø¨Ø®Ø¨Ø±Ø© ØªÙ…ØªØ¯ Ù„Ø£ÙƒØ«Ø± Ù…Ù† Ø£Ø±Ø¨Ø¹ÙŠÙ† Ø¹Ø§Ù…Ù‹Ø§ØŒ Ø·ÙˆÙ‘Ø± Ø§Ù„Ù…ÙƒØªØ¨ Ø®Ø¨Ø±Ø© Ù…Ø¹ØªØ±Ù Ø¨Ù‡Ø§ ÙÙŠ Ù‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø£Ø¹Ù…Ø§Ù„ ÙˆØ§Ù„Ù…Ù†Ø§Ù‚ØµØ§Øª Ø§Ù„Ø¹Ø§Ù…Ø© ÙˆØ§Ù„ØªØ­ÙƒÙŠÙ… ÙˆØ§Ù„Ø¶Ø±Ø§Ø¦Ø¨ ÙˆØ§Ù„DUCTIEUXØŒ ÙˆÙˆØ³Ø¹ Ù‚Ø¯Ø±Ø§ØªÙ‡ Ù„meet ØªØ­Ø¯ÙŠØ§Øª Ù‚Ø§Ù†ÙˆÙ†ÙŠ Ø§Ù„Ø±Ù‚Ù…ÙŠ ÙˆØ§Ù„Ø°ÙƒØ§Ø¡ Ø§Ù„Ø§ØµØ·Ù†Ø§Ø¹ÙŠ Ø§Ù„Ù†Ø§Ø´Ø¦Ø©.",
+  "pres.p4": "Ù…Ù‡Ù…ØªÙ†Ø§ Ù‡ÙŠ ØªØ­ÙˆÙŠÙ„ Ø§Ù„ØªØ¹Ù‚ÙŠØ¯ Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠ Ø¥Ù„Ù‰ Ø­Ù„ÙˆÙ„ ÙˆØ§Ø¶Ø­Ø© ÙˆØ§Ø³ØªØ±Ø§ØªÙŠØ¬ÙŠØ© Ù…ØµÙ…Ù…Ø© ÙˆÙÙ‚ Ø§Ø­ØªÙŠØ§Ø¬Ø§Øª Ø¹Ù…Ù„Ø§Ø¦Ù†Ø§.",
+  "services.title": "Ù…Ø¬Ø§Ù„Ø§Øª Ø§Ù„Ø®Ø¨Ø±Ø©",
+  "services.desc": "Ù…Ù† Ø§Ù„ØªÙØ§ÙˆØ¶ Ø¹Ù„Ù‰ Ø§Ù„Ø¹Ù‚ÙˆØ¯ Ø¥Ù„Ù‰ Ø§Ù„ØªØ­ÙƒÙŠÙ… Ø§Ù„Ø¯ÙˆÙ„ÙŠØŒ Ù†Ù‚Ø¯Ù… Ø¯Ø¹Ù…Ø§Ù‹ Ù‚Ø§Ù†ÙˆÙ†ÙŠØ§Ù‹ Ø´Ø§Ù…Ù„Ø§Ù‹ Ù„Ù…Ø´Ø§Ø±ÙŠØ¹Ùƒ Ø§Ù„Ø£ÙƒØ«Ø± ØªØ¹Ù‚ÙŠØ¯Ø§Ù‹.",
+  "services.rate": "Ø§Ø³ØªØ´Ø§Ø±Ø© Ø£ÙˆÙ„ÙŠØ©",
+  "services.onrequest": "Ø¹Ù†Ø¯ Ø§Ù„Ø·Ù„Ø¨",
+  "team.badge": "ÙØ±ÙŠÙ‚Ù†Ø§",
+  "team.title": "ØªØ¹Ø±Ù Ø¹Ù„Ù‰ Ø§Ù„Ù…Ø­Ø§Ù…ÙŠÙ†",
+  "team.desc": "ÙØ±ÙŠÙ‚ Ù…ÙƒØ±Ø³ Ù…Ù† Ø§Ù„Ù…Ù‡Ù†ÙŠÙŠÙ† Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠÙŠÙ† Ø§Ù„Ù…Ø¹ØªÙ…Ø¯ÙŠÙ† Ù…Ù† Ø£Ø¹Ù„Ù‰ Ø§Ù„Ù…Ø­Ø§ÙƒÙ….",
+  "team.founder": "Ø§Ù„Ø´Ø±ÙŠÙƒ Ø§Ù„Ù…Ø¤Ø³Ø³",
+  "team.partner": "Ø´Ø±ÙŠÙƒ",
+  "team.attorney": "Ù…Ø­Ø§Ù…Ù",
+  "team.cred1": "Ù…Ø­Ø§Ù…Ù ÙÙŠ Ø§Ù„Ù…Ø­ÙƒÙ…Ø©ØŒ Ù…Ø¹ØªÙ…Ø¯ Ù„Ø¯Ù‰ Ø§Ù„Ù…Ø­ÙƒÙ…Ø© Ø§Ù„Ø¹Ù„ÙŠØ§ ÙˆÙ…Ø¬Ù„Ø³ Ø§Ù„Ø¯ÙˆÙ„Ø©",
+  "team.cred2": "Ø¹Ø¶Ùˆ ÙÙŠ Ø§Ù„Ù†Ø¸Ø§Ù… Ø§Ù„Ø¹Ø§Ù„Ù…ÙŠ Ù„Ù„Ø®Ø¨Ø±Ø§Ø¡ Ø§Ù„Ø¯ÙˆÙ„ÙŠÙŠÙ† (OMEI â€“ Ø¬Ù†ÙŠÙ)",
+  "book.badge": "Ø§Ø³ØªØ´Ø§Ø±Ø©",
+  "book.title": "Ø§Ø­Ø¬Ø² Ù…ÙˆØ¹Ø¯Ùƒ",
+  "book.desc": "Ø§Ø®ØªØ± Ù…Ø¬Ø§Ù„ Ø§Ù„Ù…Ù…Ø§Ø±Ø³Ø©ØŒ ÙˆØ§Ø®ØªØ± Ø§Ù„ÙˆÙ‚Øª Ø§Ù„Ø°ÙŠ ÙŠÙ†Ø§Ø³Ø¨ÙƒØŒ ÙˆØ³ÙŠØªÙ… ÙØªØ­ Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ø§Ù„Ø®Ø§Øµ Ø¨Ùƒ Ù„Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø·Ù„Ø¨ Ø¥Ù„Ù‰ Ù…Ø­Ø§Ù…ÙŠÙ†Ø§.",
+  "form.title": "Ø§Ø­Ø¬Ø² Ø§Ø³ØªØ´Ø§Ø±Ø©",
+  "form.subtitle": "Ø§Ø­Ø¬Ø² Ù…ÙˆØ¹Ø¯Ø§Ù‹ Ø®Ø§ØµØ§Ù‹ Ù…Ø¹ ÙØ±ÙŠÙ‚Ù†Ø§. Ø§Ù„Ø­Ù‚ÙˆÙ„ Ø§Ù„Ù…Ù…ÙŠØ²Ø© Ø¨Ù€ * Ù…Ø·Ù„ÙˆØ¨Ø©.",
+  "form.name": "Ø§Ù„Ø§Ø³Ù… Ø§Ù„ÙƒØ§Ù…Ù„",
+  "form.phone": "Ø§Ù„Ù‡Ø§ØªÙ",
+  "form.email": "Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ",
+  "form.service": "Ù…Ø¬Ø§Ù„ Ø§Ù„Ù…Ù…Ø§Ø±Ø³Ø©",
+  "form.date": "Ø§Ù„ØªØ§Ø±ÙŠØ® Ø§Ù„Ù…ÙØ¶Ù„",
+  "form.slot": "Ø§Ù„ÙØªØ­Ø© Ø§Ù„Ø²Ù…Ù†ÙŠØ©",
+  "form.notes": "Ù…Ù„Ø§Ø­Ø¸Ø§Øª Ø§Ù„Ù‚Ø¶ÙŠØ© (Ø§Ø®ØªÙŠØ§Ø±ÙŠ)",
+  "form.notes.ph": "ØµÙ Ø­Ø§Ù„ØªÙƒ Ø¨Ø¥ÙŠØ¬Ø§Ø². ÙƒÙ„ Ù…Ø§ ØªØ´Ø§Ø±ÙƒÙ‡ Ù…Ø­Ù…ÙŠ Ø¨Ø³Ø±ÙŠØ© ØªØ§Ù…Ø©.",
+  "form.disclaimer": "Ø¨Ø§Ù„Ø¥Ø±Ø³Ø§Ù„ØŒ Ø³ÙŠØªÙ… ÙØªØ­ Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ø§Ù„Ø®Ø§Øµ Ø¨Ùƒ Ù„Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø·Ù„Ø¨ Ø¥Ù„Ù‰ Ù…Ø­Ø§Ù…ÙŠÙ†Ø§.",
+  "form.submit": "ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ø­Ø¬Ø²",
+  "form.sending": "Ø¬Ø§Ø±ÙŠ Ø§Ù„Ù…Ø¹Ø§Ù„Ø¬Ø©...",
+  "form.select.service": "Ø§Ø®ØªØ± Ù…Ø¬Ø§Ù„ Ø§Ù„Ù…Ù…Ø§Ø±Ø³Ø©",
+  "form.select.slot": "Ø§Ø®ØªØ± ÙˆÙ‚ØªÙ‹Ø§",
+  "form.success": "ØªÙ… Ø­Ø¬Ø² Ø§Ù„Ø§Ø³ØªØ´Ø§Ø±Ø©. Ø³ÙŠØªÙ… ÙØªØ­ Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ø§Ù„Ø®Ø§Øµ Ø¨Ùƒ Ù„Ù„ØªØ£ÙƒÙŠØ¯.",
+  "form.error": "ÙŠØ±Ø¬Ù‰ Ø¥ÙƒÙ…Ø§Ù„ Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ„ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.",
+  "form.error.email": "ØªÙ… Ø­Ø¬Ø² Ø§Ù„Ù…ÙˆØ¹Ø¯ØŒ Ù„ÙƒÙ† Ù„Ù… ÙŠØªÙ… Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ. Ø³ÙŠØªÙˆØ§ØµÙ„ ÙØ±ÙŠÙ‚Ù†Ø§ Ù…Ø¹Ùƒ.",
+  "res.title": "Ø­Ø¬ÙˆØ²Ø§ØªÙƒ",
+  "res.subtitle": "Ø±Ø§Ø¬Ø¹ Ø£Ùˆ Ø£Ù„ØºÙ Ù…ÙˆØ§Ø¹ÙŠØ¯Ùƒ Ø§Ù„Ù‚Ø§Ø¯Ù…Ø©.",
+  "res.count": "Ù…Ø­Ø¬ÙˆØ²",
+  "res.empty.title": "Ù„Ø§ ØªÙˆØ¬Ø¯ Ø­Ø¬ÙˆØ²Ø§Øª Ø¨Ø¹Ø¯",
+  "res.empty.desc": "Ø§Ø³ØªØ®Ø¯Ù… Ø§Ù„Ù†Ù…ÙˆØ°Ø¬ Ù„Ø­Ø¬Ø² Ø§Ø³ØªØ´Ø§Ø±ØªÙƒ Ø§Ù„Ø£ÙˆÙ„Ù‰.",
+  "res.cancel": "Ø¥Ù„ØºØ§Ø¡",
+  "res.cancelled": "ØªÙ… Ø¥Ù„ØºØ§Ø¡ Ø§Ù„Ø­Ø¬Ø²",
+  "res.notes": "Ù…Ù„Ø§Ø­Ø¸Ø§Øª:",
+  "location.badge": "Ù…ÙˆÙ‚Ø¹Ù†Ø§",
+  "location.title": "Ø²ÙˆØ± Ù…ÙƒØªØ¨Ù†Ø§",
+  "location.desc": "ÙŠÙ‚Ø¹ Ù…ÙƒØªØ¨Ù†Ø§ ÙÙŠ Ø§Ù„Ø¬Ø²Ø§Ø¦Ø± Ø§Ù„Ø¹Ø§ØµÙ…Ø©ØŒ Ø§Ù„Ø¬Ø²Ø§Ø¦Ø±. Ù†Ø±Ø­Ø¨ Ø¨Ø§Ù„Ø¹Ù…Ù„Ø§Ø¡ Ù„Ù„Ø§Ø³ØªØ´Ø§Ø±Ø§Øª Ø§Ù„Ø´Ø®ØµÙŠØ©.",
+  "footer.about": "Ø´Ø±ÙƒØ© Ù…Ø¯Ù†ÙŠØ© Ù…Ù‡Ù†ÙŠØ© Ù„Ù„Ù…Ø­Ø§Ù…ÙŠÙ†. Ù†Ù‚Ø¯Ù… Ø§Ø³ØªØ´Ø§Ø±Ø§Øª Ù‚Ø§Ù†ÙˆÙ†ÙŠØ© Ù…ØªØ®ØµØµØ© ÙÙŠ Ø§Ù„Ø¬Ø²Ø§Ø¦Ø± ÙˆØ¯ÙˆÙ„ÙŠØ§Ù‹ Ù…Ù†Ø° 1985.",
+  "footer.contact": "Ø§ØªØµÙ„ Ø¨Ù†Ø§",
+  "footer.email": "hb.legalcontact@gmail.com",
+  "footer.fax": "ÙØ§ÙƒØ³: 028170900",
+  "footer.languages": "Ø§Ù„Ù„ØºØ§Øª",
+  "footer.rights": "Â© {year} Ù…ÙƒØªØ¨ H&B. Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø©.",
 };
 
 const DICTS: Record<Lang, Dict> = { en, fr, ar };
@@ -383,104 +383,104 @@ function dir(): "ltr" | "rtl" {
   return current === "ar" ? "rtl" : "ltr";
 }
 
-// ── Services ───────────────────────────────────────────────────────────────
+// â”€â”€ Services â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const SERVICES: Service[] = [
   {
     id: "public-procurement",
-    title: { en: "🏛️ Public Procurement", fr: "🏛️ Marchés Publics", ar: "🏛️ المناقصات العامة" },
+    title: { en: "ðŸ›ï¸ Public Procurement", fr: "ðŸ›ï¸ MarchÃ©s Publics", ar: "ðŸ›ï¸ Ø§Ù„Ù…Ù†Ø§Ù‚ØµØ§Øª Ø§Ù„Ø¹Ø§Ù…Ø©" },
     blurb: {
       en: "Public procurement is one of the firm's core areas of excellence. With several decades of experience, we support businesses, public entities, and investors through every stage of their operations, from the preparation of bids to the resolution of disputes.",
-      fr: "Les marchés publics constituent l'un des domaines d'excellence du cabinet. Avec plusieurs décennies d'expérience, nous accompagnons les entreprises, les entités publiques et les investisseurs à chaque étape de leurs opérations, de la préparation des offres à la résolution des litiges.",
-      ar: "المناقصات العامة هي إحدى مجالات التميز الأساسية للمكتب. مع عقود من الخبرة، نرافق الشركات والكيانات العامة والمستثمرين في كل مرحلة من مراحل عملياتهم، من إعداد العروض إلى حل النزاعات.",
+      fr: "Les marchÃ©s publics constituent l'un des domaines d'excellence du cabinet. Avec plusieurs dÃ©cennies d'expÃ©rience, nous accompagnons les entreprises, les entitÃ©s publiques et les investisseurs Ã  chaque Ã©tape de leurs opÃ©rations, de la prÃ©paration des offres Ã  la rÃ©solution des litiges.",
+      ar: "Ø§Ù„Ù…Ù†Ø§Ù‚ØµØ§Øª Ø§Ù„Ø¹Ø§Ù…Ø© Ù‡ÙŠ Ø¥Ø­Ø¯Ù‰ Ù…Ø¬Ø§Ù„Ø§Øª Ø§Ù„ØªÙ…ÙŠØ² Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ© Ù„Ù„Ù…ÙƒØªØ¨. Ù…Ø¹ Ø¹Ù‚ÙˆØ¯ Ù…Ù† Ø§Ù„Ø®Ø¨Ø±Ø©ØŒ Ù†Ø±Ø§ÙÙ‚ Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„ÙƒÙŠØ§Ù†Ø§Øª Ø§Ù„Ø¹Ø§Ù…Ø© ÙˆØ§Ù„Ù…Ø³ØªØ«Ù…Ø±ÙŠÙ† ÙÙŠ ÙƒÙ„ Ù…Ø±Ø­Ù„Ø© Ù…Ù† Ù…Ø±Ø§Ø­Ù„ Ø¹Ù…Ù„ÙŠØ§ØªÙ‡Ù…ØŒ Ù…Ù† Ø¥Ø¹Ø¯Ø§Ø¯ Ø§Ù„Ø¹Ø±ÙˆØ¶ Ø¥Ù„Ù‰ Ø­Ù„ Ø§Ù„Ù†Ø²Ø§Ø¹Ø§Øª.",
     },
     rate: "onrequest",
     icon: "Building2",
   },
   {
     id: "business-law",
-    title: { en: "💼 Business Law", fr: "💼 Droit des Affaires", ar: "💼 قانون الأعمال" },
+    title: { en: "ðŸ’¼ Business Law", fr: "ðŸ’¼ Droit des Affaires", ar: "ðŸ’¼ Ù‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø£Ø¹Ù…Ø§Ù„" },
     blurb: {
       en: "The firm supports businesses, executives, and investors in their day-to-day operations as well as their growth strategies. Our approach aims to secure economic transactions, mitigate legal risks, and deliver solutions tailored to each client's specific commercial challenges.",
-      fr: "Le cabinet accompagne les entreprises, les dirigeants et les investisseurs dans leurs activités quotidiennes ainsi que dans leurs stratégies de croissance. Notre approche vise à sécuriser les transactions économiques, atténuer les risques juridiques et offrir des solutions adaptées aux défis commerciaux spécifiques de chaque client.",
-      ar: "يرافق المكتب الشركات والمديرين والمستثمرين في أنشطتهم اليومية وكذلك في استراتيجيات نموهم. يهدف نهجنا إلى تأمين المعاملات الاقتصادية، والتخفيف من المخاطر القانونية، وتقديم حلول مصممة وفق التحديات التجارية الخاصة لكل عميل.",
+      fr: "Le cabinet accompagne les entreprises, les dirigeants et les investisseurs dans leurs activitÃ©s quotidiennes ainsi que dans leurs stratÃ©gies de croissance. Notre approche vise Ã  sÃ©curiser les transactions Ã©conomiques, attÃ©nuer les risques juridiques et offrir des solutions adaptÃ©es aux dÃ©fis commerciaux spÃ©cifiques de chaque client.",
+      ar: "ÙŠØ±Ø§ÙÙ‚ Ø§Ù„Ù…ÙƒØªØ¨ Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„Ù…Ø¯ÙŠØ±ÙŠÙ† ÙˆØ§Ù„Ù…Ø³ØªØ«Ù…Ø±ÙŠÙ† ÙÙŠ Ø£Ù†Ø´Ø·ØªÙ‡Ù… Ø§Ù„ÙŠÙˆÙ…ÙŠØ© ÙˆÙƒØ°Ù„Ùƒ ÙÙŠ Ø§Ø³ØªØ±Ø§ØªÙŠØ¬ÙŠØ§Øª Ù†Ù…ÙˆÙ‡Ù…. ÙŠÙ‡Ø¯Ù Ù†Ù‡Ø¬Ù†Ø§ Ø¥Ù„Ù‰ ØªØ£Ù…ÙŠÙ† Ø§Ù„Ù…Ø¹Ø§Ù…Ù„Ø§Øª Ø§Ù„Ø§Ù‚ØªØµØ§Ø¯ÙŠØ©ØŒ ÙˆØ§Ù„ØªØ®ÙÙŠÙ Ù…Ù† Ø§Ù„Ù…Ø®Ø§Ø·Ø± Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠØ©ØŒ ÙˆØªÙ‚Ø¯ÙŠÙ… Ø­Ù„ÙˆÙ„ Ù…ØµÙ…Ù…Ø© ÙˆÙÙ‚ Ø§Ù„ØªØ­Ø¯ÙŠØ§Øª Ø§Ù„ØªØ¬Ø§Ø±ÙŠØ© Ø§Ù„Ø®Ø§ØµØ© Ù„ÙƒÙ„ Ø¹Ù…ÙŠÙ„.",
     },
     rate: "onrequest",
     icon: "Briefcase",
   },
   {
     id: "corporate-law",
-    title: { en: "🏢 Corporate Law", fr: "🏢 Droit des Sociétés", ar: "🏢 قانون الشركات" },
+    title: { en: "ðŸ¢ Corporate Law", fr: "ðŸ¢ Droit des SociÃ©tÃ©s", ar: "ðŸ¢ Ù‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø´Ø±ÙƒØ§Øª" },
     blurb: {
       en: "We assist companies at every stage of their development, from creation to restructuring, ensuring the legal compliance of their corporate structure and protecting the interests of shareholders and executives.",
-      fr: "Nous assistons les entreprises à chaque étape de leur développement, de la création à la restructuration, en assurant la conformité juridique de leur structure et en protégeant les intérêts des actionnaires et des dirigeants.",
-      ar: "نساعد الشركات في كل مرحلة من مراحل تطورها، من التأسيس إلى إعادة الهيكلة، مع ضمان الامتثال القانوني لهيكلها corporate وحماية مصالح المساهمين والمديرين.",
+      fr: "Nous assistons les entreprises Ã  chaque Ã©tape de leur dÃ©veloppement, de la crÃ©ation Ã  la restructuration, en assurant la conformitÃ© juridique de leur structure et en protÃ©geant les intÃ©rÃªts des actionnaires et des dirigeants.",
+      ar: "Ù†Ø³Ø§Ø¹Ø¯ Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙÙŠ ÙƒÙ„ Ù…Ø±Ø­Ù„Ø© Ù…Ù† Ù…Ø±Ø§Ø­Ù„ ØªØ·ÙˆØ±Ù‡Ø§ØŒ Ù…Ù† Ø§Ù„ØªØ£Ø³ÙŠØ³ Ø¥Ù„Ù‰ Ø¥Ø¹Ø§Ø¯Ø© Ø§Ù„Ù‡ÙŠÙƒÙ„Ø©ØŒ Ù…Ø¹ Ø¶Ù…Ø§Ù† Ø§Ù„Ø§Ù…ØªØ«Ø§Ù„ Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠ Ù„Ù‡ÙŠÙƒÙ„Ù‡Ø§ corporate ÙˆØ­Ù…Ø§ÙŠØ© Ù…ØµØ§Ù„Ø­ Ø§Ù„Ù…Ø³Ø§Ù‡Ù…ÙŠÙ† ÙˆØ§Ù„Ù…Ø¯ÙŠØ±ÙŠÙ†.",
     },
     rate: "onrequest",
     icon: "Building",
   },
   {
     id: "arbitration-mediation",
-    title: { en: "🤝 Arbitration & Mediation", fr: "🤝 Arbitrage & Médiation", ar: "🤝 التحكيم والوساطة" },
+    title: { en: "ðŸ¤ Arbitration & Mediation", fr: "ðŸ¤ Arbitrage & MÃ©diation", ar: "ðŸ¤ Ø§Ù„ØªØ­ÙƒÙŠÙ… ÙˆØ§Ù„ÙˆØ³Ø§Ø·Ø©" },
     blurb: {
       en: "The firm prioritizes dispute resolution methods that are efficient, confidential, and tailored to the stakes of each case. We guide our clients through arbitration and mediation procedures to facilitate swift and sustainable solutions.",
-      fr: "Le cabinet privilégie des méthodes de résolution des litiges efficaces, confidentielles et adaptées aux enjeux de chaque affaire. Nous guidons nos clients à travers les procédures d'arbitrage et de médiation pour faciliter des solutions rapides et durables.",
-      ar: "يحرص المكتب على طرق تسوية النزاعات الفعالة والسرية والمصممة وفق أهمية كل قضية. نرافق عملاءنا في إجراءات التحكيم والوساطة لتسهيل حلول سريعة ومستدامة.",
+      fr: "Le cabinet privilÃ©gie des mÃ©thodes de rÃ©solution des litiges efficaces, confidentielles et adaptÃ©es aux enjeux de chaque affaire. Nous guidons nos clients Ã  travers les procÃ©dures d'arbitrage et de mÃ©diation pour faciliter des solutions rapides et durables.",
+      ar: "ÙŠØ­Ø±Øµ Ø§Ù„Ù…ÙƒØªØ¨ Ø¹Ù„Ù‰ Ø·Ø±Ù‚ ØªØ³ÙˆÙŠØ© Ø§Ù„Ù†Ø²Ø§Ø¹Ø§Øª Ø§Ù„ÙØ¹Ø§Ù„Ø© ÙˆØ§Ù„Ø³Ø±ÙŠØ© ÙˆØ§Ù„Ù…ØµÙ…Ù…Ø© ÙˆÙÙ‚ Ø£Ù‡Ù…ÙŠØ© ÙƒÙ„ Ù‚Ø¶ÙŠØ©. Ù†Ø±Ø§ÙÙ‚ Ø¹Ù…Ù„Ø§Ø¡Ù†Ø§ ÙÙŠ Ø¥Ø¬Ø±Ø§Ø¡Ø§Øª Ø§Ù„ØªØ­ÙƒÙŠÙ… ÙˆØ§Ù„ÙˆØ³Ø§Ø·Ø© Ù„ØªØ³Ù‡ÙŠÙ„ Ø­Ù„ÙˆÙ„ Ø³Ø±ÙŠØ¹Ø© ÙˆÙ…Ø³ØªØ¯Ø§Ù…Ø©.",
     },
     rate: "onrequest",
     icon: "Scale",
   },
   {
     id: "tax-law",
-    title: { en: "📊 Tax Law", fr: "📊 Droit Fiscal", ar: "📊 القانون الضريبي" },
+    title: { en: "ðŸ“Š Tax Law", fr: "ðŸ“Š Droit Fiscal", ar: "ðŸ“Š Ø§Ù„Ù‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø¶Ø±ÙŠØ¨ÙŠ" },
     blurb: {
       en: "Taxation is a strategic priority for businesses and individuals alike. Our firm provides rigorous support in advisory services, compliance, and tax litigation management, with the ultimate goal of securing our clients' decisions and effectively defending their interests before the relevant tax authorities.",
-      fr: "La fiscalité est une priorité stratégique pour les entreprises et les particuliers. Notre cabinet offre un accompagnement rigoureux en conseil, conformité et gestion du contentieux fiscal, avec l'objectif final de sécuriser les décisions de nos clients et défendre efficacement leurs intérêts devant les autorités fiscales compétentes.",
-      ar: "الضرائب هي أولوية استراتيجية للشركات والأفراد على حد سواء. يوفر مكتبنا دعمًا صارمًا في الاستشارات والامتثال وإدارة النزاعات الضريبية، بهدف تأمين قرارات عملائنا والدفاع بفعالية عن مصالحهم أمام الجهات الضريبية المختصة.",
+      fr: "La fiscalitÃ© est une prioritÃ© stratÃ©gique pour les entreprises et les particuliers. Notre cabinet offre un accompagnement rigoureux en conseil, conformitÃ© et gestion du contentieux fiscal, avec l'objectif final de sÃ©curiser les dÃ©cisions de nos clients et dÃ©fendre efficacement leurs intÃ©rÃªts devant les autoritÃ©s fiscales compÃ©tentes.",
+      ar: "Ø§Ù„Ø¶Ø±Ø§Ø¦Ø¨ Ù‡ÙŠ Ø£ÙˆÙ„ÙˆÙŠØ© Ø§Ø³ØªØ±Ø§ØªÙŠØ¬ÙŠØ© Ù„Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„Ø£ÙØ±Ø§Ø¯ Ø¹Ù„Ù‰ Ø­Ø¯ Ø³ÙˆØ§Ø¡. ÙŠÙˆÙØ± Ù…ÙƒØªØ¨Ù†Ø§ Ø¯Ø¹Ù…Ù‹Ø§ ØµØ§Ø±Ù…Ù‹Ø§ ÙÙŠ Ø§Ù„Ø§Ø³ØªØ´Ø§Ø±Ø§Øª ÙˆØ§Ù„Ø§Ù…ØªØ«Ø§Ù„ ÙˆØ¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù†Ø²Ø§Ø¹Ø§Øª Ø§Ù„Ø¶Ø±ÙŠØ¨ÙŠØ©ØŒ Ø¨Ù‡Ø¯Ù ØªØ£Ù…ÙŠÙ† Ù‚Ø±Ø§Ø±Ø§Øª Ø¹Ù…Ù„Ø§Ø¦Ù†Ø§ ÙˆØ§Ù„Ø¯ÙØ§Ø¹ Ø¨ÙØ¹Ø§Ù„ÙŠØ© Ø¹Ù† Ù…ØµØ§Ù„Ø­Ù‡Ù… Ø£Ù…Ø§Ù… Ø§Ù„Ø¬Ù‡Ø§Øª Ø§Ù„Ø¶Ø±ÙŠØ¨ÙŠØ© Ø§Ù„Ù…Ø®ØªØµØ©.",
     },
     rate: "onrequest",
     icon: "FileText",
   },
   {
     id: "criminal-law",
-    title: { en: "⚖️ Criminal Law", fr: "⚖️ Droit Pénal", ar: "⚖️ القانون الجنائي" },
+    title: { en: "âš–ï¸ Criminal Law", fr: "âš–ï¸ Droit PÃ©nal", ar: "âš–ï¸ Ø§Ù„Ù‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø¬Ù†Ø§Ø¦ÙŠ" },
     blurb: {
       en: "We provide defense and legal assistance to our clients at every stage of criminal proceedings, with particular emphasis on upholding their rights, maintaining confidentiality, and implementing a defense strategy tailored to each situation.",
-      fr: "Nous assurons la défense et l'assistance juridique de nos clients à chaque étape de la procédure pénale, en insistant particulièrement sur le respect de leurs droits, le maintien de la confidentialité et la mise en œuvre d'une stratégie de défense adaptée à chaque situation.",
-      ar: "نقدم الدفاع والمساعدة القانونية لعملائنا في كل مرحلة من مراحل الإجراءات الجنائية، مع التأكيد على حفظ حقوقهم والحفاظ على السرية وتطبيق استراتيجية دفاع مصممة لكل موقف.",
+      fr: "Nous assurons la dÃ©fense et l'assistance juridique de nos clients Ã  chaque Ã©tape de la procÃ©dure pÃ©nale, en insistant particuliÃ¨rement sur le respect de leurs droits, le maintien de la confidentialitÃ© et la mise en Å“uvre d'une stratÃ©gie de dÃ©fense adaptÃ©e Ã  chaque situation.",
+      ar: "Ù†Ù‚Ø¯Ù… Ø§Ù„Ø¯ÙØ§Ø¹ ÙˆØ§Ù„Ù…Ø³Ø§Ø¹Ø¯Ø© Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠØ© Ù„Ø¹Ù…Ù„Ø§Ø¦Ù†Ø§ ÙÙŠ ÙƒÙ„ Ù…Ø±Ø­Ù„Ø© Ù…Ù† Ù…Ø±Ø§Ø­Ù„ Ø§Ù„Ø¥Ø¬Ø±Ø§Ø¡Ø§Øª Ø§Ù„Ø¬Ù†Ø§Ø¦ÙŠØ©ØŒ Ù…Ø¹ Ø§Ù„ØªØ£ÙƒÙŠØ¯ Ø¹Ù„Ù‰ Ø­ÙØ¸ Ø­Ù‚ÙˆÙ‚Ù‡Ù… ÙˆØ§Ù„Ø­ÙØ§Ø¸ Ø¹Ù„Ù‰ Ø§Ù„Ø³Ø±ÙŠØ© ÙˆØªØ·Ø¨ÙŠÙ‚ Ø§Ø³ØªØ±Ø§ØªÙŠØ¬ÙŠØ© Ø¯ÙØ§Ø¹ Ù…ØµÙ…Ù…Ø© Ù„ÙƒÙ„ Ù…ÙˆÙ‚Ù.",
     },
     rate: "onrequest",
     icon: "Gavel",
   },
   {
     id: "land-real-estate",
-    title: { en: "🏠 Land & Real Estate Law", fr: "🏠 Droit Foncier et Immobilier", ar: "🏠 قانون العقارات والأراضي" },
+    title: { en: "ðŸ  Land & Real Estate Law", fr: "ðŸ  Droit Foncier et Immobilier", ar: "ðŸ  Ù‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø¹Ù‚Ø§Ø±Ø§Øª ÙˆØ§Ù„Ø£Ø±Ø§Ø¶ÙŠ" },
     blurb: {
       en: "The firm supports individuals, companies, and investors in their real estate transactions and property matters. We leverage our expertise to secure projects and resolve disputes related to property ownership and real estate.",
-      fr: "Le cabinet accompagne les particuliers, les entreprises et les investisseurs dans leurs transactions immobilières et leurs questions foncières. Nous exploitons notre expertise pour sécuriser les projets et résoudre les litiges liés à la propriété immobilière.",
-      ar: "يرافق المكتب الأفراد والشركات والمستثمرين في صفقاتهم العقارية وشؤون ملكيتهم. نستفيد من خبرتنا لتأمين المشاريع وحل النزاعات المتعلقة بالملكية العقارية.",
+      fr: "Le cabinet accompagne les particuliers, les entreprises et les investisseurs dans leurs transactions immobiliÃ¨res et leurs questions fonciÃ¨res. Nous exploitons notre expertise pour sÃ©curiser les projets et rÃ©soudre les litiges liÃ©s Ã  la propriÃ©tÃ© immobiliÃ¨re.",
+      ar: "ÙŠØ±Ø§ÙÙ‚ Ø§Ù„Ù…ÙƒØªØ¨ Ø§Ù„Ø£ÙØ±Ø§Ø¯ ÙˆØ§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„Ù…Ø³ØªØ«Ù…Ø±ÙŠÙ† ÙÙŠ ØµÙÙ‚Ø§ØªÙ‡Ù… Ø§Ù„Ø¹Ù‚Ø§Ø±ÙŠØ© ÙˆØ´Ø¤ÙˆÙ† Ù…Ù„ÙƒÙŠØªÙ‡Ù…. Ù†Ø³ØªÙÙŠØ¯ Ù…Ù† Ø®Ø¨Ø±ØªÙ†Ø§ Ù„ØªØ£Ù…ÙŠÙ† Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ ÙˆØ­Ù„ Ø§Ù„Ù†Ø²Ø§Ø¹Ø§Øª Ø§Ù„Ù…ØªØ¹Ù„Ù‚Ø© Ø¨Ø§Ù„Ù…Ù„ÙƒÙŠØ© Ø§Ù„Ø¹Ù‚Ø§Ø±ÙŠØ©.",
     },
     rate: "onrequest",
     icon: "HardHat",
   },
   {
     id: "labor-family",
-    title: { en: "👥 Labor & Family Law", fr: "👥 Droit du Travail et de la Famille", ar: "👥 قانون العمل والأسرة" },
+    title: { en: "ðŸ‘¥ Labor & Family Law", fr: "ðŸ‘¥ Droit du Travail et de la Famille", ar: "ðŸ‘¥ Ù‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø¹Ù…Ù„ ÙˆØ§Ù„Ø£Ø³Ø±Ø©" },
     blurb: {
       en: "We handle both individual and collective employment relations, as well as family law matters. Our firm emphasizes an approach that is simultaneously empathetic, rigorous, and pragmatic, supporting our clients through what are often defining moments in their personal or professional lives.",
-      fr: "Nous gérons les relations individuelles et collectives de travail, ainsi que les questions de droit de la famille. Notre cabinet met l'accent sur une approche à la fois empathique, rigoureuse et pragmatique, accompagnant nos clients à travers ce qui sont souvent des moments déterminants de leur vie personnelle ou professionnelle.",
-      ar: "نتعامل مع علاقات العمل الفردية والجماعية، فضلاً عن قضايا قانون الأسرة. يؤكد مكتبنا على نهج متزامن بين التعاطف والصرامة والعملية، مساندين عملاءنا خلال ما هي في كثير من الأحيان لحظات محورية في حياتهم الشخصية أو المهنية.",
+      fr: "Nous gÃ©rons les relations individuelles et collectives de travail, ainsi que les questions de droit de la famille. Notre cabinet met l'accent sur une approche Ã  la fois empathique, rigoureuse et pragmatique, accompagnant nos clients Ã  travers ce qui sont souvent des moments dÃ©terminants de leur vie personnelle ou professionnelle.",
+      ar: "Ù†ØªØ¹Ø§Ù…Ù„ Ù…Ø¹ Ø¹Ù„Ø§Ù‚Ø§Øª Ø§Ù„Ø¹Ù…Ù„ Ø§Ù„ÙØ±Ø¯ÙŠØ© ÙˆØ§Ù„Ø¬Ù…Ø§Ø¹ÙŠØ©ØŒ ÙØ¶Ù„Ø§Ù‹ Ø¹Ù† Ù‚Ø¶Ø§ÙŠØ§ Ù‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø£Ø³Ø±Ø©. ÙŠØ¤ÙƒØ¯ Ù…ÙƒØªØ¨Ù†Ø§ Ø¹Ù„Ù‰ Ù†Ù‡Ø¬ Ù…ØªØ²Ø§Ù…Ù† Ø¨ÙŠÙ† Ø§Ù„ØªØ¹Ø§Ø·Ù ÙˆØ§Ù„ØµØ±Ø§Ù…Ø© ÙˆØ§Ù„Ø¹Ù…Ù„ÙŠØ©ØŒ Ù…Ø³Ø§Ù†Ø¯ÙŠÙ† Ø¹Ù…Ù„Ø§Ø¡Ù†Ø§ Ø®Ù„Ø§Ù„ Ù…Ø§ Ù‡ÙŠ ÙÙŠ ÙƒØ«ÙŠØ± Ù…Ù† Ø§Ù„Ø£Ø­ÙŠØ§Ù† Ù„Ø­Ø¸Ø§Øª Ù…Ø­ÙˆØ±ÙŠØ© ÙÙŠ Ø­ÙŠØ§ØªÙ‡Ù… Ø§Ù„Ø´Ø®ØµÙŠØ© Ø£Ùˆ Ø§Ù„Ù…Ù‡Ù†ÙŠØ©.",
     },
     rate: "onrequest",
     icon: "User",
   },
   {
     id: "intellectual-property",
-    title: { en: "💡 Intellectual Property", fr: "💡 Propriété Intellectuelle", ar: "💡 الملكية الفكرية" },
+    title: { en: "ðŸ’¡ Intellectual Property", fr: "ðŸ’¡ PropriÃ©tÃ© Intellectuelle", ar: "ðŸ’¡ Ø§Ù„Ù…Ù„ÙƒÙŠØ© Ø§Ù„ÙÙƒØ±ÙŠØ©" },
     blurb: {
-      en: "The firm assists clients in protecting and maximizing the value of their intellectual property rights—particularly regarding trademarks, copyright, designs, and models—as well as in preventing and resolving disputes related to these intangible assets.",
-      fr: "Le cabinet assiste les clients dans la protection et la valorisation de leurs droits de propriété intellectuelle—notamment marques, droits d'auteur, dessins et modèles—ainsi que dans la prévention et la résolution des litiges liés à ces actifs immatériels.",
-      ar: "يساعد المكتب عملاءهم في حماية وتعظيم قيمة حقوق الملكية الفكرية لديهم — لا سيما العلامات التجارية وحقوق النمط والتصاميم والنماذج — وكذلك في الوقاية وحل النزاعات المتعلقة بهذه الأصول غير المادية.",
+      en: "The firm assists clients in protecting and maximizing the value of their intellectual property rightsâ€”particularly regarding trademarks, copyright, designs, and modelsâ€”as well as in preventing and resolving disputes related to these intangible assets.",
+      fr: "Le cabinet assiste les clients dans la protection et la valorisation de leurs droits de propriÃ©tÃ© intellectuelleâ€”notamment marques, droits d'auteur, dessins et modÃ¨lesâ€”ainsi que dans la prÃ©vention et la rÃ©solution des litiges liÃ©s Ã  ces actifs immatÃ©riels.",
+      ar: "ÙŠØ³Ø§Ø¹Ø¯ Ø§Ù„Ù…ÙƒØªØ¨ Ø¹Ù…Ù„Ø§Ø¡Ù‡Ù… ÙÙŠ Ø­Ù…Ø§ÙŠØ© ÙˆØªØ¹Ø¸ÙŠÙ… Ù‚ÙŠÙ…Ø© Ø­Ù‚ÙˆÙ‚ Ø§Ù„Ù…Ù„ÙƒÙŠØ© Ø§Ù„ÙÙƒØ±ÙŠØ© Ù„Ø¯ÙŠÙ‡Ù… â€” Ù„Ø§ Ø³ÙŠÙ…Ø§ Ø§Ù„Ø¹Ù„Ø§Ù…Ø§Øª Ø§Ù„ØªØ¬Ø§Ø±ÙŠØ© ÙˆØ­Ù‚ÙˆÙ‚ Ø§Ù„Ù†Ù…Ø· ÙˆØ§Ù„ØªØµØ§Ù…ÙŠÙ… ÙˆØ§Ù„Ù†Ù…Ø§Ø°Ø¬ â€” ÙˆÙƒØ°Ù„Ùƒ ÙÙŠ Ø§Ù„ÙˆÙ‚Ø§ÙŠØ© ÙˆØ­Ù„ Ø§Ù„Ù†Ø²Ø§Ø¹Ø§Øª Ø§Ù„Ù…ØªØ¹Ù„Ù‚Ø© Ø¨Ù‡Ø°Ù‡ Ø§Ù„Ø£ØµÙˆÙ„ ØºÙŠØ± Ø§Ù„Ù…Ø§Ø¯ÙŠØ©.",
     },
     rate: "onrequest",
     icon: "Globe",
@@ -499,7 +499,7 @@ const TIME_SLOTS: string[] = [
   "17:00",
 ];
 
-// ── Store ──────────────────────────────────────────────────────────────────
+// â”€â”€ Store â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const BOOKING_KEY = "hblaw.bookings.v1";
 const bookingListeners = new Set<() => void>();
@@ -551,7 +551,7 @@ function cancelBooking(id: string) {
   emitBookings();
 }
 
-// ── UI Components ──────────────────────────────────────────────────────────
+// â”€â”€ UI Components â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const badgeVariants = cva(
   "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
@@ -785,7 +785,7 @@ const SelectItem = React.forwardRef<
 ));
 SelectItem.displayName = SelectPrimitive.Item.displayName;
 
-// ── LangSwitcher ───────────────────────────────────────────────────────────
+// â”€â”€ LangSwitcher â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function LangSwitcher() {
   const [lang, setLangFn] = useLang();
@@ -808,7 +808,7 @@ function LangSwitcher() {
   );
 }
 
-// ── BookingForm ────────────────────────────────────────────────────────────
+// â”€â”€ BookingForm â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const FORM_SLOTS = ["09:00", "10:30", "12:00", "14:00", "15:30", "17:00"];
 
@@ -950,14 +950,14 @@ function BookingForm() {
                   {s.title[lang]}
                 </option>
               ))}
-              <option value="other">{lang === "en" ? "Other" : lang === "fr" ? "Autre" : "أخرى"}</option>
+              <option value="other">{lang === "en" ? "Other" : lang === "fr" ? "Autre" : "Ø£Ø®Ø±Ù‰"}</option>
             </select>
             {service === "other" && (
               <input
                 type="text"
                 value={customService}
                 onChange={(e) => setCustomService(e.target.value)}
-                placeholder={lang === "en" ? "Describe your legal concern..." : lang === "fr" ? "Décrivez votre problème juridique..." : "صف مشكلتك القانونية..."}
+                placeholder={lang === "en" ? "Describe your legal concern..." : lang === "fr" ? "DÃ©crivez votre problÃ¨me juridique..." : "ØµÙ Ù…Ø´ÙƒÙ„ØªÙƒ Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠØ©..."}
                 className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm focus:border-slate-500 focus:ring-2 focus:ring-slate-500 focus:outline-none"
               />
             )}
@@ -1054,7 +1054,7 @@ function BookingForm() {
   );
 }
 
-// ── Reservations ───────────────────────────────────────────────────────────
+// â”€â”€ Reservations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function Reservations() {
   const [lang] = useLang();
@@ -1150,7 +1150,7 @@ function Reservations() {
                     onClick={() => {
                       cancelBooking(b.id);
                       toast(t("res.cancelled"), {
-                        description: `${b.name} • ${b.date} at ${b.slot}`,
+                        description: `${b.name} â€¢ ${b.date} at ${b.slot}`,
                       });
                     }}
                     className="border-stone-300 text-stone-600 hover:border-rose-300 hover:text-rose-700"
@@ -1168,7 +1168,7 @@ function Reservations() {
   );
 }
 
-// ── App ────────────────────────────────────────────────────────────────────
+// â”€â”€ App â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const ATTORNEYS: Attorney[] = [
   {
@@ -1176,8 +1176,8 @@ const ATTORNEYS: Attorney[] = [
     role: "founder",
     desc: {
       en: "Approved by the International Order of Experts. Focuses primarily on public procurement, business law, corporate law, and taxation.",
-      fr: "Agréé par l'Ordre International des Experts. Spécialisé principalement en marchés publics, droit des affaires, droit des sociétés et fiscalité.",
-      ar: "معتمد من النظام الدولي للخبراء. متخصص بشكل أساسي في المناقصات العامة وقانون الأعمال وقانون الشركات والضرائب.",
+      fr: "AgrÃ©Ã© par l'Ordre International des Experts. SpÃ©cialisÃ© principalement en marchÃ©s publics, droit des affaires, droit des sociÃ©tÃ©s et fiscalitÃ©.",
+      ar: "Ù…Ø¹ØªÙ…Ø¯ Ù…Ù† Ø§Ù„Ù†Ø¸Ø§Ù… Ø§Ù„Ø¯ÙˆÙ„ÙŠ Ù„Ù„Ø®Ø¨Ø±Ø§Ø¡. Ù…ØªØ®ØµØµ Ø¨Ø´ÙƒÙ„ Ø£Ø³Ø§Ø³ÙŠ ÙÙŠ Ø§Ù„Ù…Ù†Ø§Ù‚ØµØ§Øª Ø§Ù„Ø¹Ø§Ù…Ø© ÙˆÙ‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø£Ø¹Ù…Ø§Ù„ ÙˆÙ‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø´Ø±ÙƒØ§Øª ÙˆØ§Ù„Ø¶Ø±Ø§Ø¦Ø¨.",
     },
   },
   {
@@ -1185,8 +1185,8 @@ const ATTORNEYS: Attorney[] = [
     role: "partner",
     desc: {
       en: "Specializes in family law, and estate law.",
-      fr: "Spécialisée en droit de la famille et droit des successions.",
-      ar: "متخصصة في قانون الأسرة وقانون الإرث.",
+      fr: "SpÃ©cialisÃ©e en droit de la famille et droit des successions.",
+      ar: "Ù…ØªØ®ØµØµØ© ÙÙŠ Ù‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø£Ø³Ø±Ø© ÙˆÙ‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø¥Ø±Ø«.",
     },
   },
   {
@@ -1194,8 +1194,8 @@ const ATTORNEYS: Attorney[] = [
     role: "attorney",
     desc: {
       en: "Property and real estate law.",
-      fr: "Droit de la propriété et droit immobilier.",
-      ar: "قانون العقارات والأراضي.",
+      fr: "Droit de la propriÃ©tÃ© et droit immobilier.",
+      ar: "Ù‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø¹Ù‚Ø§Ø±Ø§Øª ÙˆØ§Ù„Ø£Ø±Ø§Ø¶ÙŠ.",
     },
   },
   {
@@ -1203,8 +1203,8 @@ const ATTORNEYS: Attorney[] = [
     role: "attorney",
     desc: {
       en: "Criminal law, contact law and liability, and business law.",
-      fr: "Droit pénal, droit des contacts et responsabilité, et droit des affaires.",
-      ar: "القانون الجنائي وقانون الاتصال والمسؤولية وقانون الأعمال.",
+      fr: "Droit pÃ©nal, droit des contacts et responsabilitÃ©, et droit des affaires.",
+      ar: "Ø§Ù„Ù‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø¬Ù†Ø§Ø¦ÙŠ ÙˆÙ‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø§ØªØµØ§Ù„ ÙˆØ§Ù„Ù…Ø³Ø¤ÙˆÙ„ÙŠØ© ÙˆÙ‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø£Ø¹Ù…Ø§Ù„.",
     },
   },
   {
@@ -1212,8 +1212,8 @@ const ATTORNEYS: Attorney[] = [
     role: "attorney",
     desc: {
       en: "Labor law, cybercriminality, and intellectual property law.",
-      fr: "Droit du travail, cybercriminalité et droit de la propriété intellectuelle.",
-      ar: "قانون العمل والجرائم الإلكترونية وقانون الملكية الفكرية.",
+      fr: "Droit du travail, cybercriminalitÃ© et droit de la propriÃ©tÃ© intellectuelle.",
+      ar: "Ù‚Ø§Ù†ÙˆÙ† Ø§Ù„Ø¹Ù…Ù„ ÙˆØ§Ù„Ø¬Ø±Ø§Ø¦Ù… Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØ© ÙˆÙ‚Ø§Ù†ÙˆÙ† Ø§Ù„Ù…Ù„ÙƒÙŠØ© Ø§Ù„ÙÙƒØ±ÙŠØ©.",
     },
   },
 ];
@@ -1259,7 +1259,7 @@ export default function App() {
                 H&amp;B <span className="italic">Law Firm</span>
               </p>
               <p className="text-[10px] uppercase tracking-[0.2em] text-blue-400">
-                Attorneys at Law · Algeria
+                Attorneys at Law Â· Algeria
               </p>
             </div>
           </div>
@@ -1306,7 +1306,7 @@ export default function App() {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="mb-3 font-serif text-2xl italic text-amber-300 md:text-3xl"
           >
-            {lang === "en" ? "Legal excellence at the service of your ambitions." : lang === "fr" ? "L'excellence juridique au service de vos ambitions." : "التميز القانوني في خدمة طموحاتك."}
+            {lang === "en" ? "Legal excellence at the service of your ambitions." : lang === "fr" ? "L'excellence juridique au service de vos ambitions." : "Ø§Ù„ØªÙ…ÙŠØ² Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠ ÙÙŠ Ø®Ø¯Ù…Ø© Ø·Ù…ÙˆØ­Ø§ØªÙƒ."}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -1542,8 +1542,8 @@ export default function App() {
               {t("footer.languages")}
             </p>
             <ul className="space-y-2.5 text-sm">
-              <li>Français</li>
-              <li>العربية</li>
+              <li>FranÃ§ais</li>
+              <li>Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©</li>
               <li>English</li>
             </ul>
           </div>
