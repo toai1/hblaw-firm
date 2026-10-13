@@ -1,4 +1,4 @@
-import { useState, useEffect, useSyncExternalStore } from "react";
+﻿import { useState, useEffect, useSyncExternalStore } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import {
@@ -272,7 +272,7 @@ const ar: Dict = {
   "pres.title": "مكتب الأستاذ حنيفي وشركاه",
   "pres.p1": "يرافق المكتب الشركات والمؤسسات والأفراد في الوقاية من المخاطر القانونية والاستشارات الاستراتيجية والتفاوض والدفاع عن مصالحهم.",
   "pres.p2": "يجمع فريقنا بين مهارات مكملة لتقديم دعم شامل عبر المجالات الرئيسية للقانون. نحن نعطي الأولوية لنهج يرتكز على الاستماع الفعال والدقة القانونية والسرية والسعي نحو حلول مصممة وفق أهداف كل عميل.",
-  "pres.p3": "بخبرة تمتد لأكثر من أربعين عامًا، طوّر المكتب خبرة معترف بها في قانون الأعمال والمناقصات العامة والتحكيم والضرائب والDUCTIEUX، ووسع قدراته لmeet تحديات قانوني الرقمي والذكاء الاصطناعي الناشئة.",
+  "pres.p3": "بخبرة تمتد لأكثر من أربعين عامًا، طوّر المكتب خبرة معترف بها في قانون الأعمال والمناقصات العامة والتحكيم والضرائب والنزاعات، ووسع قدراته لمواجهة تحديات قانوني الرقمي والذكاء الاصطناعي الناشئة.",
   "pres.p4": "مهمتنا هي تحويل التعقيد القانوني إلى حلول واضحة واستراتيجية مصممة وفق احتياجات عملائنا.",
   "services.title": "مجالات الخبرة",
   "services.desc": "من التفاوض على العقود إلى التحكيم الدولي، نقدم دعماً قانونياً شاملاً لمشاريعك الأكثر تعقيداً.",
@@ -414,7 +414,7 @@ const SERVICES: Service[] = [
     blurb: {
       en: "We assist companies at every stage of their development, from creation to restructuring, ensuring the legal compliance of their corporate structure and protecting the interests of shareholders and executives.",
       fr: "Nous assistons les entreprises à chaque étape de leur développement, de la création à la restructuration, en assurant la conformité juridique de leur structure et en protégeant les intérêts des actionnaires et des dirigeants.",
-      ar: "نساعد الشركات في كل مرحلة من مراحل تطورها، من التأسيس إلى إعادة الهيكلة، مع ضمان الامتثال القانوني لهيكلها corporate وحماية مصالح المساهمين والمديرين.",
+      ar: "نساعد الشركات في كل مرحلة من مراحل تطورها، من التأسيس إلى إعادة الهيكلة، مع ضمان الامتثال القانوني لهيكلها للشركات وحماية مصالح المساهمين والمديرين.",
     },
     rate: "onrequest",
     icon: "Building",
@@ -480,7 +480,7 @@ const SERVICES: Service[] = [
     blurb: {
       en: "The firm assists clients in protecting and maximizing the value of their intellectual property rights—particularly regarding trademarks, copyright, designs, and models—as well as in preventing and resolving disputes related to these intangible assets.",
       fr: "Le cabinet assiste les clients dans la protection et la valorisation de leurs droits de propriété intellectuelle—notamment marques, droits d'auteur, dessins et modèles—ainsi que dans la prévention et la résolution des litiges liés à ces actifs immatériels.",
-      ar: "يساعد المكتب عملاءهم في حماية وتعظيم قيمة حقوق الملكية الفكرية لديهم — لا سيما العلامات التجارية وحقوق النمط والتصاميم والنماذج — وكذلك في الوقاية وحل النزاعات المتعلقة بهذه الأصول غير المادية.",
+      ar: "يساعد المكتب عملاءهم في حماية وتعظيم قيمة حقوق الملكية الفكرية لديهم — لا سيما العلامات التجارية والنماذج الصناعية والتصاميم — وكذلك في الوقاية وحل النزاعات المتعلقة بهذه الأصول غير المادية.",
     },
     rate: "onrequest",
     icon: "Globe",
