@@ -196,7 +196,7 @@ const fr: Dict = {
   "pres.p2": "Notre équipe allie des compétences complémentaires pour offrir un accompagnement global dans les principaux domaines du droit. Nous privilégions une approche fondée sur l'écoute active, la rigueur juridique, la confidentialité et la recherche de solutions adaptées aux objectifs de chaque client.",
   "pres.p3": "Avec plus de quarante ans d'expérience, le cabinet a développé une expertise reconnue en droit des affaires, marchés publics, arbitrage, fiscalitéet contentieux, tout en élargissant ses compétences pour répondre aux défis émergents du droit du numérique et de l'intelligence artificielle.",
   "pres.p4": "Notre mission est de transformer la complexité juridique en solutions claires et stratégiques adaptées aux besoins de nos clients.",
-  "services.title": "Domaines de Compétence",
+  "services.title": "Domaines de pratique",
   "services.desc": "De la négociation de contrats à l'arbitrage international, nous offrons un soutien juridique complet pour vos projets les plus complexes.",
   "services.rate": "Consultation initiale",
   "services.onrequest": "Sur demande",
@@ -1176,7 +1176,8 @@ const ATTORNEYS: Attorney[] = [
     role: "founder",
     desc: {
       en: "Approved by the International Order of Experts. Focuses primarily on public procurement, business law, corporate law, and taxation.",
-      fr: "Agréé par l'Ordre International des Experts. Spécialisé principalement en marchés publics, droit des affaires, droit des sociétés et fiscalité", ar: "معتمد من النظام الدولي للخبراء. متخصص بشكل أساسي في المناقصات العامة وقانون الأعمال وقانون الشركات والضرائب.",
+      fr: "Agréé par conseil d'etat et la cours suprême par l'Ordre International des Experts.",
+      ar: "معتمد من مجلس الدولة والمجلس الأعلى من قبل الهيئة الدولية للخبراء.",
     },
   },
   {
@@ -1184,8 +1185,8 @@ const ATTORNEYS: Attorney[] = [
     role: "partner",
     desc: {
       en: "Specializes in family law, and estate law.",
-      fr: "Spécialisée en droit de la famille et droit des successions.",
-      ar: "متخصصة في قانون الأسرة وقانون الإرث.",
+      fr: "Agréé par conseil d'etat et la cours suprême",
+      ar: "معتمد من مجلس الدولة والمجلس الأعلى",
     },
   },
   {
@@ -1193,8 +1194,8 @@ const ATTORNEYS: Attorney[] = [
     role: "attorney",
     desc: {
       en: "Property and real estate law.",
-      fr: "Droit de la propriété et droit immobilier.",
-      ar: "قانون العقارات والأراضي.",
+      fr: "Agréé par conseil d'etat",
+      ar: "معتمد من مجلس الدولة",
     },
   },
   {
@@ -1211,7 +1212,7 @@ const ATTORNEYS: Attorney[] = [
     role: "attorney",
     desc: {
       en: "Labor law, cybercriminalitéy, and intellectual property law.",
-      fr: "Droit du travail, cybercriminalitéet droit de la propriété intellectuelle.",
+      fr: "Droit du travail, cybercriminalité et droit de la propriété intellectuelle.",
       ar: "قانون العمل والجرائم الإلكترونية وقانون الملكية الفكرية.",
     },
   },
@@ -1409,23 +1410,12 @@ export default function App() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold text-amber-300">
-                {t("services.badge")}
+                {t("services.title")}
               </div>
-              <ul className="mt-5 space-y-2">
-                {SERVICES.map((s, i) => (
-                  <motion.li
-                    key={s.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.35, delay: i * 0.04 }}
-                    className="rounded-xl bg-white/10 p-3 transition-all hover:bg-white/15"
-                  >
-                    <p className="text-sm font-semibold text-white">{s.title[lang]}</p>
-                    <p className="mt-0.5 text-xs leading-relaxed text-blue-200">{s.blurb[lang]}</p>
-                  </motion.li>
-                ))}
-              </ul>
+              <div className="mt-5 rounded-xl bg-white/10 p-4 text-sm leading-relaxed text-blue-100">
+                <p className="mb-2">Le cabinet H&B accompagne les entreprises étrangères dans leurs démarches juridiques en Algérie. Il propose des consultations juridiques, une assistance dans les formalités liées à leur implantation, le suivi de leurs démarches administratives ainsi que la réception de correspondances et des missions de représentation sur mandat, dans le respect du cadre légal applicable.</p>
+                <p>Grâce à son expérience en droit des affaires et en droit des contrats, le cabinet apporte un accompagnement adapté aux besoins des entreprises souhaitant développer ou sécuriser leurs activités en Algérie.</p>
+              </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 24 }}
