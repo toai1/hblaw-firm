@@ -1,4 +1,4 @@
-import { useState, useEffect, useSyncExternalStore } from "react";
+﻿import { useState, useEffect, useSyncExternalStore } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import {
@@ -1176,7 +1176,7 @@ const ATTORNEYS: Attorney[] = [
     role: "founder",
     desc: {
       en: "Approved by the International Order of Experts. Focuses primarily on public procurement, business law, corporate law, and taxation.",
-      fr: "Agréé par conseil d'etat et la cours suprême par l'Ordre International des Experts.",
+      fr: "Avocat - Agréé par Conseil d'État et la Cour Suprême par l'Ordre International des Experts.",
       ar: "معتمد من مجلس الدولة والمجلس الأعلى من قبل الهيئة الدولية للخبراء.",
     },
   },
@@ -1185,7 +1185,7 @@ const ATTORNEYS: Attorney[] = [
     role: "partner",
     desc: {
       en: "Specializes in family law, and estate law.",
-      fr: "Agréé par conseil d'etat et la cours suprême",
+      fr: "Avocat - Agréé par Conseil d'État et la Cour Suprême",
       ar: "معتمد من مجلس الدولة والمجلس الأعلى",
     },
   },
@@ -1194,7 +1194,7 @@ const ATTORNEYS: Attorney[] = [
     role: "attorney",
     desc: {
       en: "Property and real estate law.",
-      fr: "Agréé par conseil d'etat",
+      fr: "Avocat - Agréé par Conseil d'État",
       ar: "معتمد من مجلس الدولة",
     },
   },
@@ -1412,7 +1412,7 @@ export default function App() {
               <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold text-amber-300">
                 {t("services.title")}
               </div>
-              <div className="mt-5 rounded-xl bg-white/10 p-4 text-sm leading-relaxed text-blue-100">
+              <div className="mt-5 rounded-xl bg-white/10 p-4 text-sm leading-relaxed text-amber-200">
                 <p className="mb-2">Le cabinet H&B accompagne les entreprises étrangères dans leurs démarches juridiques en Algérie. Il propose des consultations juridiques, une assistance dans les formalités liées à leur implantation, le suivi de leurs démarches administratives ainsi que la réception de correspondances et des missions de représentation sur mandat, dans le respect du cadre légal applicable.</p>
                 <p>Grâce à son expérience en droit des affaires et en droit des contrats, le cabinet apporte un accompagnement adapté aux besoins des entreprises souhaitant développer ou sécuriser leurs activités en Algérie.</p>
               </div>
