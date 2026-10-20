@@ -122,6 +122,7 @@ const en: Dict = {
   "services.desc": "From contract negotiation to international arbitration, we provide comprehensive legal support for your most complex projects.",
   "services.rate": "Initial consult",
   "services.onrequest": "On request",
+  "services.specialties": "Our Specializations",
   "team.badge": "Our Team",
   "team.title": "Meet the Attorneys",
   "team.desc": "A dedicated team of legal professionals accredited by the highest courts.",
@@ -200,6 +201,7 @@ const fr: Dict = {
   "services.desc": "De la négociation de contrats à l'arbitrage international, nous offrons un soutien juridique complet pour vos projets les plus complexes.",
   "services.rate": "Consultation initiale",
   "services.onrequest": "Sur demande",
+  "services.specialties": "Nos Spécialisations",
   "team.badge": "Notre Équipe",
   "team.title": "Rencontrez les Avocats",
   "team.desc": "Une équipe dévouée de professionnels du droit accrédités par les plus hautes juridictions.",
@@ -278,6 +280,7 @@ const ar: Dict = {
   "services.desc": "من التفاوض على العقود إلى التحكيم الدولي، نقدم دعماً قانونياً شاملاً لمشاريعك الأكثر تعقيداً.",
   "services.rate": "استشارة أولية",
   "services.onrequest": "عند الطلب",
+  "services.specialties": "تخصصاتنا",
   "team.badge": "فريقنا",
   "team.title": "تعرف على المحامين",
   "team.desc": "فريق مكرس من المهنيين القانونيين المعتمدين من أعلى المحاكم.",
@@ -1444,6 +1447,32 @@ export default function App() {
                 ))}
               </div>
             </motion.div>
+          </div>
+          <div className="mt-12 border-t border-white/10 pt-10">
+            <motion.h3
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-center font-serif text-2xl text-amber-300 sm:text-3xl"
+            >
+              {t("services.specialties")}
+            </motion.h3>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {SERVICES.map((s, i) => (
+                <motion.div
+                  key={s.id}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.35, delay: i * 0.04 }}
+                  className="rounded-xl bg-white/10 p-4 transition-all hover:bg-white/15"
+                >
+                  <p className="text-sm font-semibold text-white">{s.title[lang]}</p>
+                  <p className="mt-1.5 text-xs leading-relaxed text-blue-200">{s.blurb[lang]}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
