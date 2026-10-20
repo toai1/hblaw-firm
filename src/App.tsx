@@ -1375,33 +1375,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Booking + Reservations */}
-      <section id="book" className="bg-gradient-to-b from-amber-50 to-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-10 max-w-2xl"
-          >
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#061826] px-4 py-1.5 text-sm font-semibold text-white">
-              {t("book.badge")}
-            </div>
-            <h2 className="mt-4 font-serif text-3xl text-[#061826] sm:text-4xl">
-              {t("book.title")}
-            </h2>
-            <p className="mt-3 text-slate-500">
-              {t("book.desc")}
-            </p>
-          </motion.div>
-          <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr]">
-            <BookingForm />
-            <Reservations />
-          </div>
-        </div>
-      </section>
-
       {/* Practice Areas + Our Team (compact) */}
       <section id="services" className="bg-[#061826] text-white">
         <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
@@ -1473,6 +1446,33 @@ export default function App() {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Booking + Reservations */}
+      <section id="book" className="bg-gradient-to-b from-amber-50 to-white">
+        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="mb-10 max-w-2xl"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#061826] px-4 py-1.5 text-sm font-semibold text-white">
+              {t("book.badge")}
+            </div>
+            <h2 className="mt-4 font-serif text-3xl text-[#061826] sm:text-4xl">
+              {t("book.title")}
+            </h2>
+            <p className="mt-3 text-slate-500">
+              {t("book.desc")}
+            </p>
+          </motion.div>
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr]">
+            <BookingForm />
+            <Reservations />
           </div>
         </div>
       </section>
