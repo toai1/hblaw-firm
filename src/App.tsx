@@ -1398,18 +1398,7 @@ export default function App() {
       {/* Practice Areas + Our Team (compact) */}
       <section id="services" className="bg-[#061826] text-white">
         <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
-          <div className="grid gap-8 lg:grid-cols-2">
-            <motion.div
-              initial={{ opacity: 0, x: -24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <div className="rounded-xl bg-white/10 p-4 text-sm leading-relaxed text-amber-200">
-                <p className="mb-2">{t("intro.p1")}</p>
-                <p>{t("intro.p2")}</p>
-              </div>
-            </motion.div>
+          <div className="grid gap-8">
             <motion.div
               initial={{ opacity: 0, x: 24 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -1420,7 +1409,7 @@ export default function App() {
               <div className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-4 py-1.5 text-sm font-semibold text-[#061826]">
                 {t("team.badge")}
               </div>
-              <div className="mt-5 space-y-2">
+              <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {ATTORNEYS.map((att, i) => (
                   <motion.div
                     key={att.name}
@@ -1463,6 +1452,16 @@ export default function App() {
                 </motion.div>
               ))}
             </div>
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="mx-auto mt-8 max-w-3xl space-y-3 text-center text-sm leading-relaxed text-blue-200"
+            >
+              <p>{t("intro.p1")}</p>
+              <p>{t("intro.p2")}</p>
+            </motion.div>
           </div>
         </div>
       </section>
