@@ -100,6 +100,8 @@ const en: Dict = {
   "cta.book": "Book Now",
   "topbar.phone": "+213 661 53 18 65",
   "topbar.firm": "Firm: 028 17 09 00",
+  "topbar.phone2": "+213 0791816044",
+  "topbar.phone3": "+213 0783318146",
   "topbar.email": "hb.legalcontact@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.tagline": "LegaL'excellence at the service of your ambitions.",
@@ -122,7 +124,9 @@ const en: Dict = {
   "services.desc": "From contract negotiation to international arbitration, we provide comprehensive legal support for your most complex projects.",
   "services.rate": "Initial consult",
   "services.onrequest": "On request",
-  "services.specialties": "Our Specializations",
+  "services.specialties": "Practice Areas",
+  "intro.p1": "From Algiers, H&B supports foreign companies throughout their legal formalities in Algeria: legal consultations, assistance with the formalities of establishing a presence, day-to-day administrative follow-up, handling of correspondence, and representation on mandate — all in strict compliance with the applicable legal framework.",
+  "intro.p2": "Drawing on its experience in business and contract law, the firm provides tailored support to companies seeking to develop or secure their activities in Algeria.",
   "team.badge": "Our Team",
   "team.title": "Meet the Attorneys",
   "team.desc": "A dedicated team of legal professionals accredited by the highest courts.",
@@ -179,6 +183,8 @@ const fr: Dict = {
   "cta.book": "Réserver",
   "topbar.phone": "+213 661 53 18 65",
   "topbar.firm": "Firm: 028 17 09 00",
+  "topbar.phone2": "+213 0791816044",
+  "topbar.phone3": "+213 0783318146",
   "topbar.email": "hb.legalcontact@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.tagline": "L'excellence juridique au service de vos ambitions.",
@@ -201,7 +207,9 @@ const fr: Dict = {
   "services.desc": "De la négociation de contrats à l'arbitrage international, nous offrons un soutien juridique complet pour vos projets les plus complexes.",
   "services.rate": "Consultation initiale",
   "services.onrequest": "Sur demande",
-  "services.specialties": "Nos Spécialisations",
+  "services.specialties": "Domaines de pratique",
+  "intro.p1": "Depuis Alger, H&B accompagne les entreprises étrangères dans l'ensemble de leurs démarches juridiques en Algérie : consultations juridiques, assistance dans les formalités liées à leur implantation, suivi de leurs démarches administratives, réception de leurs correspondances et missions de représentation sur mandat, dans le strict respect du cadre légal applicable.",
+  "intro.p2": "Forte de son expérience en droit des affaires et en droit des contrats, notre équipe apporte un accompagnement sur mesure aux entreprises qui souhaitent développer ou sécuriser leurs activités en Algérie.",
   "team.badge": "Notre Équipe",
   "team.title": "Rencontrez les Avocats",
   "team.desc": "Une équipe dévouée de professionnels du droit accrédités par les plus hautes juridictions.",
@@ -258,6 +266,8 @@ const ar: Dict = {
   "cta.book": "احجز الآن",
   "topbar.phone": "+213 661 53 18 65",
   "topbar.firm": "Firm: 028 17 09 00",
+  "topbar.phone2": "+213 0791816044",
+  "topbar.phone3": "+213 0783318146",
   "topbar.email": "hb.legalcontact@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.tagline": "التميز القانوني في خدمة طموحاتك.",
@@ -280,7 +290,9 @@ const ar: Dict = {
   "services.desc": "من التفاوض على العقود إلى التحكيم الدولي، نقدم دعماً قانونياً شاملاً لمشاريعك الأكثر تعقيداً.",
   "services.rate": "استشارة أولية",
   "services.onrequest": "عند الطلب",
-  "services.specialties": "تخصصاتنا",
+  "services.specialties": "مجالات الممارسة",
+  "intro.p1": "من الجزائر العاصمة، يرافق مكتب H&B الشركات الأجنبية في كامل إجراءاتها القانونية في الجزائر: استشارات قانونية، ومساعدة في إجراءات التأسيس، ومتابعة الخطوات الإدارية، وتلقّي المراسلات، ومهام التمثيل بموجب توكيل، في احترام تام للإطار القانوني المعمول به.",
+  "intro.p2": "وبفضل خبرته في قانون الأعمال وقانون العقود، يقدّم المكتب مواكبة مصمّمة حسب احتياجات الشركات الراغبة في تطوير أو تأمين نشاطها في الجزائر.",
   "team.badge": "فريقنا",
   "team.title": "تعرف على المحامين",
   "team.desc": "فريق مكرس من المهنيين القانونيين المعتمدين من أعلى المحاكم.",
@@ -391,7 +403,7 @@ function dir(): "ltr" | "rtl" {
 const SERVICES: Service[] = [
   {
     id: "public-procurement",
-    title: { en: "🏛️ Public Procurement", fr: "🏛️ marchés publics", ar: "🏛️ المناقصات العامة" },
+    title: { en: "🏛️ Public Procurement", fr: "🏛️ Marchés publics", ar: "🏛️ المناقصات العامة" },
     blurb: {
       en: "Public procurement is one of the firm's core areas of excellence. With several decades of experience, we support businesses, public entities, and investors through every stage of their operations, from the preparation of bids to the resolution of disputes.",
       fr: "Les marchés publics constituent l'un des domaines d'excellence du cabinet. Avec plusieurs décennies d'expérience, nous accompagnons les entreprises, les entités publiques et les investisseurs à chaque étape de leurs opérations, de la préparation des offres à la résolution des litiges.",
@@ -438,7 +450,7 @@ const SERVICES: Service[] = [
     title: { en: "📊 Tax Law", fr: "📊 Droit Fiscal", ar: "📊 القانون الضريبي" },
     blurb: {
       en: "Taxation is a strategic priority for businesses and individuals alike. Our firm provides rigorous support in advisory services, compliance, and tax litigation management, with the ultimate goal of securing our clients' decisions and effectively defending their interests before the relevant tax authorities.",
-      fr: "La fiscalitéest une priorité stratégique pour les entreprises et les particuliers. Notre cabinet offre un accompagnement rigoureux en conseil, conformité et gestion du contentieux fiscal, avec l'objectif final de sécuriser les décisions de nos clients et défendre efficacement leurs intérêts devant les autorités fiscales compétentes.",
+      fr: "La fiscalité est une priorité stratégique pour les entreprises et les particuliers. Notre cabinet offre un accompagnement rigoureux en conseil, conformité et gestion du contentieux fiscal, avec l'objectif final de sécuriser les décisions de nos clients et défendre efficacement leurs intérêts devant les autorités fiscales compétentes.",
       ar: "الضرائب هي أولوية استراتيجية للشركات والأفراد على حد سواء. يوفر مكتبنا دعمًا صارمًا في الاستشارات والامتثال وإدارة النزاعات الضريبية، بهدف تأمين قرارات عملائنا والدفاع بفعالية عن مصالحهم أمام الجهات الضريبية المختصة.",
     },
     rate: "onrequest",
@@ -479,7 +491,7 @@ const SERVICES: Service[] = [
   },
   {
     id: "intellectual-property",
-    title: { en: "💡 Intellectual Property", fr: "💡 propriété intellectuelle", ar: "💡 الملكية الفكرية" },
+    title: { en: "💡 Intellectual Property", fr: "💡 Propriété Intellectuelle", ar: "💡 الملكية الفكرية" },
     blurb: {
       en: "The firm assists clients in protecting and maximizing the value of their intellectual property rights—particularly regarding trademarks, copyright, designs, and models—as well as in preventing and resolving disputes related to these intangible assets.",
       fr: "Le cabinet assiste les clients dans la protection et la valorisation de leurs droits de propriété intellectuelle—notamment marques, droits d'auteur, dessins et modèles—ainsi que dans la prévention et la résolution des litiges liés à ces actifs immatériels.",
@@ -1178,8 +1190,8 @@ const ATTORNEYS: Attorney[] = [
     name: "Hanifi Boubkeur",
     role: "founder",
     desc: {
-      en: "Avocat - Agréé auprès du Conseil d'État et de la Cour Suprême, and by the International Order of Experts.",
-      fr: "Avocat - Agréé auprès du Conseil d'État et de la Cour Suprême, et auprès de l'Ordre International des Experts.",
+      en: "Avocat - Agréé près du Conseil d'État et de la Cour Suprême, and by the International Order of Experts.",
+      fr: "Avocat - Agréé près du Conseil d'État et de la Cour Suprême, et près de l'Ordre International des Experts.",
       ar: "محامي - معتمد لدى مجلس الدولة والمحكمة العليا، ولدى الهيئة الدولية للخبراء.",
     },
   },
@@ -1187,8 +1199,8 @@ const ATTORNEYS: Attorney[] = [
     name: "Benaicha Houria",
     role: "partner",
     desc: {
-      en: "Avocat - Agréé auprès du Conseil d'État et de la Cour Suprême",
-      fr: "Avocat - Agréé auprès du Conseil d'État et de la Cour Suprême",
+      en: "Avocat - Agréé près du Conseil d'État et de la Cour Suprême",
+      fr: "Avocat - Agréé près du Conseil d'État et de la Cour Suprême",
       ar: "محامية - معتمدة لدى مجلس الدولة والمحكمة العليا",
     },
   },
@@ -1197,7 +1209,7 @@ const ATTORNEYS: Attorney[] = [
     role: "attorney",
     desc: {
       en: "Accredited to the Council of State and the Supreme Court",
-      fr: "Agréé auprès du Conseil d'État et de la Cour Suprême",
+      fr: "Agréé près du Conseil d'État et de la Cour Suprême",
       ar: "معتمد لدى مجلس الدولة والمحكمة العليا",
     },
   },
@@ -1206,7 +1218,7 @@ const ATTORNEYS: Attorney[] = [
     role: "attorney",
     desc: {
       en: "Accredited to the Court",
-      fr: "Agréé auprès de la Cour",
+      fr: "Agréé près de la Cour",
       ar: "معتمد لدى المحكمة",
     },
   },
@@ -1215,7 +1227,7 @@ const ATTORNEYS: Attorney[] = [
     role: "attorney",
     desc: {
       en: "Accredited to the Court",
-      fr: "Agréé auprès de la Cour",
+      fr: "Agréé près de la Cour",
       ar: "معتمد لدى المحكمة",
     },
   },
@@ -1242,6 +1254,14 @@ export default function App() {
             <span className="inline-flex items-center gap-1.5">
               <Phone className="h-3.5 w-3.5 text-amber-400" />
               {t("topbar.firm")}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Phone className="h-3.5 w-3.5 text-amber-400" />
+              {t("topbar.phone2")}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Phone className="h-3.5 w-3.5 text-amber-400" />
+              {t("topbar.phone3")}
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Mail className="h-3.5 w-3.5 text-amber-400" />
@@ -1385,12 +1405,9 @@ export default function App() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold text-amber-300">
-                {t("services.title")}
-              </div>
-              <div className="mt-5 rounded-xl bg-white/10 p-4 text-sm leading-relaxed text-amber-200">
-                <p className="mb-2">Le cabinet H&B accompagne les entreprises étrangères dans leurs démarches juridiques en Algérie. Il propose des consultations juridiques, une assistance dans les formalités liées à leur implantation, le suivi de leurs démarches administratives ainsi que la réception de correspondances et des missions de représentation sur mandat, dans le respect du cadre légal applicable.</p>
-                <p>Grâce à son expérience en droit des affaires et en droit des contrats, le cabinet apporte un accompagnement adapté aux besoins des entreprises souhaitant développer ou sécuriser leurs activités en Algérie.</p>
+              <div className="rounded-xl bg-white/10 p-4 text-sm leading-relaxed text-amber-200">
+                <p className="mb-2">{t("intro.p1")}</p>
+                <p>{t("intro.p2")}</p>
               </div>
             </motion.div>
             <motion.div
@@ -1548,6 +1565,14 @@ export default function App() {
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-amber-400" />
                 {t("topbar.firm")}
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-amber-400" />
+                {t("topbar.phone2")}
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-amber-400" />
+                {t("topbar.phone3")}
               </li>
               <li className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-amber-400" />
