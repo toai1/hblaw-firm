@@ -100,8 +100,8 @@ const en: Dict = {
   "cta.book": "Book Now",
   "topbar.phone": "+213 661 53 18 65",
   "topbar.firm": "Firm: 028 17 09 00",
-  "topbar.phone2": "+213 0791816044",
-  "topbar.phone3": "+213 0783318146",
+  "topbar.phone2": "+213 791 81 60 44",
+  "topbar.phone3": "+213 783 31 81 46",
   "topbar.email": "hb.legalcontact@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.tagline": "LegaL'excellence at the service of your ambitions.",
@@ -183,8 +183,8 @@ const fr: Dict = {
   "cta.book": "Réserver",
   "topbar.phone": "+213 661 53 18 65",
   "topbar.firm": "Firm: 028 17 09 00",
-  "topbar.phone2": "+213 0791816044",
-  "topbar.phone3": "+213 0783318146",
+  "topbar.phone2": "+213 791 81 60 44",
+  "topbar.phone3": "+213 783 31 81 46",
   "topbar.email": "hb.legalcontact@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.tagline": "L'excellence juridique au service de vos ambitions.",
@@ -208,8 +208,8 @@ const fr: Dict = {
   "services.rate": "Consultation initiale",
   "services.onrequest": "Sur demande",
   "services.specialties": "Domaines de pratique",
-  "intro.p1": "Depuis Alger, H&B accompagne les entreprises étrangères dans l'ensemble de leurs démarches juridiques en Algérie : consultations juridiques, assistance dans les formalités liées à leur implantation, suivi de leurs démarches administratives, réception de leurs correspondances et missions de représentation sur mandat, dans le strict respect du cadre légal applicable.",
-  "intro.p2": "Forte de son expérience en droit des affaires et en droit des contrats, notre équipe apporte un accompagnement sur mesure aux entreprises qui souhaitent développer ou sécuriser leurs activités en Algérie.",
+  "intro.p1": "Le cabinet H&B accompagne les entreprises étrangères dans leurs démarches juridiques en Algérie. Il propose des consultations juridiques, une assistance dans les formalités liées à leur implantation, le suivi de leurs démarches administratives ainsi que la réception de correspondances et des missions de représentation sur mandat, dans le respect du cadre légal applicable.",
+  "intro.p2": "Grâce à son expérience en droit des affaires et en droit des contrats, le cabinet apporte un accompagnement adapté aux besoins des entreprises souhaitant développer ou sécuriser leurs activités en Algérie.",
   "team.badge": "Notre Équipe",
   "team.title": "Rencontrez les Avocats",
   "team.desc": "Une équipe dévouée de professionnels du droit accrédités par les plus hautes juridictions.",
@@ -249,7 +249,7 @@ const fr: Dict = {
   "res.notes": "Notes :",
   "footer.about": "Société Civile Professionnelle d'Avocats. Offrant un conseil juridique expert en Algérie et à l'international depuis 1985.",
   "location.badge": "Notre Emplacement",
-  "location.title": "Visitez Notre Bureau",
+  "location.title": "Visitez Notre cabinet",
   "location.desc": "Situé à Alger, Algérie. Nous accueillons les clients pour des consultations en personne.",
   "footer.contact": "Contact",
   "footer.email": "hb.legalcontact@gmail.com",
@@ -266,8 +266,8 @@ const ar: Dict = {
   "cta.book": "احجز الآن",
   "topbar.phone": "+213 661 53 18 65",
   "topbar.firm": "Firm: 028 17 09 00",
-  "topbar.phone2": "+213 0791816044",
-  "topbar.phone3": "+213 0783318146",
+  "topbar.phone2": "+213 791 81 60 44",
+  "topbar.phone3": "+213 783 31 81 46",
   "topbar.email": "hb.legalcontact@gmail.com",
   "topbar.languages": "Français · العربية · English",
   "hero.tagline": "التميز القانوني في خدمة طموحاتك.",
@@ -403,7 +403,7 @@ function dir(): "ltr" | "rtl" {
 const SERVICES: Service[] = [
   {
     id: "public-procurement",
-    title: { en: "🏛️ Public Procurement", fr: "🏛️ Marchés publics", ar: "🏛️ المناقصات العامة" },
+    title: { en: "🏛️ Public Procurement", fr: "🏛️ marchés publics", ar: "🏛️ المناقصات العامة" },
     blurb: {
       en: "Public procurement is one of the firm's core areas of excellence. With several decades of experience, we support businesses, public entities, and investors through every stage of their operations, from the preparation of bids to the resolution of disputes.",
       fr: "Les marchés publics constituent l'un des domaines d'excellence du cabinet. Avec plusieurs décennies d'expérience, nous accompagnons les entreprises, les entités publiques et les investisseurs à chaque étape de leurs opérations, de la préparation des offres à la résolution des litiges.",
@@ -491,7 +491,7 @@ const SERVICES: Service[] = [
   },
   {
     id: "intellectual-property",
-    title: { en: "💡 Intellectual Property", fr: "💡 Propriété Intellectuelle", ar: "💡 الملكية الفكرية" },
+    title: { en: "💡 Intellectual Property", fr: "💡 propriété intellectuelle", ar: "💡 الملكية الفكرية" },
     blurb: {
       en: "The firm assists clients in protecting and maximizing the value of their intellectual property rights—particularly regarding trademarks, copyright, designs, and models—as well as in preventing and resolving disputes related to these intangible assets.",
       fr: "Le cabinet assiste les clients dans la protection et la valorisation de leurs droits de propriété intellectuelle—notamment marques, droits d'auteur, dessins et modèles—ainsi que dans la prévention et la résolution des litiges liés à ces actifs immatériels.",
@@ -1205,15 +1205,6 @@ const ATTORNEYS: Attorney[] = [
     },
   },
   {
-    name: "Bensadoun Mohamed",
-    role: "attorney",
-    desc: {
-      en: "Accredited to the Council of State and the Supreme Court",
-      fr: "Agréé près du Conseil d'État et de la Cour Suprême",
-      ar: "معتمد لدى مجلس الدولة والمحكمة العليا",
-    },
-  },
-  {
     name: "Hanifi Zakaria",
     role: "attorney",
     desc: {
@@ -1229,6 +1220,15 @@ const ATTORNEYS: Attorney[] = [
       en: "Accredited to the Court",
       fr: "Agréé près de la Cour",
       ar: "معتمد لدى المحكمة",
+    },
+  },
+  {
+    name: "Bensadoun Mohamed",
+    role: "attorney",
+    desc: {
+      en: "Accredited to the Council of State and the Supreme Court",
+      fr: "Agréé près du Conseil d'État et de la Cour Suprême",
+      ar: "معتمد لدى مجلس الدولة والمحكمة العليا",
     },
   },
 ];
@@ -1249,11 +1249,11 @@ export default function App() {
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             <span className="inline-flex items-center gap-1.5">
               <Phone className="h-3.5 w-3.5 text-amber-400" />
-              {t("topbar.phone")}
+              {t("topbar.firm")}
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Phone className="h-3.5 w-3.5 text-amber-400" />
-              {t("topbar.firm")}
+              {t("topbar.phone")}
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Phone className="h-3.5 w-3.5 text-amber-400" />
@@ -1559,11 +1559,11 @@ export default function App() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-amber-400" />
-                {t("topbar.phone")}
+                {t("topbar.firm")}
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-amber-400" />
-                {t("topbar.firm")}
+                {t("topbar.phone")}
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-amber-400" />
