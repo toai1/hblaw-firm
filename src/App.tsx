@@ -167,6 +167,7 @@ const en: Dict = {
   "location.badge": "Our Location",
   "location.title": "Visit Our Office",
   "location.desc": "Located in Algiers, Algérie. We welcome clients for in-person consultations.",
+  "location.open": "Open in Google Maps",
   "footer.about": "Société Civile Professionnelle d'Avocats. Providing expert legal counsel in Algérie and internationally since 1985.",
   "footer.contact": "Contact",
   "footer.email": "hb.legalcontact@gmail.com",
@@ -249,8 +250,9 @@ const fr: Dict = {
   "res.notes": "Notes :",
   "footer.about": "Société Civile Professionnelle d'Avocats. Offrant un conseil juridique expert en Algérie et à l'international depuis 1985.",
   "location.badge": "Notre Emplacement",
-  "location.title": "Visitez Notre cabinet",
+  "location.title": "Visitez Notre Cabinet",
   "location.desc": "Situé à Alger, Algérie. Nous accueillons les clients pour des consultations en personne.",
+  "location.open": "Ouvrir dans Google Maps",
   "footer.contact": "Contact",
   "footer.email": "hb.legalcontact@gmail.com",
   "footer.fax": "Fax : 028170900",
@@ -333,6 +335,7 @@ const ar: Dict = {
   "location.badge": "موقعنا",
   "location.title": "زور مكتبنا",
   "location.desc": "يقع مكتبنا في الجزائر العاصمة، الجزائر. نرحب بالعملاء للاستشارات الشخصية.",
+  "location.open": "افتح في خرائط Google",
   "footer.about": "شركة مدنية مهنية للمحامين. نقدم استشارات قانونية متخصصة في الجزائر ودولياً منذ 1985.",
   "footer.contact": "اتصل بنا",
   "footer.email": "hb.legalcontact@gmail.com",
@@ -435,17 +438,6 @@ const SERVICES: Service[] = [
     icon: "Building",
   },
   {
-    id: "arbitration-mediation",
-    title: { en: "🤝 Arbitration & Mediation", fr: "🤝 Arbitrage & Médiation", ar: "🤝 التحكيم والوساطة" },
-    blurb: {
-      en: "The firm prioritizes dispute resolution methods that are efficient, confidential, and tailored to the stakes of each case. We guide our clients through arbitration and mediation procedures to facilitate swift and sustainable solutions.",
-      fr: "Le cabinet privilégie des méthodes de résolution des litiges efficaces, confidentielles et adaptées aux enjeux de chaque affaire. Nous guidons nos clients à travers les procédures d'arbitrage et de médiation pour faciliter des solutions rapides et durables.",
-      ar: "يحرص المكتب على طرق تسوية النزاعات الفعالة والسرية والمصممة وفق أهمية كل قضية. نرافق عملاءنا في إجراءات التحكيم والوساطة لتسهيل حلول سريعة ومستدامة.",
-    },
-    rate: "onrequest",
-    icon: "Scale",
-  },
-  {
     id: "tax-law",
     title: { en: "📊 Tax Law", fr: "📊 Droit Fiscal", ar: "📊 القانون الضريبي" },
     blurb: {
@@ -468,28 +460,6 @@ const SERVICES: Service[] = [
     icon: "Gavel",
   },
   {
-    id: "land-real-estate",
-    title: { en: "🏠 Land & Real Estate Law", fr: "🏠 Droit Foncier et Immobilier", ar: "🏠 قانون العقارات والأراضي" },
-    blurb: {
-      en: "The firm supports individuals, companies, and investors in their real estate transactions and property matters. We leverage our expertise to secure projects and resolve disputes related to property ownership and real estate.",
-      fr: "Le cabinet accompagne les particuliers, les entreprises et les investisseurs dans leurs transactions immobilières et leurs questions foncières. Nous exploitons notre expertise pour sécuriser les projets et résoudre les litiges liés à la propriété immobilière.",
-      ar: "يرافق المكتب الأفراد والشركات والمستثمرين في صفقاتهم العقارية وشؤون ملكيتهم. نستفيد من خبرتنا لتأمين المشاريع وحل النزاعات المتعلقة بالملكية العقارية.",
-    },
-    rate: "onrequest",
-    icon: "HardHat",
-  },
-  {
-    id: "labor-family",
-    title: { en: "👥 Labor & Family Law", fr: "👥 Droit du Travail et de la Famille", ar: "👥 قانون العمل والأسرة" },
-    blurb: {
-      en: "We handle both individual and collective employment relations, as well as family law matters. Our firm emphasizes an approach that is simultaneously empathetic, rigorous, and pragmatic, supporting our clients through what are often defining moments in their personal or professional lives.",
-      fr: "Nous gérons les relations individuelles et collectives de travail, ainsi que les questions de droit de la famille. Notre cabinet met l'accent sur une approche à la fois empathique, rigoureuse et pragmatique, accompagnant nos clients à travers ce qui sont souvent des moments déterminants de leur vie personnelle ou professionnelle.",
-      ar: "نتعامل مع علاقات العمل الفردية والجماعية، فضلاً عن قضايا قانون الأسرة. يؤكد مكتبنا على نهج متزامن بين التعاطف والصرامة والعملية، مساندين عملاءنا خلال ما هي في كثير من الأحيان لحظات محورية في حياتهم الشخصية أو المهنية.",
-    },
-    rate: "onrequest",
-    icon: "User",
-  },
-  {
     id: "intellectual-property",
     title: { en: "💡 Intellectual Property", fr: "💡 propriété intellectuelle", ar: "💡 الملكية الفكرية" },
     blurb: {
@@ -499,6 +469,17 @@ const SERVICES: Service[] = [
     },
     rate: "onrequest",
     icon: "Globe",
+  },
+  {
+    id: "arbitration-mediation",
+    title: { en: "🤝 Arbitration & Mediation", fr: "🤝 Arbitrage & Médiation", ar: "🤝 التحكيم والوساطة" },
+    blurb: {
+      en: "The firm prioritizes dispute resolution methods that are efficient, confidential, and tailored to the stakes of each case. We guide our clients through arbitration and mediation procedures to facilitate swift and sustainable solutions.",
+      fr: "Le cabinet privilégie des méthodes de résolution des litiges efficaces, confidentielles et adaptées aux enjeux de chaque affaire. Nous guidons nos clients à travers les procédures d'arbitrage et de médiation pour faciliter des solutions rapides et durables.",
+      ar: "يحرص المكتب على طرق تسوية النزاعات الفعالة والسرية والمصممة وفق أهمية كل قضية. نرافق عملاءنا في إجراءات التحكيم والوساطة لتسهيل حلول سريعة ومستدامة.",
+    },
+    rate: "onrequest",
+    icon: "Scale",
   },
 ];
 
@@ -1199,8 +1180,8 @@ const ATTORNEYS: Attorney[] = [
     name: "Benaicha Houria",
     role: "partner",
     desc: {
-      en: "Avocat - Agréé près du Conseil d'État et de la Cour Suprême",
-      fr: "Avocat - Agréé près du Conseil d'État et de la Cour Suprême",
+      en: "Avocate - Accredited to the Council of State and the Supreme Court",
+      fr: "Avocate - Agréée près du Conseil d'État et de la Cour Suprême",
       ar: "محامية - معتمدة لدى مجلس الدولة والمحكمة العليا",
     },
   },
@@ -1208,27 +1189,27 @@ const ATTORNEYS: Attorney[] = [
     name: "Hanifi Zakaria",
     role: "attorney",
     desc: {
-      en: "Accredited to the Court",
-      fr: "Agréé près de la Cour",
-      ar: "معتمد لدى المحكمة",
+      en: "Collaborating Lawyer - Accredited to the Court",
+      fr: "Avocat collaborateur - Agréé à la Cour",
+      ar: "محام متعاون - معتمد لدى المحكمة",
     },
   },
   {
     name: "Bouzid Noureddine",
     role: "attorney",
     desc: {
-      en: "Accredited to the Court",
-      fr: "Agréé près de la Cour",
-      ar: "معتمد لدى المحكمة",
+      en: "Collaborating Lawyer - Accredited to the Court",
+      fr: "Avocat collaborateur - Agréé à la Cour",
+      ar: "محام متعاون - معتمد لدى المحكمة",
     },
   },
   {
     name: "Bensadoun Mohamed",
     role: "attorney",
     desc: {
-      en: "Accredited to the Council of State and the Supreme Court",
-      fr: "Agréé près du Conseil d'État et de la Cour Suprême",
-      ar: "معتمد لدى مجلس الدولة والمحكمة العليا",
+      en: "Collaborating Lawyer - Accredited to the Court",
+      fr: "Avocat collaborateur - Agréé à la Cour",
+      ar: "محام متعاون - معتمد لدى المحكمة",
     },
   },
 ];
@@ -1438,7 +1419,7 @@ export default function App() {
               {t("services.specialties")}
             </motion.h3>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {SERVICES.map((s, i) => (
+              {SERVICES.filter((s) => s.id !== "arbitration-mediation").map((s, i) => (
                 <motion.div
                   key={s.id}
                   initial={{ opacity: 0, y: 12 }}
@@ -1452,11 +1433,20 @@ export default function App() {
                 </motion.div>
               ))}
             </div>
+            {SERVICES.filter((s) => s.id === "arbitration-mediation").map((s) => (
+              <motion.div
+                key={s.id}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                className="mx-auto mt-4 max-w-xl rounded-xl bg-white/10 p-4 text-center transition-all hover:bg-white/15"
+              >
+                <p className="text-sm font-semibold text-white">{s.title[lang]}</p>
+                <p className="mt-1.5 text-xs leading-relaxed text-blue-200">{s.blurb[lang]}</p>
+              </motion.div>
+            ))}
             <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
               className="mx-auto mt-8 max-w-3xl space-y-3 text-center text-sm leading-relaxed text-blue-200"
             >
               <p>{t("intro.p1")}</p>
@@ -1521,7 +1511,7 @@ export default function App() {
             className="overflow-hidden rounded-3xl border border-slate-100 shadow-2xl shadow-blue-900/5"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.0!2d3.0576111!3d36.7785553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb30059bee70f%3A0xb887aa1b8ffc3b92!2sSoci%C3%A9t%C3%A9%20D%27avocats%20HANIFI%20%26%20BENAICHA!5e0!3m2!1sen!2sdz!4v1700000000000!5m2!1sen!2sdz"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.0!2d3.0576111!3d36.7785553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb30039f959ab%3A0x879a829347a08907!2sSoci%C3%A9t%C3%A9%20Civile%20d%27Avocat%20H%26B!5e0!3m2!1sfr!2sdz!4v1700000000000!5m2!1sfr!2sdz"
               width="100%"
               height="450"
               style={{ border: 0 }}
@@ -1531,6 +1521,16 @@ export default function App() {
               title="H&B Law Firm Location"
             />
           </motion.div>
+          <div className="mt-6 text-center">
+            <a
+              href="https://maps.app.goo.gl/dJVVGLtgv8HuMvREA"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-[#061826] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0b2438]"
+            >
+              {t("location.open")}
+            </a>
+          </div>
         </div>
       </section>
 
