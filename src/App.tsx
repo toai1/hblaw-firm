@@ -116,7 +116,7 @@ const en: Dict = {
   "services.badge": "Practice Areas",
   "pres.badge": "About Us",
   "pres.title": "Maître Hanifi & Associés",
-  "pres.p1": "The firm supports businesses, institutions, and individuals in legal risk prevention, strategic counseling, negotiation, and the defense of their interests.",
+  "pres.p1": "Since 1985, the firm supports businesses, institutions, and individuals in legal risk prevention, strategic counseling, negotiation, and the defense of their interests.",
   "pres.p2": "Our team combines complementary skills to offer comprehensive support across the main areas of law. We prioritize an approach built on active listening, legal rigor, confidentiality, and the pursuit of solutions tailored to each client's objectives.",
   "pres.p3": "With over forty years of experience, the firm has developed recognized expertise in business law, public procurement, arbitration, taxation, and litigation, while expanding its capabilities to meet the emerging challenges of digital law and artificial intelligence.",
   "pres.p4": "Our mission is to transform legal complexity into clear, strategic solutions tailored to our clients' needs.",
@@ -132,7 +132,7 @@ const en: Dict = {
   "team.desc": "A dedicated team of legal professionals accredited by the highest courts.",
   "team.founder": "Founding Partner",
   "team.partner": "Partner",
-  "team.attorney": "Attorney",
+  "team.attorney": "Collaborating Attorney",
   "team.cred1": "Attorney at the Court, accredited by the Supreme Court and the Council of State",
   "team.cred2": "Member of the World Order of International Experts (OMEI – Geneva)",
   "book.badge": "Consultation",
@@ -200,9 +200,9 @@ const fr: Dict = {
   "services.badge": "Domaines de pratique",
   "pres.badge": "À propos",
   "pres.title": "Maître Hanifi & Associés",
-  "pres.p1": "Le cabinet accompagne les entreprises, les institutions et les particuliers dans la prévention des risques juridiques, le conseil stratégique, la négociation et la défense de leurs intérêts.",
+  "pres.p1": "Depuis 1985, le cabinet accompagne les entreprises, les institutions et les particuliers dans la prévention des risques juridiques, le conseil stratégique, la négociation et la défense de leurs intérêts.",
   "pres.p2": "Notre équipe allie des compétences complémentaires pour offrir un accompagnement global dans les principaux domaines du droit. Nous privilégions une approche fondée sur l'écoute active, la rigueur juridique, la confidentialité et la recherche de solutions adaptées aux objectifs de chaque client.",
-  "pres.p3": "Avec plus de quarante ans d'expérience, le cabinet a développé une expertise reconnue en droit des affaires, marchés publics, arbitrage, fiscalitéet contentieux, tout en élargissant ses compétences pour répondre aux défis émergents du droit du numérique et de l'intelligence artificielle.",
+  "pres.p3": "Avec plus de quarante ans d'expérience, le cabinet a développé une expertise reconnue en droit des affaires, marchés publics, arbitrage, fiscalité et contentieux, tout en élargissant ses compétences pour répondre aux défis émergents du droit du numérique et de l'intelligence artificielle.",
   "pres.p4": "Notre mission est de transformer la complexité juridique en solutions claires et stratégiques adaptées aux besoins de nos clients.",
   "services.title": "Domaines de pratique",
   "services.desc": "De la négociation de contrats à l'arbitrage international, nous offrons un soutien juridique complet pour vos projets les plus complexes.",
@@ -214,9 +214,9 @@ const fr: Dict = {
   "team.badge": "Notre Équipe",
   "team.title": "Rencontrez les Avocats",
   "team.desc": "Une équipe dévouée de professionnels du droit accrédités par les plus hautes juridictions.",
-  "team.founder": "Associé Fondateur",
-  "team.partner": "Associée",
-  "team.attorney": "Avocat",
+  "team.founder": "Avocat Associé Fondateur",
+  "team.partner": "Avocate Associée",
+  "team.attorney": "Avocat collaborateur",
   "team.cred1": "Avocat à la Cour, agréé près du Tribunal Suprême et du Conseil d'État",
   "team.cred2": "Membre de l'Ordre Mondial des Experts Internationaux (OMEI – Genève)",
   "book.badge": "Consultation",
@@ -284,7 +284,7 @@ const ar: Dict = {
   "services.badge": "مجالات الممارسة",
   "pres.badge": "من نحن",
   "pres.title": "مكتب الأستاذ حنيفي وشركاه",
-  "pres.p1": "يرافق المكتب الشركات والمؤسسات والأفراد في الوقاية من المخاطر القانونية والاستشارات الاستراتيجية والتفاوض والدفاع عن مصالحهم.",
+  "pres.p1": "منذ عام 1985، يرافق المكتب الشركات والمؤسسات والأفراد في الوقاية من المخاطر القانونية والاستشارات الاستراتيجية والتفاوض والدفاع عن مصالحهم.",
   "pres.p2": "يجمع فريقنا بين مهارات مكملة لتقديم دعم شامل عبر المجالات الرئيسية للقانون. نحن نعطي الأولوية لنهج يرتكز على الاستماع الفعال والدقة القانونية والسرية والسعي نحو حلول مصممة وفق أهداف كل عميل.",
   "pres.p3": "بخبرة تمتد لأكثر من أربعين عامًا، طوّر المكتب خبرة معترف بها في قانون الأعمال والمناقصات العامة والتحكيم والضرائب والنزاعات، ووسع قدراته لمواجهة تحديات قانوني الرقمي والذكاء الاصطناعي الناشئة.",
   "pres.p4": "مهمتنا هي تحويل التعقيد القانوني إلى حلول واضحة واستراتيجية مصممة وفق احتياجات عملائنا.",
@@ -298,9 +298,9 @@ const ar: Dict = {
   "team.badge": "فريقنا",
   "team.title": "تعرف على المحامين",
   "team.desc": "فريق مكرس من المهنيين القانونيين المعتمدين من أعلى المحاكم.",
-  "team.founder": "الشريك المؤسس",
-  "team.partner": "شريك",
-  "team.attorney": "محامٍ",
+  "team.founder": "المحامي الشريك المؤسس",
+  "team.partner": "المحامية الشريكة",
+  "team.attorney": "محام متعاون",
   "team.cred1": "محامٍ في المحكمة، معتمد لدى المحكمة العليا ومجلس الدولة",
   "team.cred2": "عضو في النظام العالمي للخبراء الدوليين (OMEI – جنيف)",
   "book.badge": "استشارة",
@@ -1171,45 +1171,45 @@ const ATTORNEYS: Attorney[] = [
     name: "Hanifi Boubkeur",
     role: "founder",
     desc: {
-      en: "Avocat - Agréé près du Conseil d'État et de la Cour Suprême, and by the International Order of Experts.",
-      fr: "Avocat - Agréé près du Conseil d'État et de la Cour Suprême, et près de l'Ordre International des Experts.",
-      ar: "محامي - معتمد لدى مجلس الدولة والمحكمة العليا، ولدى الهيئة الدولية للخبراء.",
+      en: "Avocat Agréé près du Conseil d'État et de la Cour Suprême, and by the International Order of Experts.",
+      fr: "Avocat Agréé près du Conseil d'État et de la Cour Suprême, et près de l'Ordre International des Experts.",
+      ar: "محامي معتمد لدى مجلس الدولة والمحكمة العليا، ولدى الهيئة الدولية للخبراء.",
     },
   },
   {
     name: "Benaicha Houria",
     role: "partner",
     desc: {
-      en: "Avocate - Accredited to the Council of State and the Supreme Court",
-      fr: "Avocate - Agréée près du Conseil d'État et de la Cour Suprême",
-      ar: "محامية - معتمدة لدى مجلس الدولة والمحكمة العليا",
+      en: "Avocate Accredited to the Council of State and the Supreme Court",
+      fr: "Avocate Agréée près du Conseil d'État et de la Cour Suprême",
+      ar: "محامية معتمدة لدى مجلس الدولة والمحكمة العليا",
     },
   },
   {
     name: "Hanifi Zakaria",
     role: "attorney",
     desc: {
-      en: "Collaborating Lawyer - Accredited to the Court",
-      fr: "Avocat collaborateur - Agréé à la Cour",
-      ar: "محام متعاون - معتمد لدى المحكمة",
+      en: "Accredited to the Court",
+      fr: "Avocat Agréé à la Cour",
+      ar: "معتمد لدى المحكمة",
     },
   },
   {
     name: "Bouzid Noureddine",
     role: "attorney",
     desc: {
-      en: "Collaborating Lawyer - Accredited to the Court",
-      fr: "Avocat collaborateur - Agréé à la Cour",
-      ar: "محام متعاون - معتمد لدى المحكمة",
+      en: "Accredited to the Court",
+      fr: "Avocat Agréé à la Cour",
+      ar: "معتمد لدى المحكمة",
     },
   },
   {
     name: "Bensadoun Mohamed",
     role: "attorney",
     desc: {
-      en: "Collaborating Lawyer - Accredited to the Court",
-      fr: "Avocat collaborateur - Agréé à la Cour",
-      ar: "محام متعاون - معتمد لدى المحكمة",
+      en: "Accredited to the Court",
+      fr: "Avocat Agréé à la Cour",
+      ar: "معتمد لدى المحكمة",
     },
   },
 ];
@@ -1447,10 +1447,14 @@ export default function App() {
               </motion.div>
             ))}
             <motion.div
-              className="mx-auto mt-8 max-w-3xl space-y-3 text-center text-sm leading-relaxed text-blue-200"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.15 }}
+              className="mt-4 rounded-xl bg-white/10 p-4 transition-all hover:bg-white/15"
             >
-              <p>{t("intro.p1")}</p>
-              <p>{t("intro.p2")}</p>
+              <p className="text-xs leading-relaxed text-blue-200">{t("intro.p1")}</p>
+              <p className="mt-2 text-xs leading-relaxed text-blue-200">{t("intro.p2")}</p>
             </motion.div>
           </div>
         </div>
